@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name "radar-bf-bot"
           git config user.email "radar-bf-bot@users.noreply.github.com"
-          git add frontend/public/data/*.json data/radar_bf2026.db || true
+          git add frontend/public/data/*.json backend/radar_bf2026.db || true
           git diff --staged --quiet || (git commit -m "chore(radar): atualização automática de preços [skip ci]" && git push)
 
       - name: Configurar Node.js 22

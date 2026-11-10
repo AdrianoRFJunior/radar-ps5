@@ -1,0 +1,185 @@
+{
+  "ps5_target_price": null,
+  "ps5_excellent_price": 3650.0,
+  "ps5_payment_preference": "ANY",
+  "ps5_preferred_stores": [
+    "kabum",
+    "magazine-luiza",
+    "amazon-br",
+    "fast-shop"
+  ],
+  "ps5_include_bundles": true,
+  "dualsense_target_price": null,
+  "dualsense_excellent_price": 385.0,
+  "dualsense_desired_colors": [
+    "Branco",
+    "Preto",
+    "Midnight Black",
+    "Cosmic Red",
+    "Starlight Blue",
+    "Galactic Purple",
+    "Grey Camouflage",
+    "Cobalt Blue",
+    "Volcanic Red",
+    "Sterling Silver",
+    "Chroma"
+  ],
+  "dualsense_preferred_stores": [
+    "fast-shop",
+    "kabum",
+    "magazine-luiza",
+    "amazon-br"
+  ],
+  "scheduler_mode": "AUTO_EVENT",
+  "interval_normal_minutes": 30,
+  "interval_warmup_minutes": 15,
+  "interval_high_minutes": 10,
+  "interval_night_minutes": 60,
+  "event_mode_enabled": true,
+  "event_lead_days": 7,
+  "prioritize_ps5_in_event": true,
+  "stale_data_threshold_minutes": 90,
+  "promotional_events": [
+    {
+      "slug": "singles-day-11-11",
+      "name": "Singles' Day (11/11)",
+      "start_date": "2026-11-10",
+      "end_date": "2026-11-12",
+      "description": "Data dupla 11/11 com forte liberação de cupons relâmpago e descontos no PIX para eletrônicos e games.",
+      "expand_coupon_search": true,
+      "recommended_interval_minutes": 10
+    },
+    {
+      "slug": "black-friday-2026",
+      "name": "Black Friday 2026",
+      "start_date": "2026-11-26",
+      "end_date": "2026-11-28",
+      "description": "Evento principal do ano para compra do PlayStation 5 Slim Digital e controle DualSense adicional.",
+      "expand_coupon_search": true,
+      "recommended_interval_minutes": 5
+    },
+    {
+      "slug": "cyber-monday-2026",
+      "name": "Cyber Monday 2026",
+      "start_date": "2026-11-30",
+      "end_date": "2026-12-01",
+      "description": "Queima de estoque residual pós-Black Friday focada em hardware, consoles digitais e acessórios.",
+      "expand_coupon_search": true,
+      "recommended_interval_minutes": 10
+    },
+    {
+      "slug": "prime-day-2027",
+      "name": "Amazon Prime Day",
+      "start_date": "2027-07-14",
+      "end_date": "2027-07-16",
+      "description": "Evento promocional exclusivo Amazon Brasil com ofertas em consoles e acessórios PlayStation.",
+      "expand_coupon_search": true,
+      "recommended_interval_minutes": 10
+    }
+  ],
+  "browser_notifications_enabled": false,
+  "only_official_warranty": false,
+  "updated_at": "2026-11-04T18:08:16.639716-03:00",
+  "scheduler_status": {
+    "scheduler_running": false,
+    "is_paused": false,
+    "is_running_cycle_now": false,
+    "current_mode": "AUTO_EVENT",
+    "current_interval_minutes": 15,
+    "last_run_at": null,
+    "next_run_at": null
+  },
+  "event_mode": {
+    "event_mode_enabled": true,
+    "mode_code": "EVENT_ACTIVE",
+    "mode_label": "MODO DE EVENTO ATIVO: Singles' Day (11/11)",
+    "is_intensified": true,
+    "effective_interval_minutes": 10,
+    "lead_days_configured": 7,
+    "prioritize_ps5_active": true,
+    "expand_coupon_search_active": true,
+    "active_event": {
+      "slug": "singles-day-11-11",
+      "name": "Singles' Day (11/11)",
+      "start_date": "2026-11-10",
+      "end_date": "2026-11-12",
+      "description": "Data dupla 11/11 com forte liberação de cupons relâmpago e descontos no PIX para eletrônicos e games.",
+      "expand_coupon_search": true,
+      "recommended_interval_minutes": 10,
+      "status": "ACTIVE",
+      "days_until_start": 0,
+      "days_until_end": 2
+    },
+    "next_event": {
+      "slug": "black-friday-2026",
+      "name": "Black Friday 2026",
+      "start_date": "2026-11-26",
+      "end_date": "2026-11-28",
+      "description": "Evento principal do ano para compra do PlayStation 5 Slim Digital e controle DualSense adicional.",
+      "expand_coupon_search": true,
+      "recommended_interval_minutes": 5,
+      "status": "UPCOMING",
+      "days_until_start": 16,
+      "days_until_end": 18
+    },
+    "days_until_next_event": 16,
+    "active_actions": [
+      "Consultas intensificadas a cada 10 min (respeitando rate-limit de cada fonte)",
+      "Busca ampliada por cupons promocionais e descontos PIX",
+      "Detecção imediata de quedas repentinas e ofertas temporárias (Flash Deals)",
+      "Comparação cruzada entre lojas e atualização de estatísticas por horário",
+      "Priorização de varredura para PlayStation 5 Slim Digital"
+    ],
+    "calendar": [
+      {
+        "slug": "singles-day-11-11",
+        "name": "Singles' Day (11/11)",
+        "start_date": "2026-11-10",
+        "end_date": "2026-11-12",
+        "description": "Data dupla 11/11 com forte liberação de cupons relâmpago e descontos no PIX para eletrônicos e games.",
+        "expand_coupon_search": true,
+        "recommended_interval_minutes": 10,
+        "status": "ACTIVE",
+        "days_until_start": 0,
+        "days_until_end": 2
+      },
+      {
+        "slug": "black-friday-2026",
+        "name": "Black Friday 2026",
+        "start_date": "2026-11-26",
+        "end_date": "2026-11-28",
+        "description": "Evento principal do ano para compra do PlayStation 5 Slim Digital e controle DualSense adicional.",
+        "expand_coupon_search": true,
+        "recommended_interval_minutes": 5,
+        "status": "UPCOMING",
+        "days_until_start": 16,
+        "days_until_end": 18
+      },
+      {
+        "slug": "cyber-monday-2026",
+        "name": "Cyber Monday 2026",
+        "start_date": "2026-11-30",
+        "end_date": "2026-12-01",
+        "description": "Queima de estoque residual pós-Black Friday focada em hardware, consoles digitais e acessórios.",
+        "expand_coupon_search": true,
+        "recommended_interval_minutes": 10,
+        "status": "UPCOMING",
+        "days_until_start": 20,
+        "days_until_end": 21
+      },
+      {
+        "slug": "prime-day-2027",
+        "name": "Amazon Prime Day",
+        "start_date": "2027-07-14",
+        "end_date": "2027-07-16",
+        "description": "Evento promocional exclusivo Amazon Brasil com ofertas em consoles e acessórios PlayStation.",
+        "expand_coupon_search": true,
+        "recommended_interval_minutes": 10,
+        "status": "UPCOMING",
+        "days_until_start": 246,
+        "days_until_end": 248
+      }
+    ],
+    "transparency_notice": "As consultas respeitam rigorosamente os limites técnicos de cada loja. O sistema não afirma monitoramento em tempo real para fontes que bloqueiam acesso automatizado ou não fornecem API em tempo real, sinalizando claramente quando um dado está desatualizado."
+  }
+}

@@ -1,0 +1,643 @@
+{
+  "total_records_analyzed": 14144,
+  "by_hour": [
+    {
+      "hour": 0,
+      "hour_label": "00:00",
+      "checks_count": 278,
+      "offers_count": 156,
+      "drops_count": 8,
+      "opportunities_count": 106,
+      "avg_discount_pct": 12.71,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 38.13,
+      "drop_rate_pct": 2.88,
+      "quality_efficiency_index": 112.02
+    },
+    {
+      "hour": 1,
+      "hour_label": "01:00",
+      "checks_count": 283,
+      "offers_count": 158,
+      "drops_count": 11,
+      "opportunities_count": 107,
+      "avg_discount_pct": 12.62,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 37.81,
+      "drop_rate_pct": 3.89,
+      "quality_efficiency_index": 111.59
+    },
+    {
+      "hour": 2,
+      "hour_label": "02:00",
+      "checks_count": 293,
+      "offers_count": 165,
+      "drops_count": 11,
+      "opportunities_count": 111,
+      "avg_discount_pct": 12.51,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 37.88,
+      "drop_rate_pct": 3.75,
+      "quality_efficiency_index": 111.29
+    },
+    {
+      "hour": 3,
+      "hour_label": "03:00",
+      "checks_count": 294,
+      "offers_count": 162,
+      "drops_count": 11,
+      "opportunities_count": 110,
+      "avg_discount_pct": 12.64,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 37.41,
+      "drop_rate_pct": 3.74,
+      "quality_efficiency_index": 111.45
+    },
+    {
+      "hour": 4,
+      "hour_label": "04:00",
+      "checks_count": 272,
+      "offers_count": 152,
+      "drops_count": 8,
+      "opportunities_count": 104,
+      "avg_discount_pct": 12.77,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 38.24,
+      "drop_rate_pct": 2.94,
+      "quality_efficiency_index": 112.25
+    },
+    {
+      "hour": 5,
+      "hour_label": "05:00",
+      "checks_count": 272,
+      "offers_count": 152,
+      "drops_count": 8,
+      "opportunities_count": 104,
+      "avg_discount_pct": 12.77,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 38.24,
+      "drop_rate_pct": 2.94,
+      "quality_efficiency_index": 112.25
+    },
+    {
+      "hour": 6,
+      "hour_label": "06:00",
+      "checks_count": 276,
+      "offers_count": 155,
+      "drops_count": 8,
+      "opportunities_count": 106,
+      "avg_discount_pct": 12.83,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 38.41,
+      "drop_rate_pct": 2.9,
+      "quality_efficiency_index": 112.52
+    },
+    {
+      "hour": 7,
+      "hour_label": "07:00",
+      "checks_count": 295,
+      "offers_count": 164,
+      "drops_count": 10,
+      "opportunities_count": 111,
+      "avg_discount_pct": 12.7,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 37.63,
+      "drop_rate_pct": 3.39,
+      "quality_efficiency_index": 111.74
+    },
+    {
+      "hour": 8,
+      "hour_label": "08:00",
+      "checks_count": 367,
+      "offers_count": 205,
+      "drops_count": 25,
+      "opportunities_count": 140,
+      "avg_discount_pct": 12.59,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 38.15,
+      "drop_rate_pct": 6.81,
+      "quality_efficiency_index": 122.67
+    },
+    {
+      "hour": 9,
+      "hour_label": "09:00",
+      "checks_count": 1373,
+      "offers_count": 826,
+      "drops_count": 249,
+      "opportunities_count": 579,
+      "avg_discount_pct": 12.95,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 42.17,
+      "drop_rate_pct": 18.14,
+      "quality_efficiency_index": 125.75
+    },
+    {
+      "hour": 10,
+      "hour_label": "10:00",
+      "checks_count": 1678,
+      "offers_count": 1044,
+      "drops_count": 397,
+      "opportunities_count": 762,
+      "avg_discount_pct": 13.63,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 45.41,
+      "drop_rate_pct": 23.66,
+      "quality_efficiency_index": 129.42
+    },
+    {
+      "hour": 11,
+      "hour_label": "11:00",
+      "checks_count": 1484,
+      "offers_count": 909,
+      "drops_count": 314,
+      "opportunities_count": 655,
+      "avg_discount_pct": 13.68,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 44.14,
+      "drop_rate_pct": 21.16,
+      "quality_efficiency_index": 128.93
+    },
+    {
+      "hour": 12,
+      "hour_label": "12:00",
+      "checks_count": 849,
+      "offers_count": 495,
+      "drops_count": 127,
+      "opportunities_count": 350,
+      "avg_discount_pct": 13.07,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 41.22,
+      "drop_rate_pct": 14.96,
+      "quality_efficiency_index": 125.64
+    },
+    {
+      "hour": 13,
+      "hour_label": "13:00",
+      "checks_count": 818,
+      "offers_count": 482,
+      "drops_count": 119,
+      "opportunities_count": 340,
+      "avg_discount_pct": 13.07,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 41.56,
+      "drop_rate_pct": 14.55,
+      "quality_efficiency_index": 125.81
+    },
+    {
+      "hour": 14,
+      "hour_label": "14:00",
+      "checks_count": 704,
+      "offers_count": 404,
+      "drops_count": 82,
+      "opportunities_count": 282,
+      "avg_discount_pct": 12.99,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 40.06,
+      "drop_rate_pct": 11.65,
+      "quality_efficiency_index": 124.82
+    },
+    {
+      "hour": 15,
+      "hour_label": "15:00",
+      "checks_count": 838,
+      "offers_count": 488,
+      "drops_count": 131,
+      "opportunities_count": 349,
+      "avg_discount_pct": 13.32,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 41.65,
+      "drop_rate_pct": 15.63,
+      "quality_efficiency_index": 126.61
+    },
+    {
+      "hour": 16,
+      "hour_label": "16:00",
+      "checks_count": 946,
+      "offers_count": 565,
+      "drops_count": 152,
+      "opportunities_count": 400,
+      "avg_discount_pct": 13.2,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 42.28,
+      "drop_rate_pct": 16.07,
+      "quality_efficiency_index": 126.56
+    },
+    {
+      "hour": 17,
+      "hour_label": "17:00",
+      "checks_count": 1006,
+      "offers_count": 601,
+      "drops_count": 165,
+      "opportunities_count": 428,
+      "avg_discount_pct": 13.11,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 42.54,
+      "drop_rate_pct": 16.4,
+      "quality_efficiency_index": 126.42
+    },
+    {
+      "hour": 18,
+      "hour_label": "18:00",
+      "checks_count": 438,
+      "offers_count": 248,
+      "drops_count": 18,
+      "opportunities_count": 168,
+      "avg_discount_pct": 12.73,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 38.36,
+      "drop_rate_pct": 4.11,
+      "quality_efficiency_index": 123.19
+    },
+    {
+      "hour": 19,
+      "hour_label": "19:00",
+      "checks_count": 283,
+      "offers_count": 155,
+      "drops_count": 5,
+      "opportunities_count": 104,
+      "avg_discount_pct": 12.2,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 36.75,
+      "drop_rate_pct": 1.77,
+      "quality_efficiency_index": 109.8
+    },
+    {
+      "hour": 20,
+      "hour_label": "20:00",
+      "checks_count": 276,
+      "offers_count": 153,
+      "drops_count": 5,
+      "opportunities_count": 103,
+      "avg_discount_pct": 12.53,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 37.32,
+      "drop_rate_pct": 1.81,
+      "quality_efficiency_index": 111.07
+    },
+    {
+      "hour": 21,
+      "hour_label": "21:00",
+      "checks_count": 272,
+      "offers_count": 149,
+      "drops_count": 4,
+      "opportunities_count": 101,
+      "avg_discount_pct": 12.72,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 37.13,
+      "drop_rate_pct": 1.47,
+      "quality_efficiency_index": 111.55
+    },
+    {
+      "hour": 22,
+      "hour_label": "22:00",
+      "checks_count": 273,
+      "offers_count": 152,
+      "drops_count": 4,
+      "opportunities_count": 104,
+      "avg_discount_pct": 12.85,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 38.1,
+      "drop_rate_pct": 1.47,
+      "quality_efficiency_index": 112.42
+    },
+    {
+      "hour": 23,
+      "hour_label": "23:00",
+      "checks_count": 276,
+      "offers_count": 155,
+      "drops_count": 5,
+      "opportunities_count": 106,
+      "avg_discount_pct": 12.83,
+      "max_drop_pct": 36.55,
+      "opportunity_rate_pct": 38.41,
+      "drop_rate_pct": 1.81,
+      "quality_efficiency_index": 112.52
+    }
+  ],
+  "by_weekday": [
+    {
+      "weekday": "Segunda-feira",
+      "checks_count": 2535,
+      "drops_count": 715,
+      "opportunities_count": 1130,
+      "avg_discount_pct": 8.04,
+      "opportunity_rate_pct": 44.58
+    },
+    {
+      "weekday": "Terça-feira",
+      "checks_count": 1682,
+      "drops_count": 570,
+      "opportunities_count": 832,
+      "avg_discount_pct": 9.42,
+      "opportunity_rate_pct": 49.46
+    },
+    {
+      "weekday": "Quarta-feira",
+      "checks_count": 1741,
+      "drops_count": 27,
+      "opportunities_count": 650,
+      "avg_discount_pct": 6.96,
+      "opportunity_rate_pct": 37.33
+    },
+    {
+      "weekday": "Quinta-feira",
+      "checks_count": 5380,
+      "drops_count": 214,
+      "opportunities_count": 2062,
+      "avg_discount_pct": 7.15,
+      "opportunity_rate_pct": 38.33
+    },
+    {
+      "weekday": "Sexta-feira",
+      "checks_count": 2803,
+      "drops_count": 351,
+      "opportunities_count": 1153,
+      "avg_discount_pct": 7.94,
+      "opportunity_rate_pct": 41.13
+    },
+    {
+      "weekday": "Sábado",
+      "checks_count": 1,
+      "drops_count": 0,
+      "opportunities_count": 1,
+      "avg_discount_pct": 31.51,
+      "opportunity_rate_pct": 100.0
+    },
+    {
+      "weekday": "Domingo",
+      "checks_count": 2,
+      "drops_count": 0,
+      "opportunities_count": 2,
+      "avg_discount_pct": 16.42,
+      "opportunity_rate_pct": 100.0
+    }
+  ],
+  "by_month_day": [
+    {
+      "day": 1,
+      "label": "Dia 01",
+      "checks_count": 1,
+      "drops_count": 0,
+      "opportunities_count": 1,
+      "avg_discount_pct": 12.23
+    },
+    {
+      "day": 3,
+      "label": "Dia 03",
+      "checks_count": 1,
+      "drops_count": 0,
+      "opportunities_count": 1,
+      "avg_discount_pct": 31.51
+    },
+    {
+      "day": 4,
+      "label": "Dia 04",
+      "checks_count": 1737,
+      "drops_count": 27,
+      "opportunities_count": 648,
+      "avg_discount_pct": 6.95
+    },
+    {
+      "day": 5,
+      "label": "Dia 05",
+      "checks_count": 5380,
+      "drops_count": 214,
+      "opportunities_count": 2062,
+      "avg_discount_pct": 7.15
+    },
+    {
+      "day": 6,
+      "label": "Dia 06",
+      "checks_count": 2797,
+      "drops_count": 349,
+      "opportunities_count": 1147,
+      "avg_discount_pct": 7.92
+    },
+    {
+      "day": 7,
+      "label": "Dia 07",
+      "checks_count": 1,
+      "drops_count": 0,
+      "opportunities_count": 1,
+      "avg_discount_pct": 28.45
+    },
+    {
+      "day": 9,
+      "label": "Dia 09",
+      "checks_count": 2534,
+      "drops_count": 715,
+      "opportunities_count": 1129,
+      "avg_discount_pct": 8.03
+    },
+    {
+      "day": 10,
+      "label": "Dia 10",
+      "checks_count": 1681,
+      "drops_count": 570,
+      "opportunities_count": 831,
+      "avg_discount_pct": 9.42
+    },
+    {
+      "day": 14,
+      "label": "Dia 14",
+      "checks_count": 2,
+      "drops_count": 0,
+      "opportunities_count": 2,
+      "avg_discount_pct": 18.36
+    },
+    {
+      "day": 15,
+      "label": "Dia 15",
+      "checks_count": 1,
+      "drops_count": 0,
+      "opportunities_count": 1,
+      "avg_discount_pct": 18.5
+    },
+    {
+      "day": 16,
+      "label": "Dia 16",
+      "checks_count": 1,
+      "drops_count": 0,
+      "opportunities_count": 1,
+      "avg_discount_pct": 16.84
+    },
+    {
+      "day": 20,
+      "label": "Dia 20",
+      "checks_count": 1,
+      "drops_count": 0,
+      "opportunities_count": 1,
+      "avg_discount_pct": 20.61
+    },
+    {
+      "day": 21,
+      "label": "Dia 21",
+      "checks_count": 2,
+      "drops_count": 0,
+      "opportunities_count": 1,
+      "avg_discount_pct": 15.19
+    },
+    {
+      "day": 23,
+      "label": "Dia 23",
+      "checks_count": 1,
+      "drops_count": 1,
+      "opportunities_count": 1,
+      "avg_discount_pct": 12.41
+    },
+    {
+      "day": 28,
+      "label": "Dia 28",
+      "checks_count": 1,
+      "drops_count": 0,
+      "opportunities_count": 0,
+      "avg_discount_pct": 5.12
+    },
+    {
+      "day": 30,
+      "label": "Dia 30",
+      "checks_count": 2,
+      "drops_count": 1,
+      "opportunities_count": 2,
+      "avg_discount_pct": 11.25
+    },
+    {
+      "day": 31,
+      "label": "Dia 31",
+      "checks_count": 1,
+      "drops_count": 0,
+      "opportunities_count": 1,
+      "avg_discount_pct": 18.47
+    }
+  ],
+  "by_bf_week": [
+    {
+      "week_name": "Semana 1 (01 a 07/Nov - Esquenta)",
+      "label": "Semana 1 (01-07/Nov)",
+      "checks_count": 9915,
+      "drops_count": 590,
+      "opportunities_count": 3858,
+      "avg_discount_pct": 7.33,
+      "opportunity_rate_pct": 38.91
+    },
+    {
+      "week_name": "Semana 2 (08 a 14/Nov - Pré-BF)",
+      "label": "Semana 2 (08-14/Nov)",
+      "checks_count": 4214,
+      "drops_count": 1285,
+      "opportunities_count": 1959,
+      "avg_discount_pct": 8.58,
+      "opportunity_rate_pct": 46.49
+    },
+    {
+      "week_name": "Semana 3 (15 a 21/Nov - Antecipação)",
+      "label": "Semana 3 (15-21/Nov)",
+      "checks_count": 0,
+      "drops_count": 0,
+      "opportunities_count": 0,
+      "avg_discount_pct": 0.0,
+      "opportunity_rate_pct": 0.0
+    },
+    {
+      "week_name": "Semana Black Friday (22 a 28/Nov)",
+      "label": "Semana BF (22-28/Nov)",
+      "checks_count": 0,
+      "drops_count": 0,
+      "opportunities_count": 0,
+      "avg_discount_pct": 0.0,
+      "opportunity_rate_pct": 0.0
+    },
+    {
+      "week_name": "Cyber Monday & Pós-BF (29/Nov+)",
+      "label": "Cyber Monday (29-30/Nov)",
+      "checks_count": 0,
+      "drops_count": 0,
+      "opportunities_count": 0,
+      "avg_discount_pct": 0.0,
+      "opportunity_rate_pct": 0.0
+    }
+  ],
+  "top_quality_hours": [
+    {
+      "hour": 10,
+      "hour_label": "10:00",
+      "checks_count": 1678,
+      "offers_count": 1044,
+      "drops_count": 397,
+      "opportunities_count": 762,
+      "avg_discount_pct": 13.63,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 45.41,
+      "drop_rate_pct": 23.66,
+      "quality_efficiency_index": 129.42
+    },
+    {
+      "hour": 11,
+      "hour_label": "11:00",
+      "checks_count": 1484,
+      "offers_count": 909,
+      "drops_count": 314,
+      "opportunities_count": 655,
+      "avg_discount_pct": 13.68,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 44.14,
+      "drop_rate_pct": 21.16,
+      "quality_efficiency_index": 128.93
+    },
+    {
+      "hour": 15,
+      "hour_label": "15:00",
+      "checks_count": 838,
+      "offers_count": 488,
+      "drops_count": 131,
+      "opportunities_count": 349,
+      "avg_discount_pct": 13.32,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 41.65,
+      "drop_rate_pct": 15.63,
+      "quality_efficiency_index": 126.61
+    }
+  ],
+  "top_drop_hours": [
+    {
+      "hour": 11,
+      "hour_label": "11:00",
+      "checks_count": 1484,
+      "offers_count": 909,
+      "drops_count": 314,
+      "opportunities_count": 655,
+      "avg_discount_pct": 13.68,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 44.14,
+      "drop_rate_pct": 21.16,
+      "quality_efficiency_index": 128.93
+    },
+    {
+      "hour": 10,
+      "hour_label": "10:00",
+      "checks_count": 1678,
+      "offers_count": 1044,
+      "drops_count": 397,
+      "opportunities_count": 762,
+      "avg_discount_pct": 13.63,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 45.41,
+      "drop_rate_pct": 23.66,
+      "quality_efficiency_index": 129.42
+    },
+    {
+      "hour": 15,
+      "hour_label": "15:00",
+      "checks_count": 838,
+      "offers_count": 488,
+      "drops_count": 131,
+      "opportunities_count": 349,
+      "avg_discount_pct": 13.32,
+      "max_drop_pct": 43.88,
+      "opportunity_rate_pct": 41.65,
+      "drop_rate_pct": 15.63,
+      "quality_efficiency_index": 126.61
+    }
+  ],
+  "methodology_note": "A classificação de Melhores Horários pondera a Taxa de Oportunidades Reais (oportunidades dividido pelo número de consultas realizadas naquela faixa horária) e a Média de Desconto Real, evitando declarar um horário como melhor apenas por possuir mais consultas."
+}

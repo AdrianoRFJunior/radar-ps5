@@ -25,7 +25,7 @@ from backend.routes.api_routes import (  # noqa: E402
     get_user_settings,
     get_monitoring_logs,
 )
-from backend.services.backup_service import list_backups  # noqa: E402
+from backend.services.backup_service import list_database_backups  # noqa: E402
 from backend.services.monitoring_service import (  # noqa: E402
     ensure_initial_catalog_and_settings,
     run_monitoring_cycle,
@@ -70,7 +70,7 @@ async def export_all(run_scan: bool = False) -> None:
         _dump("reports.json", get_system_reports(db=db))
         _dump("settings.json", get_user_settings(db=db))
         _dump("logs.json", get_monitoring_logs(limit=40, db=db))
-        _dump("backups.json", {"backups": list_backups()})
+        _dump("backups.json", {"backups": list_database_backups()})
     finally:
         db.close()
 
