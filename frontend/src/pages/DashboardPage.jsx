@@ -328,16 +328,8 @@ function LowestPriceHeroCard({
           <ExternalLink className="w-3.5 h-3.5 shrink-0" />
         </a>
         <button
-          onClick={onOpenHistory}
-          className="py-2 sm:py-2.5 px-2 sm:px-3 rounded-xl bg-[#121d26] hover:bg-[#182734] text-slate-200 text-xs font-semibold border border-[#223544] transition whitespace-nowrap flex items-center gap-1"
-          title="Ver gráfico de histórico"
-        >
-          <LineChart className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-          <span className="hidden xs:inline">Histórico</span>
-        </button>
-        <button
           onClick={onOpenPredictions}
-          className="py-2 sm:py-2.5 px-2 sm:px-3 rounded-xl bg-[#121d26] hover:bg-[#182734] text-slate-200 text-xs font-semibold border border-[#223544] transition whitespace-nowrap"
+          className="py-2 sm:py-2.5 px-2.5 sm:px-3.5 rounded-xl bg-[#121d26] hover:bg-[#182734] text-slate-200 text-xs font-semibold border border-[#223544] transition whitespace-nowrap"
           title="Ver previsão estatística"
         >
           Estimativa

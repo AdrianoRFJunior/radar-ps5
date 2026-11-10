@@ -23,12 +23,12 @@ import { formatBRL, formatDateTimeSP } from '../services/api';
 const PRIMARY_NAV_ITEMS = [
   { id: 'dashboard', label: 'Menores Preços Hoje', badgeText: 'PS5 & DualSense', icon: LayoutDashboard },
   { id: 'comparator', label: 'Comparador de Lojas', icon: Scale },
-  { id: 'history', label: 'Histórico & Gráficos', icon: LineChart },
   { id: 'predictions', label: 'Estimativa & Momento', icon: TrendingDown },
   { id: 'alerts', label: 'Alertas de Queda', icon: Bell, badgeKey: 'unread_alerts_count' },
 ];
 
 const ADVANCED_NAV_ITEMS = [
+  { id: 'history', label: 'Resumo Estatístico', icon: LineChart },
   { id: 'intelligence', label: 'Auditoria Anti-Fraude', icon: BrainCircuit },
   { id: 'best-times', label: 'Melhores Horários', icon: Clock },
   { id: 'products', label: 'Catálogo Monitorado', icon: Gamepad2 },

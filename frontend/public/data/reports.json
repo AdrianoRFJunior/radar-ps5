@@ -1,105 +1,94 @@
 {
-  "generated_at": "2026-11-10T11:51:37.313205-03:00",
+  "generated_at": "2026-11-10T14:09:19.397366-03:00",
   "daily_report": {
     "date_reference": "10/11/2026",
     "lowest_prices": {
       "ps5": {
-        "title": "Sony PlayStation 5 Slim Digital Console 825GB - International Version",
-        "store": "Amazon Brasil",
-        "final_price": 3881.0,
+        "title": "Console Playstation 5 - Bundle AStro Bot + Gran Turismo - Digital",
+        "store": "Promobit",
+        "final_price": 3742.16,
         "shipping_cost": 0.0,
-        "opportunity_score": 69,
-        "url": "https://www.amazon.com.br/dp/B0FTRYCKT1"
+        "opportunity_score": 85,
+        "url": "https://www.aliexpress.com/item/1005010115972190.html"
       },
       "dualsense": {
-        "title": "Controle Sem Fio DualSense PS5 Starlight Blue",
-        "store": "Fast Shop",
-        "final_price": 371.42,
+        "title": "Dualsense Sem Fio PS5 - Starlight Blue",
+        "store": "Mercado Livre",
+        "final_price": 329.77,
         "shipping_cost": 0.0,
-        "opportunity_score": 74,
-        "url": "https://secure3.fastshop.com.br/controle-sem-fio-dualsense-ps5-starlight-blue-185913/p?idsku=196244"
+        "opportunity_score": 100,
+        "url": "https://meli.la/1QjvNka"
       }
     },
     "best_opportunities": [
       {
-        "id": 74,
-        "title": "Controle sem fio PlayStation DualSense™ – Branco",
+        "id": 130,
+        "title": "Dualsense Sem Fio PS5 - Starlight Blue",
         "category": "DUALSENSE",
-        "store_name": "Amazon Brasil",
-        "final_price": 374.2,
-        "opportunity_score": 80,
-        "opportunity_level": "Excelente oportunidade",
-        "reason": "Esta oferta está 23.3% abaixo da média dos últimos 30 dias (R$ 487.94) e está 10.4% acima do mínimo histórico (R$ 339.00). Apresentou queda rápida de 8.0% em relação à consulta anterior. Custa 23.7% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Classificação: Excelente oportunidade (80/100).",
-        "url": "https://www.amazon.com.br/dp/B0FY6X2XXY"
+        "store_name": "Mercado Livre",
+        "final_price": 329.77,
+        "opportunity_score": 100,
+        "opportunity_level": "Oportunidade excepcional",
+        "reason": "Esta oferta está 32.3% abaixo da média dos últimos 30 dias (R$ 486.77) e atingiu ou superou o menor preço histórico registrado (R$ 329.77). Apresentou queda rápida de 40.8% em relação à consulta anterior. Custa 31.2% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Cupom ativo (MELIMAISPREDD) reduzindo o preço final. Atingiu sua meta de Preço Excelente (R$ 356.15)! Classificação: Oportunidade excepcional (100/100).",
+        "url": "https://meli.la/1QjvNka"
       },
       {
-        "id": 61,
-        "title": "Controle sem Fio DualSense PS5 Sony PlayStation Branco, Branco",
+        "id": 187,
+        "title": "Dualsense Sem Fio PS5 - Starlight Blue",
         "category": "DUALSENSE",
-        "store_name": "Magazine Luiza",
-        "final_price": 378.0,
-        "opportunity_score": 78,
-        "opportunity_level": "Excelente oportunidade",
-        "reason": "Esta oferta está 22.5% abaixo da média dos últimos 30 dias (R$ 487.94) e está 11.5% acima do mínimo histórico (R$ 339.00). Apresentou queda rápida de 7.8% em relação à consulta anterior. Custa 22.9% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Classificação: Excelente oportunidade (78/100).",
-        "url": "https://www.magazineluiza.com.br/controle-sem-fio-dualsense-ps5-sony-playstation-branco/p/241087100/ga/otga/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=magazineluiza&utm_campaign=3ed212287df842bd9f215237d92a4a09&utm_term=3ed212287df842bd9f215237d92a4a09"
+        "store_name": "Promobit",
+        "final_price": 329.77,
+        "opportunity_score": 98,
+        "opportunity_level": "Oportunidade excepcional",
+        "reason": "Esta oferta está 32.3% abaixo da média dos últimos 30 dias (R$ 486.77) e atingiu ou superou o menor preço histórico registrado (R$ 329.77). Apresentou queda rápida de 40.8% em relação à consulta anterior. Custa 31.2% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Cupom ativo (MELIMAISPREDD) reduzindo o preço final. Atingiu sua meta de Preço Excelente (R$ 356.15)! Classificação: Oportunidade excepcional (98/100).",
+        "url": "https://meli.la/1QjvNka"
       },
       {
-        "id": 18,
-        "title": "Controle Sony Dualsense Playstation 5, Sem Fio, Branco - Ps5",
+        "id": 131,
+        "title": "Controle Joystick Sem Fio Sony Playstation Cobalt Blue Ps5 Camouflage Gray",
         "category": "DUALSENSE",
-        "store_name": "KaBuM!",
-        "final_price": 378.0,
-        "opportunity_score": 76,
-        "opportunity_level": "Excelente oportunidade",
-        "reason": "Esta oferta está 22.5% abaixo da média dos últimos 30 dias (R$ 487.94) e está 11.5% acima do mínimo histórico (R$ 339.00). Apresentou queda rápida de 7.8% em relação à consulta anterior. Custa 22.9% menos que a média das outras lojas monitoradas. Oferta comercializada via marketplace. Frete grátis incluso no valor final. Classificação: Excelente oportunidade (76/100).",
-        "url": "https://www.kabum.com.br/produto/1008210"
+        "store_name": "Mercado Livre",
+        "final_price": 346.0,
+        "opportunity_score": 94,
+        "opportunity_level": "Oportunidade excepcional",
+        "reason": "Esta oferta está 28.9% abaixo da média dos últimos 30 dias (R$ 486.77) e está muito próxima (4.9%) do menor preço histórico (R$ 329.77). Apresentou queda rápida de 37.9% em relação à consulta anterior. Custa 27.7% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Cupom ativo (MELIMAISPREDD) reduzindo o preço final. Atingiu sua meta de Preço Excelente (R$ 356.15)! Classificação: Oportunidade excepcional (94/100).",
+        "url": "https://meli.la/2D77wqL"
       },
       {
-        "id": 96,
-        "title": "Controle sem Fio DualSense Midnight Black PS5 Sony PlayStation, Midnig",
+        "id": 188,
+        "title": "Controle Joystick Sem Fio Sony Playstation Cobalt Blue Ps5 Camouflage Gray",
         "category": "DUALSENSE",
-        "store_name": "Magazine Luiza",
-        "final_price": 378.0,
-        "opportunity_score": 76,
-        "opportunity_level": "Excelente oportunidade",
-        "reason": "Esta oferta está 22.5% abaixo da média dos últimos 30 dias (R$ 487.94) e está 11.5% acima do mínimo histórico (R$ 339.00). Custa 22.9% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Classificação: Excelente oportunidade (76/100).",
-        "url": "https://www.magazineluiza.com.br/controle-sem-fio-dualsense-midnight-black-ps5-sony-playstation/p/241087300/ga/otga/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=magazineluiza&utm_term=17e74bb924d94486a5a2a991c056b3d9&utm_campaign=17e74bb924d94486a5a2a991c056b3d9"
+        "store_name": "Promobit",
+        "final_price": 346.0,
+        "opportunity_score": 92,
+        "opportunity_level": "Oportunidade excepcional",
+        "reason": "Esta oferta está 28.9% abaixo da média dos últimos 30 dias (R$ 486.77) e está muito próxima (4.9%) do menor preço histórico (R$ 329.77). Apresentou queda rápida de 37.9% em relação à consulta anterior. Custa 27.7% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Cupom ativo (MELIMAISPREDD) reduzindo o preço final. Atingiu sua meta de Preço Excelente (R$ 356.15)! Classificação: Oportunidade excepcional (92/100).",
+        "url": "https://meli.la/2D77wqL"
       },
       {
-        "id": 17,
-        "title": "Controle Sony Dualsense Playstation 5, Sem Fio, Galactic Purple - Ps5",
-        "category": "DUALSENSE",
-        "store_name": "KaBuM!",
-        "final_price": 378.0,
-        "opportunity_score": 76,
+        "id": 189,
+        "title": "Console Playstation 5 - Bundle AStro Bot + Gran Turismo - Digital",
+        "category": "PS5",
+        "store_name": "Promobit",
+        "final_price": 3742.16,
+        "opportunity_score": 85,
         "opportunity_level": "Excelente oportunidade",
-        "reason": "Esta oferta está 22.5% abaixo da média dos últimos 30 dias (R$ 487.94) e está 11.5% acima do mínimo histórico (R$ 339.00). Apresentou queda rápida de 7.1% em relação à consulta anterior. Custa 22.9% menos que a média das outras lojas monitoradas. Oferta comercializada via marketplace. Frete grátis incluso no valor final. Classificação: Excelente oportunidade (76/100).",
-        "url": "https://www.kabum.com.br/produto/1008207"
+        "reason": "Esta oferta está 18.5% abaixo da média dos últimos 30 dias (R$ 4589.71) e está 11.7% acima do mínimo histórico (R$ 3349.00). Apresentou queda rápida de 11.9% em relação à consulta anterior. Custa 20.2% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Cupom ativo (AEMEGA18) reduzindo o preço final. Classificação: Excelente oportunidade (85/100).",
+        "url": "https://www.aliexpress.com/item/1005010115972190.html"
       },
       {
-        "id": 12,
-        "title": "Controle Sem Fio Sony DualSense, PlayStation 5, Bluetooth, Midnight Black - CFI-ZCT2W",
-        "category": "DUALSENSE",
-        "store_name": "KaBuM!",
-        "final_price": 398.97,
-        "opportunity_score": 76,
+        "id": 190,
+        "title": "Console PlayStation 5 Edição Digital 825GB + Jogos Astro Bot e Gran Turismo 7",
+        "category": "PS5",
+        "store_name": "Promobit",
+        "final_price": 3747.53,
+        "opportunity_score": 85,
         "opportunity_level": "Excelente oportunidade",
-        "reason": "Esta oferta está 18.2% abaixo da média dos últimos 30 dias (R$ 487.94) e está distante (17.7% acima) do menor preço histórico (R$ 339.00). Apresentou queda rápida de 14.0% em relação à consulta anterior. Custa 18.5% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Classificação: Excelente oportunidade (76/100).",
-        "url": "https://www.kabum.com.br/produto/1032835"
+        "reason": "Esta oferta está 18.3% abaixo da média dos últimos 30 dias (R$ 4589.71) e está 11.9% acima do mínimo histórico (R$ 3349.00). Apresentou queda rápida de 11.8% em relação à consulta anterior. Custa 20.1% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Cupom ativo (AEMEGA18) reduzindo o preço final. Classificação: Excelente oportunidade (85/100).",
+        "url": "https://pt.aliexpress.com/item/1005010115972190.html"
       }
     ],
     "price_drops": [
-      {
-        "offer_id": 74,
-        "title": "Controle sem fio PlayStation DualSense™ – Branco",
-        "store_name": "Amazon Brasil",
-        "previous_price": 406.6,
-        "current_price": 374.2,
-        "drop_amount": 32.4,
-        "drop_pct": 7.97,
-        "opportunity_score": 80,
-        "url": "https://www.amazon.com.br/dp/B0FY6X2XXY"
-      },
       {
         "offer_id": 61,
         "title": "Controle sem Fio DualSense PS5 Sony PlayStation Branco, Branco",
@@ -108,8 +97,19 @@
         "current_price": 378.0,
         "drop_amount": 32.0,
         "drop_pct": 7.8,
-        "opportunity_score": 78,
-        "url": "https://www.magazineluiza.com.br/controle-sem-fio-dualsense-ps5-sony-playstation-branco/p/241087100/ga/otga/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=magazineluiza&utm_campaign=3ed212287df842bd9f215237d92a4a09&utm_term=3ed212287df842bd9f215237d92a4a09"
+        "opportunity_score": 75,
+        "url": "https://www.magazineluiza.com.br/controle-sem-fio-dualsense-ps5-sony-playstation-branco/p/241087100/ga/otga/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=magazineluiza&utm_campaign=e17c823210724219b125aec9f4cd6d96&utm_term=e17c823210724219b125aec9f4cd6d96"
+      },
+      {
+        "offer_id": 12,
+        "title": "Controle Sem Fio Sony DualSense, PlayStation 5, Bluetooth, Midnight Black - CFI-ZCT2W",
+        "store_name": "KaBuM!",
+        "previous_price": 464.07,
+        "current_price": 398.97,
+        "drop_amount": 65.1,
+        "drop_pct": 14.03,
+        "opportunity_score": 74,
+        "url": "https://www.kabum.com.br/produto/1032835"
       },
       {
         "offer_id": 18,
@@ -119,7 +119,7 @@
         "current_price": 378.0,
         "drop_amount": 32.0,
         "drop_pct": 7.8,
-        "opportunity_score": 76,
+        "opportunity_score": 73,
         "url": "https://www.kabum.com.br/produto/1008210"
       },
       {
@@ -130,8 +130,8 @@
         "current_price": 378.0,
         "drop_amount": 17.91,
         "drop_pct": 4.52,
-        "opportunity_score": 76,
-        "url": "https://www.magazineluiza.com.br/controle-sem-fio-dualsense-midnight-black-ps5-sony-playstation/p/241087300/ga/otga/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=magazineluiza&utm_term=17e74bb924d94486a5a2a991c056b3d9&utm_campaign=17e74bb924d94486a5a2a991c056b3d9"
+        "opportunity_score": 72,
+        "url": "https://www.magazineluiza.com.br/controle-sem-fio-dualsense-midnight-black-ps5-sony-playstation/p/241087300/ga/otga/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=magazineluiza&utm_campaign=a92b1c0d2f60462294ebe985557ae891&utm_term=a92b1c0d2f60462294ebe985557ae891"
       },
       {
         "offer_id": 17,
@@ -141,19 +141,8 @@
         "current_price": 378.0,
         "drop_amount": 28.9,
         "drop_pct": 7.1,
-        "opportunity_score": 76,
+        "opportunity_score": 72,
         "url": "https://www.kabum.com.br/produto/1008207"
-      },
-      {
-        "offer_id": 12,
-        "title": "Controle Sem Fio Sony DualSense, PlayStation 5, Bluetooth, Midnight Black - CFI-ZCT2W",
-        "store_name": "KaBuM!",
-        "previous_price": 464.07,
-        "current_price": 398.97,
-        "drop_amount": 65.1,
-        "drop_pct": 14.03,
-        "opportunity_score": 76,
-        "url": "https://www.kabum.com.br/produto/1032835"
       },
       {
         "offer_id": 11,
@@ -163,19 +152,8 @@
         "current_price": 371.42,
         "drop_amount": 7.58,
         "drop_pct": 2.0,
-        "opportunity_score": 74,
+        "opportunity_score": 71,
         "url": "https://secure3.fastshop.com.br/controle-sem-fio-dualsense-ps5-starlight-blue-185913/p?idsku=196244"
-      },
-      {
-        "offer_id": 43,
-        "title": "Controle Sony Dualsense Playstation 5, Sem Fio, Midnight Black - Ps5",
-        "store_name": "KaBuM!",
-        "previous_price": 395.91,
-        "current_price": 378.0,
-        "drop_amount": 17.91,
-        "drop_pct": 4.52,
-        "opportunity_score": 74,
-        "url": "https://www.kabum.com.br/produto/1008213"
       },
       {
         "offer_id": 20,
@@ -185,8 +163,19 @@
         "current_price": 378.0,
         "drop_amount": 21.0,
         "drop_pct": 5.26,
-        "opportunity_score": 74,
+        "opportunity_score": 71,
         "url": "https://www.kabum.com.br/produto/1008212"
+      },
+      {
+        "offer_id": 43,
+        "title": "Controle Sony Dualsense Playstation 5, Sem Fio, Midnight Black - Ps5",
+        "store_name": "KaBuM!",
+        "previous_price": 395.91,
+        "current_price": 378.0,
+        "drop_amount": 17.91,
+        "drop_pct": 4.52,
+        "opportunity_score": 70,
+        "url": "https://www.kabum.com.br/produto/1008213"
       },
       {
         "offer_id": 22,
@@ -196,7 +185,7 @@
         "current_price": 417.57,
         "drop_amount": 46.5,
         "drop_pct": 10.02,
-        "opportunity_score": 68,
+        "opportunity_score": 67,
         "url": "https://www.kabum.com.br/produto/1032839"
       },
       {
@@ -207,7 +196,7 @@
         "current_price": 426.55,
         "drop_amount": 84.02,
         "drop_pct": 16.46,
-        "opportunity_score": 67,
+        "opportunity_score": 65,
         "url": "https://www.kabum.com.br/produto/945694"
       },
       {
@@ -218,30 +207,8 @@
         "current_price": 412.3,
         "drop_amount": 6.19,
         "drop_pct": 1.48,
-        "opportunity_score": 64,
-        "url": "https://www.amazon.com.br/dp/B088GNW267"
-      },
-      {
-        "offer_id": 69,
-        "title": "Sony DualSense PS5 Joystick Branco USB Compatível com PlayStation 5",
-        "store_name": "Amazon Brasil",
-        "previous_price": 439.0,
-        "current_price": 420.0,
-        "drop_amount": 19.0,
-        "drop_pct": 4.33,
-        "opportunity_score": 64,
-        "url": "https://www.amazon.com.br/dp/B08H99BPJN"
-      },
-      {
-        "offer_id": 76,
-        "title": "Controle sem fio DualSense Midnight Black",
-        "store_name": "Amazon Brasil",
-        "previous_price": 420.0,
-        "current_price": 415.15,
-        "drop_amount": 4.85,
-        "drop_pct": 1.15,
         "opportunity_score": 63,
-        "url": "https://www.amazon.com.br/dp/B0CQKKHT5J"
+        "url": "https://www.amazon.com.br/dp/B088GNW267"
       },
       {
         "offer_id": 90,
@@ -255,6 +222,50 @@
         "url": "https://www.amazon.com.br/dp/B0FX62Z7LK"
       },
       {
+        "offer_id": 76,
+        "title": "Controle sem fio DualSense Midnight Black",
+        "store_name": "Amazon Brasil",
+        "previous_price": 420.0,
+        "current_price": 415.15,
+        "drop_amount": 4.85,
+        "drop_pct": 1.15,
+        "opportunity_score": 62,
+        "url": "https://www.amazon.com.br/dp/B0CQKKHT5J"
+      },
+      {
+        "offer_id": 80,
+        "title": "PlayStation®5 Slim Edição Digital",
+        "store_name": "Amazon Brasil",
+        "previous_price": 4499.0,
+        "current_price": 4177.0,
+        "drop_amount": 322.0,
+        "drop_pct": 7.16,
+        "opportunity_score": 62,
+        "url": "https://www.amazon.com.br/dp/B0CQKJN2C6"
+      },
+      {
+        "offer_id": 119,
+        "title": "Controle Dualsense - Midnight Black",
+        "store_name": "Amazon Brasil",
+        "previous_price": 417.05,
+        "current_price": 415.15,
+        "drop_amount": 1.9,
+        "drop_pct": 0.46,
+        "opportunity_score": 61,
+        "url": "https://www.amazon.com.br/dp/B094Z7HFM5"
+      },
+      {
+        "offer_id": 69,
+        "title": "Sony DualSense PS5 Joystick Branco USB Compatível com PlayStation 5",
+        "store_name": "Amazon Brasil",
+        "previous_price": 420.0,
+        "current_price": 417.57,
+        "drop_amount": 2.43,
+        "drop_pct": 0.58,
+        "opportunity_score": 61,
+        "url": "https://www.amazon.com.br/dp/B08H99BPJN"
+      },
+      {
         "offer_id": 34,
         "title": "Controle Sem Fio Sony DualSense Hyperpop, PS5, Rhythm Blue, Azul - 1000048538",
         "store_name": "KaBuM!",
@@ -262,19 +273,8 @@
         "current_price": 445.47,
         "drop_amount": 111.6,
         "drop_pct": 20.03,
-        "opportunity_score": 61,
-        "url": "https://www.kabum.com.br/produto/1004688"
-      },
-      {
-        "offer_id": 86,
-        "title": "PlayStation DualSense Controle sem fio – Cobalt Blue",
-        "store_name": "Amazon Brasil",
-        "previous_price": 425.0,
-        "current_price": 423.2,
-        "drop_amount": 1.8,
-        "drop_pct": 0.42,
         "opportunity_score": 60,
-        "url": "https://www.amazon.com.br/dp/B0CJSY6961"
+        "url": "https://www.kabum.com.br/produto/1004688"
       },
       {
         "offer_id": 31,
@@ -284,8 +284,19 @@
         "current_price": 447.99,
         "drop_amount": 62.58,
         "drop_pct": 12.26,
-        "opportunity_score": 60,
+        "opportunity_score": 59,
         "url": "https://www.kabum.com.br/produto/945665"
+      },
+      {
+        "offer_id": 86,
+        "title": "PlayStation DualSense Controle sem fio – Cobalt Blue",
+        "store_name": "Amazon Brasil",
+        "previous_price": 425.0,
+        "current_price": 423.2,
+        "drop_amount": 1.8,
+        "drop_pct": 0.42,
+        "opportunity_score": 58,
+        "url": "https://www.amazon.com.br/dp/B0CJSY6961"
       },
       {
         "offer_id": 30,
@@ -295,7 +306,7 @@
         "current_price": 455.05,
         "drop_amount": 55.52,
         "drop_pct": 10.87,
-        "opportunity_score": 58,
+        "opportunity_score": 56,
         "url": "https://www.kabum.com.br/produto/713091"
       },
       {
@@ -306,19 +317,8 @@
         "current_price": 4323.06,
         "drop_amount": 42.47,
         "drop_pct": 0.97,
-        "opportunity_score": 53,
-        "url": "https://www.magazineluiza.com.br/console-sony-playstation-5-ssd-825gb-controle-sem-fio-dualsense-2-jogos-digitais-edicao-digital/p/aebh5a7a94/ga/gap5/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=kabum&utm_campaign=be34c5356f3c4524afeb01db174776e2&utm_term=be34c5356f3c4524afeb01db174776e2"
-      },
-      {
-        "offer_id": 89,
-        "title": "Sony PlayStation 5 Edição Digital 825GB 1 Controle",
-        "store_name": "Amazon Brasil",
-        "previous_price": 4369.9,
-        "current_price": 4369.0,
-        "drop_amount": 0.9,
-        "drop_pct": 0.02,
-        "opportunity_score": 51,
-        "url": "https://www.amazon.com.br/dp/B0GWNKJDCZ"
+        "opportunity_score": 52,
+        "url": "https://www.magazineluiza.com.br/console-sony-playstation-5-ssd-825gb-controle-sem-fio-dualsense-2-jogos-digitais-edicao-digital/p/aebh5a7a94/ga/gap5/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=kabum&utm_campaign=ddc89889b27249e2ad28cb364c1f7481&utm_term=ddc89889b27249e2ad28cb364c1f7481"
       },
       {
         "offer_id": 52,
@@ -328,7 +328,7 @@
         "current_price": 4356.93,
         "drop_amount": 12.15,
         "drop_pct": 0.28,
-        "opportunity_score": 50,
+        "opportunity_score": 48,
         "url": "https://www.kabum.com.br/produto/939944"
       },
       {
@@ -339,7 +339,7 @@
         "current_price": 4464.06,
         "drop_amount": 284.94,
         "drop_pct": 6.0,
-        "opportunity_score": 49,
+        "opportunity_score": 48,
         "url": "https://secure3.fastshop.com.br/console-ps5-fisico-1tb-com-controle-dualsense-branco---sony-173286/p?idsku=183493"
       },
       {
@@ -350,7 +350,7 @@
         "current_price": 4593.72,
         "drop_amount": 1732.39,
         "drop_pct": 27.38,
-        "opportunity_score": 49,
+        "opportunity_score": 48,
         "url": "https://www.kabum.com.br/produto/939943"
       },
       {
@@ -361,7 +361,7 @@
         "current_price": 4538.99,
         "drop_amount": 210.91,
         "drop_pct": 4.44,
-        "opportunity_score": 48,
+        "opportunity_score": 47,
         "url": "https://www.amazon.com.br/dp/B0GBYZ4R2K"
       },
       {
@@ -372,7 +372,7 @@
         "current_price": 4599.9,
         "drop_amount": 400.0,
         "drop_pct": 8.0,
-        "opportunity_score": 48,
+        "opportunity_score": 47,
         "url": "https://www.amazon.com.br/dp/B0CM9VHGY7"
       },
       {
@@ -383,8 +383,8 @@
         "current_price": 490.16,
         "drop_amount": 27.85,
         "drop_pct": 5.38,
-        "opportunity_score": 42,
-        "url": "https://www.magazineluiza.com.br/controle-ps-5-preto-midnight-black-dualsense-sony/p/gk1676b881/ga/ctpn/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=lojarugalgames&utm_campaign=0ff4c5a4814e4de690a6decedff202a9&utm_term=0ff4c5a4814e4de690a6decedff202a9"
+        "opportunity_score": 40,
+        "url": "https://www.magazineluiza.com.br/controle-ps-5-preto-midnight-black-dualsense-sony/p/gk1676b881/ga/ctpn/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=lojarugalgames&utm_term=cc210b1669fa486a96cc4fa2c8d22bd3&utm_campaign=cc210b1669fa486a96cc4fa2c8d22bd3"
       },
       {
         "offer_id": 78,
@@ -394,8 +394,19 @@
         "current_price": 521.55,
         "drop_amount": 78.35,
         "drop_pct": 13.06,
-        "opportunity_score": 40,
+        "opportunity_score": 39,
         "url": "https://www.amazon.com.br/dp/B0HKMD27WX"
+      },
+      {
+        "offer_id": 9,
+        "title": "PlayStation 5 Disc Console (New 2023 Slim Model)- UAE Version, 1 Year Manufacturer Warranty",
+        "store_name": "Amazon Brasil",
+        "previous_price": 4999.9,
+        "current_price": 4749.9,
+        "drop_amount": 250.0,
+        "drop_pct": 5.0,
+        "opportunity_score": 37,
+        "url": "https://www.amazon.com.br/dp/B0CN5RCWDD"
       },
       {
         "offer_id": 44,
@@ -405,7 +416,7 @@
         "current_price": 531.0,
         "drop_amount": 98.9,
         "drop_pct": 15.7,
-        "opportunity_score": 36,
+        "opportunity_score": 35,
         "url": "https://www.kabum.com.br/produto/588613"
       },
       {
@@ -439,7 +450,7 @@
         "drop_amount": 413.6,
         "drop_pct": 7.27,
         "opportunity_score": 31,
-        "url": "https://www.magazineluiza.com.br/console-sony-playstation-5-com-leitor-de-discos-ssd-1tb-controle-sem-fio-dualsense-2-jogos/p/bja6dfc54b/ga/gap5/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=kabum&utm_term=6b60d6eafc3846d9ba22969684d0aee3&utm_campaign=6b60d6eafc3846d9ba22969684d0aee3"
+        "url": "https://www.magazineluiza.com.br/console-sony-playstation-5-com-leitor-de-discos-ssd-1tb-controle-sem-fio-dualsense-2-jogos/p/bja6dfc54b/ga/gap5/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=kabum&utm_term=51f98c372d894dcb98d19466977b0965&utm_campaign=51f98c372d894dcb98d19466977b0965"
       },
       {
         "offer_id": 102,
@@ -451,6 +462,17 @@
         "drop_pct": 0.15,
         "opportunity_score": 29,
         "url": "https://www.amazon.com.br/dp/B0HN336XS4"
+      },
+      {
+        "offer_id": 72,
+        "title": "PlayStation 5 Slim Digital Edition Console + Blue Controller Bundle (KSA version)",
+        "store_name": "Amazon Brasil",
+        "previous_price": 5799.9,
+        "current_price": 5509.9,
+        "drop_amount": 290.0,
+        "drop_pct": 5.0,
+        "opportunity_score": 28,
+        "url": "https://www.amazon.com.br/dp/B0F63Q3BQS"
       },
       {
         "offer_id": 93,
@@ -477,17 +499,6 @@
     ],
     "relevant_changes": [
       {
-        "offer_id": 74,
-        "title": "Controle sem fio PlayStation DualSense™ – Branco",
-        "store_name": "Amazon Brasil",
-        "previous_price": 406.6,
-        "current_price": 374.2,
-        "drop_amount": 32.4,
-        "drop_pct": 7.97,
-        "opportunity_score": 80,
-        "url": "https://www.amazon.com.br/dp/B0FY6X2XXY"
-      },
-      {
         "offer_id": 61,
         "title": "Controle sem Fio DualSense PS5 Sony PlayStation Branco, Branco",
         "store_name": "Magazine Luiza",
@@ -495,8 +506,19 @@
         "current_price": 378.0,
         "drop_amount": 32.0,
         "drop_pct": 7.8,
-        "opportunity_score": 78,
-        "url": "https://www.magazineluiza.com.br/controle-sem-fio-dualsense-ps5-sony-playstation-branco/p/241087100/ga/otga/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=magazineluiza&utm_campaign=3ed212287df842bd9f215237d92a4a09&utm_term=3ed212287df842bd9f215237d92a4a09"
+        "opportunity_score": 75,
+        "url": "https://www.magazineluiza.com.br/controle-sem-fio-dualsense-ps5-sony-playstation-branco/p/241087100/ga/otga/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=magazineluiza&utm_campaign=e17c823210724219b125aec9f4cd6d96&utm_term=e17c823210724219b125aec9f4cd6d96"
+      },
+      {
+        "offer_id": 12,
+        "title": "Controle Sem Fio Sony DualSense, PlayStation 5, Bluetooth, Midnight Black - CFI-ZCT2W",
+        "store_name": "KaBuM!",
+        "previous_price": 464.07,
+        "current_price": 398.97,
+        "drop_amount": 65.1,
+        "drop_pct": 14.03,
+        "opportunity_score": 74,
+        "url": "https://www.kabum.com.br/produto/1032835"
       },
       {
         "offer_id": 18,
@@ -506,7 +528,7 @@
         "current_price": 378.0,
         "drop_amount": 32.0,
         "drop_pct": 7.8,
-        "opportunity_score": 76,
+        "opportunity_score": 73,
         "url": "https://www.kabum.com.br/produto/1008210"
       },
       {
@@ -517,8 +539,8 @@
         "current_price": 378.0,
         "drop_amount": 17.91,
         "drop_pct": 4.52,
-        "opportunity_score": 76,
-        "url": "https://www.magazineluiza.com.br/controle-sem-fio-dualsense-midnight-black-ps5-sony-playstation/p/241087300/ga/otga/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=magazineluiza&utm_term=17e74bb924d94486a5a2a991c056b3d9&utm_campaign=17e74bb924d94486a5a2a991c056b3d9"
+        "opportunity_score": 72,
+        "url": "https://www.magazineluiza.com.br/controle-sem-fio-dualsense-midnight-black-ps5-sony-playstation/p/241087300/ga/otga/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=magazineluiza&utm_campaign=a92b1c0d2f60462294ebe985557ae891&utm_term=a92b1c0d2f60462294ebe985557ae891"
       },
       {
         "offer_id": 17,
@@ -528,19 +550,8 @@
         "current_price": 378.0,
         "drop_amount": 28.9,
         "drop_pct": 7.1,
-        "opportunity_score": 76,
+        "opportunity_score": 72,
         "url": "https://www.kabum.com.br/produto/1008207"
-      },
-      {
-        "offer_id": 12,
-        "title": "Controle Sem Fio Sony DualSense, PlayStation 5, Bluetooth, Midnight Black - CFI-ZCT2W",
-        "store_name": "KaBuM!",
-        "previous_price": 464.07,
-        "current_price": 398.97,
-        "drop_amount": 65.1,
-        "drop_pct": 14.03,
-        "opportunity_score": 76,
-        "url": "https://www.kabum.com.br/produto/1032835"
       },
       {
         "offer_id": 11,
@@ -550,19 +561,8 @@
         "current_price": 371.42,
         "drop_amount": 7.58,
         "drop_pct": 2.0,
-        "opportunity_score": 74,
+        "opportunity_score": 71,
         "url": "https://secure3.fastshop.com.br/controle-sem-fio-dualsense-ps5-starlight-blue-185913/p?idsku=196244"
-      },
-      {
-        "offer_id": 43,
-        "title": "Controle Sony Dualsense Playstation 5, Sem Fio, Midnight Black - Ps5",
-        "store_name": "KaBuM!",
-        "previous_price": 395.91,
-        "current_price": 378.0,
-        "drop_amount": 17.91,
-        "drop_pct": 4.52,
-        "opportunity_score": 74,
-        "url": "https://www.kabum.com.br/produto/1008213"
       },
       {
         "offer_id": 20,
@@ -572,8 +572,19 @@
         "current_price": 378.0,
         "drop_amount": 21.0,
         "drop_pct": 5.26,
-        "opportunity_score": 74,
+        "opportunity_score": 71,
         "url": "https://www.kabum.com.br/produto/1008212"
+      },
+      {
+        "offer_id": 43,
+        "title": "Controle Sony Dualsense Playstation 5, Sem Fio, Midnight Black - Ps5",
+        "store_name": "KaBuM!",
+        "previous_price": 395.91,
+        "current_price": 378.0,
+        "drop_amount": 17.91,
+        "drop_pct": 4.52,
+        "opportunity_score": 70,
+        "url": "https://www.kabum.com.br/produto/1008213"
       },
       {
         "offer_id": 88,
@@ -594,8 +605,19 @@
         "current_price": 417.57,
         "drop_amount": 46.5,
         "drop_pct": 10.02,
-        "opportunity_score": 68,
+        "opportunity_score": 67,
         "url": "https://www.kabum.com.br/produto/1032839"
+      },
+      {
+        "offer_id": 74,
+        "title": "Controle sem fio PlayStation DualSense™ – Branco",
+        "store_name": "Amazon Brasil",
+        "previous_price": 374.2,
+        "current_price": 406.6,
+        "drop_amount": -32.4,
+        "drop_pct": -8.66,
+        "opportunity_score": 66,
+        "url": "https://www.amazon.com.br/dp/B0FY6X2XXY"
       },
       {
         "offer_id": 19,
@@ -605,18 +627,18 @@
         "current_price": 426.55,
         "drop_amount": 84.02,
         "drop_pct": 16.46,
-        "opportunity_score": 67,
+        "opportunity_score": 65,
         "url": "https://www.kabum.com.br/produto/945694"
       },
       {
         "offer_id": 75,
         "title": "PlayStation DualSense Controle sem fio – Branco",
         "store_name": "Amazon Brasil",
-        "previous_price": 404.09,
+        "previous_price": 389.0,
         "current_price": 412.3,
-        "drop_amount": -8.21,
-        "drop_pct": -2.03,
-        "opportunity_score": 66,
+        "drop_amount": -23.3,
+        "drop_pct": -5.99,
+        "opportunity_score": 64,
         "url": "https://www.amazon.com.br/dp/B0CQKLS4RP"
       },
       {
@@ -627,41 +649,19 @@
         "current_price": 412.3,
         "drop_amount": 6.19,
         "drop_pct": 1.48,
-        "opportunity_score": 64,
+        "opportunity_score": 63,
         "url": "https://www.amazon.com.br/dp/B088GNW267"
       },
       {
         "offer_id": 67,
         "title": "Sony Control Inalámbrico PS5 DualSense Midnight Black",
         "store_name": "Amazon Brasil",
-        "previous_price": 386.1,
+        "previous_price": 389.4,
         "current_price": 415.15,
-        "drop_amount": -29.05,
-        "drop_pct": -7.52,
-        "opportunity_score": 64,
-        "url": "https://www.amazon.com.br/dp/B0956PFTDK"
-      },
-      {
-        "offer_id": 69,
-        "title": "Sony DualSense PS5 Joystick Branco USB Compatível com PlayStation 5",
-        "store_name": "Amazon Brasil",
-        "previous_price": 439.0,
-        "current_price": 420.0,
-        "drop_amount": 19.0,
-        "drop_pct": 4.33,
-        "opportunity_score": 64,
-        "url": "https://www.amazon.com.br/dp/B08H99BPJN"
-      },
-      {
-        "offer_id": 76,
-        "title": "Controle sem fio DualSense Midnight Black",
-        "store_name": "Amazon Brasil",
-        "previous_price": 420.0,
-        "current_price": 415.15,
-        "drop_amount": 4.85,
-        "drop_pct": 1.15,
+        "drop_amount": -25.75,
+        "drop_pct": -6.61,
         "opportunity_score": 63,
-        "url": "https://www.amazon.com.br/dp/B0CQKKHT5J"
+        "url": "https://www.amazon.com.br/dp/B0956PFTDK"
       },
       {
         "offer_id": 90,
@@ -675,6 +675,50 @@
         "url": "https://www.amazon.com.br/dp/B0FX62Z7LK"
       },
       {
+        "offer_id": 76,
+        "title": "Controle sem fio DualSense Midnight Black",
+        "store_name": "Amazon Brasil",
+        "previous_price": 420.0,
+        "current_price": 415.15,
+        "drop_amount": 4.85,
+        "drop_pct": 1.15,
+        "opportunity_score": 62,
+        "url": "https://www.amazon.com.br/dp/B0CQKKHT5J"
+      },
+      {
+        "offer_id": 80,
+        "title": "PlayStation®5 Slim Edição Digital",
+        "store_name": "Amazon Brasil",
+        "previous_price": 4499.0,
+        "current_price": 4177.0,
+        "drop_amount": 322.0,
+        "drop_pct": 7.16,
+        "opportunity_score": 62,
+        "url": "https://www.amazon.com.br/dp/B0CQKJN2C6"
+      },
+      {
+        "offer_id": 119,
+        "title": "Controle Dualsense - Midnight Black",
+        "store_name": "Amazon Brasil",
+        "previous_price": 417.05,
+        "current_price": 415.15,
+        "drop_amount": 1.9,
+        "drop_pct": 0.46,
+        "opportunity_score": 61,
+        "url": "https://www.amazon.com.br/dp/B094Z7HFM5"
+      },
+      {
+        "offer_id": 69,
+        "title": "Sony DualSense PS5 Joystick Branco USB Compatível com PlayStation 5",
+        "store_name": "Amazon Brasil",
+        "previous_price": 420.0,
+        "current_price": 417.57,
+        "drop_amount": 2.43,
+        "drop_pct": 0.58,
+        "opportunity_score": 61,
+        "url": "https://www.amazon.com.br/dp/B08H99BPJN"
+      },
+      {
         "offer_id": 34,
         "title": "Controle Sem Fio Sony DualSense Hyperpop, PS5, Rhythm Blue, Azul - 1000048538",
         "store_name": "KaBuM!",
@@ -682,19 +726,19 @@
         "current_price": 445.47,
         "drop_amount": 111.6,
         "drop_pct": 20.03,
-        "opportunity_score": 61,
+        "opportunity_score": 60,
         "url": "https://www.kabum.com.br/produto/1004688"
       },
       {
-        "offer_id": 86,
-        "title": "PlayStation DualSense Controle sem fio – Cobalt Blue",
+        "offer_id": 77,
+        "title": "PlayStation DualSense® Wireless Controller - Starlight Blue",
         "store_name": "Amazon Brasil",
         "previous_price": 425.0,
-        "current_price": 423.2,
-        "drop_amount": 1.8,
-        "drop_pct": 0.42,
-        "opportunity_score": 60,
-        "url": "https://www.amazon.com.br/dp/B0CJSY6961"
+        "current_price": 426.55,
+        "drop_amount": -1.55,
+        "drop_pct": -0.36,
+        "opportunity_score": 59,
+        "url": "https://www.amazon.com.br/dp/B0CQKL4YTB"
       },
       {
         "offer_id": 110,
@@ -704,7 +748,7 @@
         "current_price": 426.87,
         "drop_amount": -55.81,
         "drop_pct": -15.04,
-        "opportunity_score": 60,
+        "opportunity_score": 59,
         "url": "https://www.amazon.com.br/dp/B0CJSR3DDT"
       },
       {
@@ -715,7 +759,7 @@
         "current_price": 447.99,
         "drop_amount": 62.58,
         "drop_pct": 12.26,
-        "opportunity_score": 60,
+        "opportunity_score": 59,
         "url": "https://www.kabum.com.br/produto/945665"
       },
       {
@@ -730,6 +774,17 @@
         "url": "https://secure3.fastshop.com.br/console-ps5-digital-825gb-com-controle-dualsense-branco---sony-141991/p?idsku=151159"
       },
       {
+        "offer_id": 86,
+        "title": "PlayStation DualSense Controle sem fio – Cobalt Blue",
+        "store_name": "Amazon Brasil",
+        "previous_price": 425.0,
+        "current_price": 423.2,
+        "drop_amount": 1.8,
+        "drop_pct": 0.42,
+        "opportunity_score": 58,
+        "url": "https://www.amazon.com.br/dp/B0CJSY6961"
+      },
+      {
         "offer_id": 97,
         "title": "PlayStation Controle sem fio DualSense® – Chroma Indigo",
         "store_name": "Amazon Brasil",
@@ -737,7 +792,7 @@
         "current_price": 436.05,
         "drop_amount": -8.65,
         "drop_pct": -2.02,
-        "opportunity_score": 58,
+        "opportunity_score": 56,
         "url": "https://www.amazon.com.br/dp/B0DHY92HBL"
       },
       {
@@ -748,7 +803,7 @@
         "current_price": 455.05,
         "drop_amount": 55.52,
         "drop_pct": 10.87,
-        "opportunity_score": 58,
+        "opportunity_score": 56,
         "url": "https://www.kabum.com.br/produto/713091"
       },
       {
@@ -759,7 +814,7 @@
         "current_price": 4277.07,
         "drop_amount": -130.2,
         "drop_pct": -3.14,
-        "opportunity_score": 56,
+        "opportunity_score": 55,
         "url": "https://www.kabum.com.br/produto/989702"
       },
       {
@@ -770,8 +825,8 @@
         "current_price": 4323.06,
         "drop_amount": 42.47,
         "drop_pct": 0.97,
-        "opportunity_score": 53,
-        "url": "https://www.magazineluiza.com.br/console-sony-playstation-5-ssd-825gb-controle-sem-fio-dualsense-2-jogos-digitais-edicao-digital/p/aebh5a7a94/ga/gap5/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=kabum&utm_campaign=be34c5356f3c4524afeb01db174776e2&utm_term=be34c5356f3c4524afeb01db174776e2"
+        "opportunity_score": 52,
+        "url": "https://www.magazineluiza.com.br/console-sony-playstation-5-ssd-825gb-controle-sem-fio-dualsense-2-jogos-digitais-edicao-digital/p/aebh5a7a94/ga/gap5/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=kabum&utm_campaign=ddc89889b27249e2ad28cb364c1f7481&utm_term=ddc89889b27249e2ad28cb364c1f7481"
       },
       {
         "offer_id": 101,
@@ -781,17 +836,17 @@
         "current_price": 455.03,
         "drop_amount": -28.16,
         "drop_pct": -6.6,
-        "opportunity_score": 52,
+        "opportunity_score": 51,
         "url": "https://www.amazon.com.br/dp/B0DHY8DC6R"
       },
       {
         "offer_id": 89,
         "title": "Sony PlayStation 5 Edição Digital 825GB 1 Controle",
         "store_name": "Amazon Brasil",
-        "previous_price": 4369.9,
-        "current_price": 4369.0,
-        "drop_amount": 0.9,
-        "drop_pct": 0.02,
+        "previous_price": 4369.0,
+        "current_price": 4369.9,
+        "drop_amount": -0.9,
+        "drop_pct": -0.02,
         "opportunity_score": 51,
         "url": "https://www.amazon.com.br/dp/B0GWNKJDCZ"
       },
@@ -803,7 +858,7 @@
         "current_price": 4356.93,
         "drop_amount": 12.15,
         "drop_pct": 0.28,
-        "opportunity_score": 50,
+        "opportunity_score": 48,
         "url": "https://www.kabum.com.br/produto/939944"
       },
       {
@@ -814,7 +869,7 @@
         "current_price": 4464.06,
         "drop_amount": 284.94,
         "drop_pct": 6.0,
-        "opportunity_score": 49,
+        "opportunity_score": 48,
         "url": "https://secure3.fastshop.com.br/console-ps5-fisico-1tb-com-controle-dualsense-branco---sony-173286/p?idsku=183493"
       },
       {
@@ -825,7 +880,7 @@
         "current_price": 4593.72,
         "drop_amount": 1732.39,
         "drop_pct": 27.38,
-        "opportunity_score": 49,
+        "opportunity_score": 48,
         "url": "https://www.kabum.com.br/produto/939943"
       },
       {
@@ -836,7 +891,7 @@
         "current_price": 4538.99,
         "drop_amount": 210.91,
         "drop_pct": 4.44,
-        "opportunity_score": 48,
+        "opportunity_score": 47,
         "url": "https://www.amazon.com.br/dp/B0GBYZ4R2K"
       },
       {
@@ -847,7 +902,7 @@
         "current_price": 4599.9,
         "drop_amount": 400.0,
         "drop_pct": 8.0,
-        "opportunity_score": 48,
+        "opportunity_score": 47,
         "url": "https://www.amazon.com.br/dp/B0CM9VHGY7"
       },
       {
@@ -858,7 +913,7 @@
         "current_price": 472.73,
         "drop_amount": -13.73,
         "drop_pct": -2.99,
-        "opportunity_score": 45,
+        "opportunity_score": 44,
         "url": "https://www.kabum.com.br/produto/779843"
       },
       {
@@ -869,7 +924,7 @@
         "current_price": 4599.0,
         "drop_amount": -140.0,
         "drop_pct": -3.14,
-        "opportunity_score": 45,
+        "opportunity_score": 44,
         "url": "https://www.amazon.com.br/dp/B0FPGF9J2J"
       },
       {
@@ -880,7 +935,7 @@
         "current_price": 4599.9,
         "drop_amount": -183.9,
         "drop_pct": -4.16,
-        "opportunity_score": 45,
+        "opportunity_score": 44,
         "url": "https://www.amazon.com.br/dp/B0GWNFMG5L"
       },
       {
@@ -891,7 +946,7 @@
         "current_price": 483.85,
         "drop_amount": -79.84,
         "drop_pct": -19.76,
-        "opportunity_score": 42,
+        "opportunity_score": 41,
         "url": "https://www.kabum.com.br/produto/581892"
       },
       {
@@ -902,19 +957,8 @@
         "current_price": 490.16,
         "drop_amount": 27.85,
         "drop_pct": 5.38,
-        "opportunity_score": 42,
-        "url": "https://www.magazineluiza.com.br/controle-ps-5-preto-midnight-black-dualsense-sony/p/gk1676b881/ga/ctpn/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=lojarugalgames&utm_campaign=0ff4c5a4814e4de690a6decedff202a9&utm_term=0ff4c5a4814e4de690a6decedff202a9"
-      },
-      {
-        "offer_id": 5,
-        "title": "Console Sony PlayStation 5, Com Leitor de Discos, SSD 1TB, Controle Sem Fio DualSense + 2 Jogos",
-        "store_name": "KaBuM!",
-        "previous_price": 4537.47,
-        "current_price": 4742.07,
-        "drop_amount": -204.6,
-        "drop_pct": -4.51,
-        "opportunity_score": 41,
-        "url": "https://www.kabum.com.br/produto/934759"
+        "opportunity_score": 40,
+        "url": "https://www.magazineluiza.com.br/controle-ps-5-preto-midnight-black-dualsense-sony/p/gk1676b881/ga/ctpn/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=lojarugalgames&utm_term=cc210b1669fa486a96cc4fa2c8d22bd3&utm_campaign=cc210b1669fa486a96cc4fa2c8d22bd3"
       },
       {
         "offer_id": 78,
@@ -924,8 +968,30 @@
         "current_price": 521.55,
         "drop_amount": 78.35,
         "drop_pct": 13.06,
-        "opportunity_score": 40,
+        "opportunity_score": 39,
         "url": "https://www.amazon.com.br/dp/B0HKMD27WX"
+      },
+      {
+        "offer_id": 5,
+        "title": "Console Sony PlayStation 5, Com Leitor de Discos, SSD 1TB, Controle Sem Fio DualSense + 2 Jogos",
+        "store_name": "KaBuM!",
+        "previous_price": 4537.47,
+        "current_price": 4742.07,
+        "drop_amount": -204.6,
+        "drop_pct": -4.51,
+        "opportunity_score": 39,
+        "url": "https://www.kabum.com.br/produto/934759"
+      },
+      {
+        "offer_id": 9,
+        "title": "PlayStation 5 Disc Console (New 2023 Slim Model)- UAE Version, 1 Year Manufacturer Warranty",
+        "store_name": "Amazon Brasil",
+        "previous_price": 4999.9,
+        "current_price": 4749.9,
+        "drop_amount": 250.0,
+        "drop_pct": 5.0,
+        "opportunity_score": 37,
+        "url": "https://www.amazon.com.br/dp/B0CN5RCWDD"
       },
       {
         "offer_id": 44,
@@ -935,7 +1001,7 @@
         "current_price": 531.0,
         "drop_amount": 98.9,
         "drop_pct": 15.7,
-        "opportunity_score": 36,
+        "opportunity_score": 35,
         "url": "https://www.kabum.com.br/produto/588613"
       },
       {
@@ -969,18 +1035,7 @@
         "drop_amount": 413.6,
         "drop_pct": 7.27,
         "opportunity_score": 31,
-        "url": "https://www.magazineluiza.com.br/console-sony-playstation-5-com-leitor-de-discos-ssd-1tb-controle-sem-fio-dualsense-2-jogos/p/bja6dfc54b/ga/gap5/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=kabum&utm_term=6b60d6eafc3846d9ba22969684d0aee3&utm_campaign=6b60d6eafc3846d9ba22969684d0aee3"
-      },
-      {
-        "offer_id": 8,
-        "title": "PlayStation®5 Slim Disk - Pacote ASTRO BOT e Gran Turismo 7",
-        "store_name": "Amazon Brasil",
-        "previous_price": 4879.0,
-        "current_price": 5099.0,
-        "drop_amount": -220.0,
-        "drop_pct": -4.51,
-        "opportunity_score": 30,
-        "url": "https://www.amazon.com.br/dp/B0F8R9NDXC"
+        "url": "https://www.magazineluiza.com.br/console-sony-playstation-5-com-leitor-de-discos-ssd-1tb-controle-sem-fio-dualsense-2-jogos/p/bja6dfc54b/ga/gap5/?utm_source=zoom&utm_medium=cpa&partner_id=77341&utm_content=none_roa_amp_4p_cpa_none_tod_none&seller_id=kabum&utm_term=51f98c372d894dcb98d19466977b0965&utm_campaign=51f98c372d894dcb98d19466977b0965"
       },
       {
         "offer_id": 102,
@@ -994,6 +1049,28 @@
         "url": "https://www.amazon.com.br/dp/B0HN336XS4"
       },
       {
+        "offer_id": 8,
+        "title": "PlayStation®5 Slim Disk - Pacote ASTRO BOT e Gran Turismo 7",
+        "store_name": "Amazon Brasil",
+        "previous_price": 4879.0,
+        "current_price": 5099.0,
+        "drop_amount": -220.0,
+        "drop_pct": -4.51,
+        "opportunity_score": 29,
+        "url": "https://www.amazon.com.br/dp/B0F8R9NDXC"
+      },
+      {
+        "offer_id": 72,
+        "title": "PlayStation 5 Slim Digital Edition Console + Blue Controller Bundle (KSA version)",
+        "store_name": "Amazon Brasil",
+        "previous_price": 5799.9,
+        "current_price": 5509.9,
+        "drop_amount": 290.0,
+        "drop_pct": 5.0,
+        "opportunity_score": 28,
+        "url": "https://www.amazon.com.br/dp/B0F63Q3BQS"
+      },
+      {
         "offer_id": 54,
         "title": "Console Playstation 5 1TB – Astro Bot E Gran Turismo 7",
         "store_name": "KaBuM!",
@@ -1001,7 +1078,7 @@
         "current_price": 5206.35,
         "drop_amount": -66.32,
         "drop_pct": -1.29,
-        "opportunity_score": 27,
+        "opportunity_score": 26,
         "url": "https://www.kabum.com.br/produto/953109"
       },
       {
@@ -1025,47 +1102,22 @@
         "drop_pct": 1.24,
         "opportunity_score": 25,
         "url": "https://www.kabum.com.br/produto/624529"
-      },
-      {
-        "offer_id": 72,
-        "title": "PlayStation 5 Slim Digital Edition Console + Blue Controller Bundle (KSA version)",
-        "store_name": "Amazon Brasil",
-        "previous_price": 5699.9,
-        "current_price": 5799.9,
-        "drop_amount": -100.0,
-        "drop_pct": -1.75,
-        "opportunity_score": 24,
-        "url": "https://www.amazon.com.br/dp/B0F63Q3BQS"
       }
     ],
     "disappeared_offers": [
       {
-        "id": 121,
-        "title": "Controle sem fio DualSense™ Cosmic Red",
+        "id": 70,
+        "title": "PlayStation 5 Disc Console (New 2023 Slim Model)- UAE Version, 1 Year Manufacturer Warranty",
         "store_name": "Amazon Brasil",
-        "last_final_price": 446.3,
-        "last_checked_at": "2026-11-10T11:41:30.440151-03:00"
+        "last_final_price": 4999.9,
+        "last_checked_at": "2026-11-10T14:01:30.216322-03:00"
       },
       {
-        "id": 123,
-        "title": "PlayStation®5 Slim Disk + 2 Jogos",
+        "id": 85,
+        "title": "PlayStation DualSense® Wireless Controller - Starlight Blue",
         "store_name": "Amazon Brasil",
-        "last_final_price": 5414.05,
-        "last_checked_at": "2026-11-10T10:41:34.573205-03:00"
-      },
-      {
-        "id": 122,
-        "title": "Stea PlayStation®5 console (slim)",
-        "store_name": "Amazon Brasil",
-        "last_final_price": 4749.9,
-        "last_checked_at": "2026-11-10T10:41:34.567211-03:00"
-      },
-      {
-        "id": 117,
-        "title": "Sony PlayStation 5 Slim Disc Edition DualSense Wireless Controller Double Pack PS5 - KSA Version White and Black Controllers",
-        "store_name": "Amazon Brasil",
-        "last_final_price": 5177.4,
-        "last_checked_at": "2026-11-10T10:41:34.518668-03:00"
+        "last_final_price": 425.0,
+        "last_checked_at": "2026-11-10T11:51:30.420125-03:00"
       },
       {
         "id": 82,
@@ -1108,13 +1160,6 @@
         "store_name": "Magazine Luiza",
         "last_final_price": 452.81,
         "last_checked_at": "2026-11-09T17:55:33.622856-03:00"
-      },
-      {
-        "id": 80,
-        "title": "PlayStation®5 Slim Edição Digital",
-        "store_name": "Amazon Brasil",
-        "last_final_price": 4499.0,
-        "last_checked_at": "2026-11-09T17:40:37.248977-03:00"
       },
       {
         "id": 87,
@@ -1187,25 +1232,11 @@
         "last_checked_at": "2026-11-05T06:25:26.414027-03:00"
       },
       {
-        "id": 77,
-        "title": "PlayStation DualSense® Wireless Controller - Starlight Blue",
-        "store_name": "Amazon Brasil",
-        "last_final_price": 425.0,
-        "last_checked_at": "2026-11-04T18:40:25.743137-03:00"
-      },
-      {
         "id": 14,
         "title": "Controle Sem Fio DualSense PS5 Sony PlayStation — Branco Oficial",
         "store_name": "Magazine Luiza",
         "last_final_price": 410.0,
         "last_checked_at": "2026-11-04T18:08:16.712315-03:00"
-      },
-      {
-        "id": 9,
-        "title": "PlayStation 5 Disc Console (Slim Model) - UAE Version Importado",
-        "store_name": "Amazon Brasil",
-        "last_final_price": 4999.9,
-        "last_checked_at": "2026-11-04T18:08:16.696331-03:00"
       },
       {
         "id": 6,
@@ -1229,18 +1260,18 @@
         "category": "PS5",
         "horizon_hours": 24,
         "horizon_label": "Próximas 24 horas",
-        "trend": "TENDÊNCIA DE QUEDA",
-        "estimated_price": 3215.16,
-        "current_price": 4135.06,
-        "moving_avg_7d": 4293.68,
-        "moving_avg_30d": 4293.68,
-        "slope_per_day": -1476.24,
-        "volatility_pct": 7.82,
-        "confidence_pct": 60.7,
+        "trend": "TENDÊNCIA DE AUMENTO",
+        "estimated_price": 7975.13,
+        "current_price": 4199.99,
+        "moving_avg_7d": 4295.34,
+        "moving_avg_30d": 4295.34,
+        "slope_per_day": 221466.39,
+        "volatility_pct": 8.01,
+        "confidence_pct": 60.3,
         "is_reliable": true,
-        "data_points_used": 1141,
+        "data_points_used": 1221,
         "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-        "explanation": "Baseado em 1141 coletas históricas, a média móvel de 7 dias (R$ 4293.68) comparada à média de 30 dias (R$ 4293.68) e inclinação linear de R$ -1476.24/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 7.8%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+        "explanation": "Baseado em 1221 coletas históricas, a média móvel de 7 dias (R$ 4295.34) comparada à média de 30 dias (R$ 4295.34) e inclinação linear de R$ +221466.39/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 8.0%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
         "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
       },
       {
@@ -1250,17 +1281,17 @@
         "horizon_hours": 24,
         "horizon_label": "Próximas 24 horas",
         "trend": "TENDÊNCIA DE AUMENTO",
-        "estimated_price": 4715.08,
-        "current_price": 4599.0,
-        "moving_avg_7d": 4788.82,
-        "moving_avg_30d": 4787.4,
-        "slope_per_day": 105.58,
-        "volatility_pct": 17.43,
+        "estimated_price": 17247.7,
+        "current_price": 3951.57,
+        "moving_avg_7d": 4782.66,
+        "moving_avg_30d": 4781.37,
+        "slope_per_day": 503394.46,
+        "volatility_pct": 19.35,
         "confidence_pct": 42.0,
         "is_reliable": true,
-        "data_points_used": 875,
+        "data_points_used": 960,
         "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-        "explanation": "Baseado em 875 coletas históricas, a média móvel de 7 dias (R$ 4788.82) comparada à média de 30 dias (R$ 4787.40) e inclinação linear de R$ +105.58/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 17.4%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+        "explanation": "Baseado em 960 coletas históricas, a média móvel de 7 dias (R$ 4782.66) comparada à média de 30 dias (R$ 4781.37) e inclinação linear de R$ +503394.46/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 19.4%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
         "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
       },
       {
@@ -1269,18 +1300,18 @@
         "category": "PS5",
         "horizon_hours": 24,
         "horizon_label": "Próximas 24 horas",
-        "trend": "TENDÊNCIA DE AUMENTO",
-        "estimated_price": 7125.85,
-        "current_price": 4464.06,
-        "moving_avg_7d": 5170.91,
-        "moving_avg_30d": 5170.29,
-        "slope_per_day": 40191.22,
-        "volatility_pct": 10.26,
+        "trend": "TENDÊNCIA DE QUEDA",
+        "estimated_price": 3144.15,
+        "current_price": 4249.0,
+        "moving_avg_7d": 5164.5,
+        "moving_avg_30d": 5163.94,
+        "slope_per_day": -6586017.13,
+        "volatility_pct": 10.27,
         "confidence_pct": 55.3,
         "is_reliable": true,
-        "data_points_used": 2415,
+        "data_points_used": 2681,
         "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-        "explanation": "Baseado em 2415 coletas históricas, a média móvel de 7 dias (R$ 5170.91) comparada à média de 30 dias (R$ 5170.29) e inclinação linear de R$ +40191.22/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 10.3%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+        "explanation": "Baseado em 2681 coletas históricas, a média móvel de 7 dias (R$ 5164.50) comparada à média de 30 dias (R$ 5163.94) e inclinação linear de R$ -6586017.13/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 10.3%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
         "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
       },
       {
@@ -1289,18 +1320,18 @@
         "category": "PS5",
         "horizon_hours": 24,
         "horizon_label": "Próximas 24 horas",
-        "trend": "ESTABILIDADE",
-        "estimated_price": 5782.38,
-        "current_price": 5799.9,
-        "moving_avg_7d": 5729.8,
-        "moving_avg_30d": 5729.8,
-        "slope_per_day": 0.0,
-        "volatility_pct": 0.8,
-        "confidence_pct": 76.4,
+        "trend": "TENDÊNCIA DE QUEDA",
+        "estimated_price": 3484.15,
+        "current_price": 4099.0,
+        "moving_avg_7d": 5726.36,
+        "moving_avg_30d": 5726.36,
+        "slope_per_day": -4427.23,
+        "volatility_pct": 2.14,
+        "confidence_pct": 73.4,
         "is_reliable": true,
-        "data_points_used": 194,
+        "data_points_used": 212,
         "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-        "explanation": "Baseado em 194 coletas históricas, a média móvel de 7 dias (R$ 5729.80) comparada à média de 30 dias (R$ 5729.80) e inclinação linear de R$ +0.00/dia indicam estabilidade para o horizonte de próximas 24 horas (volatilidade de 0.8%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+        "explanation": "Baseado em 212 coletas históricas, a média móvel de 7 dias (R$ 5726.36) comparada à média de 30 dias (R$ 5726.36) e inclinação linear de R$ -4427.23/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 2.1%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
         "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
       },
       {
@@ -1309,18 +1340,18 @@
         "category": "DUALSENSE",
         "horizon_hours": 24,
         "horizon_label": "Próximas 24 horas",
-        "trend": "TENDÊNCIA DE AUMENTO",
-        "estimated_price": 724.38,
-        "current_price": 412.3,
-        "moving_avg_7d": 441.72,
-        "moving_avg_30d": 441.69,
-        "slope_per_day": 923.22,
-        "volatility_pct": 13.22,
-        "confidence_pct": 48.7,
+        "trend": "TENDÊNCIA DE QUEDA",
+        "estimated_price": 288.15,
+        "current_price": 583.9,
+        "moving_avg_7d": 443.78,
+        "moving_avg_30d": 443.75,
+        "slope_per_day": -83878.08,
+        "volatility_pct": 13.5,
+        "confidence_pct": 48.0,
         "is_reliable": true,
-        "data_points_used": 1869,
+        "data_points_used": 2075,
         "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-        "explanation": "Baseado em 1869 coletas históricas, a média móvel de 7 dias (R$ 441.72) comparada à média de 30 dias (R$ 441.69) e inclinação linear de R$ +923.22/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 13.2%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+        "explanation": "Baseado em 2075 coletas históricas, a média móvel de 7 dias (R$ 443.78) comparada à média de 30 dias (R$ 443.75) e inclinação linear de R$ -83878.08/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 13.5%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
         "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
       },
       {
@@ -1329,18 +1360,18 @@
         "category": "DUALSENSE",
         "horizon_hours": 24,
         "horizon_label": "Próximas 24 horas",
-        "trend": "TENDÊNCIA DE QUEDA",
-        "estimated_price": 321.3,
-        "current_price": 417.05,
-        "moving_avg_7d": 468.04,
-        "moving_avg_30d": 467.98,
-        "slope_per_day": -1309.01,
-        "volatility_pct": 16.25,
-        "confidence_pct": 42.0,
+        "trend": "TENDÊNCIA DE AUMENTO",
+        "estimated_price": 724.38,
+        "current_price": 499.9,
+        "moving_avg_7d": 464.23,
+        "moving_avg_30d": 464.18,
+        "slope_per_day": 3555.65,
+        "volatility_pct": 16.13,
+        "confidence_pct": 42.2,
         "is_reliable": true,
-        "data_points_used": 1238,
+        "data_points_used": 1356,
         "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-        "explanation": "Baseado em 1238 coletas históricas, a média móvel de 7 dias (R$ 468.04) comparada à média de 30 dias (R$ 467.98) e inclinação linear de R$ -1309.01/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 16.2%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+        "explanation": "Baseado em 1356 coletas históricas, a média móvel de 7 dias (R$ 464.23) comparada à média de 30 dias (R$ 464.18) e inclinação linear de R$ +3555.65/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 16.1%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
         "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
       },
       {
@@ -1349,18 +1380,18 @@
         "category": "DUALSENSE",
         "horizon_hours": 24,
         "horizon_label": "Próximas 24 horas",
-        "trend": "TENDÊNCIA DE QUEDA",
-        "estimated_price": 305.23,
-        "current_price": 371.42,
-        "moving_avg_7d": 553.38,
-        "moving_avg_30d": 553.38,
-        "slope_per_day": -990300.09,
-        "volatility_pct": 35.84,
+        "trend": "TENDÊNCIA DE AUMENTO",
+        "estimated_price": 1288.92,
+        "current_price": 346.0,
+        "moving_avg_7d": 548.93,
+        "moving_avg_30d": 548.93,
+        "slope_per_day": 846965.31,
+        "volatility_pct": 35.4,
         "confidence_pct": 42.0,
         "is_reliable": true,
-        "data_points_used": 4544,
+        "data_points_used": 5035,
         "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-        "explanation": "Baseado em 4544 coletas históricas, a média móvel de 7 dias (R$ 553.38) comparada à média de 30 dias (R$ 553.38) e inclinação linear de R$ -990300.09/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 35.8%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+        "explanation": "Baseado em 5035 coletas históricas, a média móvel de 7 dias (R$ 548.93) comparada à média de 30 dias (R$ 548.93) e inclinação linear de R$ +846965.31/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 35.4%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
         "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
       },
       {
@@ -1369,61 +1400,61 @@
         "category": "DUALSENSE",
         "horizon_hours": 24,
         "horizon_label": "Próximas 24 horas",
-        "trend": "TENDÊNCIA DE QUEDA",
-        "estimated_price": 378.65,
-        "current_price": 557.07,
-        "moving_avg_7d": 552.09,
-        "moving_avg_30d": 552.09,
-        "slope_per_day": -1994.57,
-        "volatility_pct": 3.39,
-        "confidence_pct": 70.6,
+        "trend": "TENDÊNCIA DE AUMENTO",
+        "estimated_price": 982.16,
+        "current_price": 804.6,
+        "moving_avg_7d": 551.51,
+        "moving_avg_30d": 551.51,
+        "slope_per_day": 26478.45,
+        "volatility_pct": 4.2,
+        "confidence_pct": 68.8,
         "is_reliable": true,
-        "data_points_used": 1868,
+        "data_points_used": 2039,
         "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-        "explanation": "Baseado em 1868 coletas históricas, a média móvel de 7 dias (R$ 552.09) comparada à média de 30 dias (R$ 552.09) e inclinação linear de R$ -1994.57/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 3.4%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+        "explanation": "Baseado em 2039 coletas históricas, a média móvel de 7 dias (R$ 551.51) comparada à média de 30 dias (R$ 551.51) e inclinação linear de R$ +26478.45/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 4.2%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
         "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
       }
     ]
   },
   "weekly_report": {
     "period_label": "03/11/2026 a 10/11/2026",
-    "total_weekly_checks": 14128,
+    "total_weekly_checks": 15563,
     "store_comparison": [
       {
         "store_name": "KaBuM!",
-        "status": "ONLINE",
+        "status": "ERROR",
         "reputation_score": 96.0,
         "active_offers_count": 51,
         "min_ps5_price": 4277.07,
         "min_dualsense_price": 378.0,
-        "avg_opportunity_score": 45.1
+        "avg_opportunity_score": 44.3
       },
       {
         "store_name": "Magazine Luiza",
-        "status": "ONLINE",
+        "status": "ERROR",
         "reputation_score": 95.0,
-        "active_offers_count": 8,
+        "active_offers_count": 10,
         "min_ps5_price": 4323.06,
         "min_dualsense_price": 378.0,
-        "avg_opportunity_score": 53.1
+        "avg_opportunity_score": 50.6
       },
       {
         "store_name": "Amazon Brasil",
-        "status": "ONLINE",
+        "status": "ERROR",
         "reputation_score": 98.0,
-        "active_offers_count": 31,
+        "active_offers_count": 63,
         "min_ps5_price": 3881.0,
-        "min_dualsense_price": 374.2,
-        "avg_opportunity_score": 51.1
+        "min_dualsense_price": 406.6,
+        "avg_opportunity_score": 45.1
       },
       {
         "store_name": "Fast Shop",
-        "status": "ONLINE",
+        "status": "ERROR",
         "reputation_score": 96.0,
         "active_offers_count": 3,
         "min_ps5_price": 4135.06,
         "min_dualsense_price": 371.42,
-        "avg_opportunity_score": 60.7
+        "avg_opportunity_score": 59.3
       },
       {
         "store_name": "Casas Bahia",
@@ -1445,21 +1476,21 @@
       },
       {
         "store_name": "Carrefour",
-        "status": "UNAVAILABLE",
+        "status": "ERROR",
         "reputation_score": 92.0,
-        "active_offers_count": 0,
-        "min_ps5_price": null,
-        "min_dualsense_price": null,
-        "avg_opportunity_score": 0.0
+        "active_offers_count": 21,
+        "min_ps5_price": 4099.0,
+        "min_dualsense_price": 422.99,
+        "avg_opportunity_score": 37.1
       },
       {
         "store_name": "Promobit",
-        "status": "UNAVAILABLE",
+        "status": "ERROR",
         "reputation_score": 91.0,
-        "active_offers_count": 0,
-        "min_ps5_price": null,
-        "min_dualsense_price": null,
-        "avg_opportunity_score": 0.0
+        "active_offers_count": 7,
+        "min_ps5_price": 3742.16,
+        "min_dualsense_price": 329.77,
+        "avg_opportunity_score": 79.3
       },
       {
         "store_name": "Pelando",
@@ -1469,83 +1500,29 @@
         "min_ps5_price": null,
         "min_dualsense_price": null,
         "avg_opportunity_score": 0.0
+      },
+      {
+        "store_name": "Mercado Livre",
+        "status": "ERROR",
+        "reputation_score": 94.0,
+        "active_offers_count": 2,
+        "min_ps5_price": null,
+        "min_dualsense_price": 329.77,
+        "avg_opportunity_score": 97.0
+      },
+      {
+        "store_name": "Americanas",
+        "status": "ERROR",
+        "reputation_score": 90.0,
+        "active_offers_count": 7,
+        "min_ps5_price": 3999.99,
+        "min_dualsense_price": 499.99,
+        "avg_opportunity_score": 49.9
       }
     ],
     "promotions_history": [
       {
-        "recorded_at": "2026-11-10T11:51:11.825571-03:00",
-        "store_name": "KaBuM!",
-        "product_name": "Controle Sem Fio Sony DualSense PS5 — Branco (Standard)",
-        "final_price": 531.0,
-        "coupon_code": null,
-        "payment_condition": "PIX com desconto à vista"
-      },
-      {
-        "recorded_at": "2026-11-10T11:51:11.862822-03:00",
-        "store_name": "KaBuM!",
-        "product_name": "Controle Sem Fio Sony DualSense PS5 — Cores Oficiais (Starlight Blue / Camo / Cobalt / Cosmic Red)",
-        "final_price": 629.0,
-        "coupon_code": null,
-        "payment_condition": "PIX com desconto à vista"
-      },
-      {
-        "recorded_at": "2026-11-10T11:51:11.865819-03:00",
-        "store_name": "KaBuM!",
-        "product_name": "Controle Sem Fio Sony DualSense PS5 — Cores Oficiais (Starlight Blue / Camo / Cobalt / Cosmic Red)",
-        "final_price": 629.0,
-        "coupon_code": null,
-        "payment_condition": "PIX com desconto à vista"
-      },
-      {
-        "recorded_at": "2026-11-10T11:51:11.868816-03:00",
-        "store_name": "KaBuM!",
-        "product_name": "Controle Sem Fio Sony DualSense PS5 — Cores Oficiais (Starlight Blue / Camo / Cobalt / Cosmic Red)",
-        "final_price": 669.9,
-        "coupon_code": null,
-        "payment_condition": "PIX com desconto à vista"
-      },
-      {
-        "recorded_at": "2026-11-10T11:51:11.893923-03:00",
-        "store_name": "KaBuM!",
-        "product_name": "Sony PlayStation 5 Slim Digital Edition (Sem Leitor de Disco)",
-        "final_price": 4356.93,
-        "coupon_code": null,
-        "payment_condition": "PIX com desconto à vista"
-      },
-      {
-        "recorded_at": "2026-11-10T11:51:11.898918-03:00",
-        "store_name": "KaBuM!",
-        "product_name": "Sony PlayStation 5 Slim Digital + Bundle 2 Jogos (ASTRO BOT + Gran Turismo 7)",
-        "final_price": 4593.72,
-        "coupon_code": null,
-        "payment_condition": "PIX com desconto à vista"
-      },
-      {
-        "recorded_at": "2026-11-10T11:51:26.489736-03:00",
-        "store_name": "Magazine Luiza",
-        "product_name": "Controle Sem Fio Sony DualSense PS5 — Branco (Standard)",
-        "final_price": 378.0,
-        "coupon_code": null,
-        "payment_condition": "PIX / À vista com desconto"
-      },
-      {
-        "recorded_at": "2026-11-10T11:51:26.491734-03:00",
-        "store_name": "Magazine Luiza",
-        "product_name": "Controle Sem Fio Sony DualSense PS5 — Midnight Black (Preto)",
-        "final_price": 378.0,
-        "coupon_code": null,
-        "payment_condition": "PIX / À vista com desconto"
-      },
-      {
-        "recorded_at": "2026-11-10T11:51:26.496359-03:00",
-        "store_name": "Magazine Luiza",
-        "product_name": "Sony PlayStation 5 Slim Digital + Bundle 2 Jogos (ASTRO BOT + Gran Turismo 7)",
-        "final_price": 4323.06,
-        "coupon_code": null,
-        "payment_condition": "PIX / À vista com desconto"
-      },
-      {
-        "recorded_at": "2026-11-10T11:51:26.501355-03:00",
+        "recorded_at": "2026-11-10T14:04:51.664331-03:00",
         "store_name": "Magazine Luiza",
         "product_name": "Sony PlayStation 5 Slim 1TB Com Leitor de Disco Blu-Ray (Mídia Física)",
         "final_price": 5272.37,
@@ -1553,7 +1530,7 @@
         "payment_condition": "PIX / À vista com desconto"
       },
       {
-        "recorded_at": "2026-11-10T11:51:26.504352-03:00",
+        "recorded_at": "2026-11-10T14:04:51.666329-03:00",
         "store_name": "Magazine Luiza",
         "product_name": "Controle Sem Fio Sony DualSense PS5 — Midnight Black (Preto)",
         "final_price": 490.16,
@@ -1561,7 +1538,7 @@
         "payment_condition": "PIX / À vista com desconto"
       },
       {
-        "recorded_at": "2026-11-10T11:51:30.316448-03:00",
+        "recorded_at": "2026-11-10T14:04:56.956375-03:00",
         "store_name": "Amazon Brasil",
         "product_name": "Controle Sem Fio Sony DualSense PS5 — Branco (Standard)",
         "final_price": 412.3,
@@ -1569,15 +1546,15 @@
         "payment_condition": "PIX ou NuPay à vista"
       },
       {
-        "recorded_at": "2026-11-10T11:51:30.326438-03:00",
+        "recorded_at": "2026-11-10T14:04:56.966364-03:00",
         "store_name": "Amazon Brasil",
         "product_name": "Controle Sem Fio Sony DualSense PS5 — Branco (Standard)",
-        "final_price": 420.0,
+        "final_price": 417.57,
         "coupon_code": null,
-        "payment_condition": "PIX / À vista com desconto"
+        "payment_condition": "PIX ou NuPay à vista"
       },
       {
-        "recorded_at": "2026-11-10T11:51:30.344421-03:00",
+        "recorded_at": "2026-11-10T14:04:57.006982-03:00",
         "store_name": "Amazon Brasil",
         "product_name": "Sony PlayStation 5 Slim Digital Edition (Sem Leitor de Disco)",
         "final_price": 4119.0,
@@ -1585,15 +1562,7 @@
         "payment_condition": "PIX ou NuPay à vista"
       },
       {
-        "recorded_at": "2026-11-10T11:51:30.348049-03:00",
-        "store_name": "Amazon Brasil",
-        "product_name": "Sony PlayStation 5 Slim Digital Edition (Sem Leitor de Disco)",
-        "final_price": 4369.0,
-        "coupon_code": null,
-        "payment_condition": "PIX ou NuPay à vista"
-      },
-      {
-        "recorded_at": "2026-11-10T11:51:30.351046-03:00",
+        "recorded_at": "2026-11-10T14:04:57.018080-03:00",
         "store_name": "Amazon Brasil",
         "product_name": "Sony PlayStation 5 Slim 1TB Com Leitor de Disco Blu-Ray (Mídia Física)",
         "final_price": 4538.99,
@@ -1601,7 +1570,7 @@
         "payment_condition": "PIX ou NuPay à vista"
       },
       {
-        "recorded_at": "2026-11-10T11:51:30.360039-03:00",
+        "recorded_at": "2026-11-10T14:04:57.026072-03:00",
         "store_name": "Amazon Brasil",
         "product_name": "Sony PlayStation 5 Slim 1TB Com Leitor de Disco Blu-Ray (Mídia Física)",
         "final_price": 4599.9,
@@ -1609,7 +1578,23 @@
         "payment_condition": "PIX ou NuPay à vista"
       },
       {
-        "recorded_at": "2026-11-10T11:51:30.384122-03:00",
+        "recorded_at": "2026-11-10T14:04:57.042056-03:00",
+        "store_name": "Amazon Brasil",
+        "product_name": "Sony PlayStation 5 Slim 1TB Com Leitor de Disco Blu-Ray (Mídia Física)",
+        "final_price": 4749.9,
+        "coupon_code": null,
+        "payment_condition": "PIX ou NuPay à vista"
+      },
+      {
+        "recorded_at": "2026-11-10T14:04:57.065036-03:00",
+        "store_name": "Amazon Brasil",
+        "product_name": "Sony PlayStation 5 Slim Digital + 2 Controles DualSense",
+        "final_price": 5509.9,
+        "coupon_code": null,
+        "payment_condition": "PIX ou NuPay à vista"
+      },
+      {
+        "recorded_at": "2026-11-10T14:04:57.067034-03:00",
         "store_name": "Amazon Brasil",
         "product_name": "Sony PlayStation 5 Slim 1TB Com Leitor de Disco Blu-Ray (Mídia Física)",
         "final_price": 5548.9,
@@ -1617,15 +1602,7 @@
         "payment_condition": "PIX ou NuPay à vista"
       },
       {
-        "recorded_at": "2026-11-10T11:51:30.395201-03:00",
-        "store_name": "Amazon Brasil",
-        "product_name": "Controle Sem Fio Sony DualSense PS5 — Branco (Standard)",
-        "final_price": 374.2,
-        "coupon_code": null,
-        "payment_condition": "PIX ou NuPay à vista"
-      },
-      {
-        "recorded_at": "2026-11-10T11:51:30.412185-03:00",
+        "recorded_at": "2026-11-10T14:04:57.107995-03:00",
         "store_name": "Amazon Brasil",
         "product_name": "Controle Sem Fio Sony DualSense PS5 — Midnight Black (Preto)",
         "final_price": 415.15,
@@ -1633,7 +1610,15 @@
         "payment_condition": "PIX ou NuPay à vista"
       },
       {
-        "recorded_at": "2026-11-10T11:51:30.418128-03:00",
+        "recorded_at": "2026-11-10T14:04:57.110992-03:00",
+        "store_name": "Amazon Brasil",
+        "product_name": "Controle Sem Fio Sony DualSense PS5 — Midnight Black (Preto)",
+        "final_price": 415.15,
+        "coupon_code": null,
+        "payment_condition": "PIX ou NuPay à vista"
+      },
+      {
+        "recorded_at": "2026-11-10T14:04:57.137967-03:00",
         "store_name": "Amazon Brasil",
         "product_name": "Controle Sem Fio Sony DualSense PS5 — Cores Oficiais (Starlight Blue / Camo / Cobalt / Cosmic Red)",
         "final_price": 423.2,
@@ -1641,7 +1626,7 @@
         "payment_condition": "PIX ou NuPay à vista"
       },
       {
-        "recorded_at": "2026-11-10T11:51:30.441107-03:00",
+        "recorded_at": "2026-11-10T14:04:57.164258-03:00",
         "store_name": "Amazon Brasil",
         "product_name": "Controle Sem Fio Sony DualSense PS5 — Edição Especial Limitada",
         "final_price": 521.55,
@@ -1649,7 +1634,7 @@
         "payment_condition": "PIX ou NuPay à vista"
       },
       {
-        "recorded_at": "2026-11-10T11:51:30.444104-03:00",
+        "recorded_at": "2026-11-10T14:04:57.167255-03:00",
         "store_name": "Amazon Brasil",
         "product_name": "Controle Sem Fio Sony DualSense PS5 — Edição Especial Limitada",
         "final_price": 557.07,
@@ -1657,7 +1642,15 @@
         "payment_condition": "PIX ou NuPay à vista"
       },
       {
-        "recorded_at": "2026-11-10T11:51:31.377239-03:00",
+        "recorded_at": "2026-11-10T14:04:57.194230-03:00",
+        "store_name": "Amazon Brasil",
+        "product_name": "Sony PlayStation 5 Slim Digital Edition (Sem Leitor de Disco)",
+        "final_price": 4177.0,
+        "coupon_code": null,
+        "payment_condition": "PIX ou NuPay à vista"
+      },
+      {
+        "recorded_at": "2026-11-10T14:04:58.277579-03:00",
         "store_name": "Fast Shop",
         "product_name": "Controle Sem Fio Sony DualSense PS5 — Cores Oficiais (Starlight Blue / Camo / Cobalt / Cosmic Red)",
         "final_price": 371.42,
@@ -1665,53 +1658,109 @@
         "payment_condition": "PIX à vista na Fast Shop"
       },
       {
-        "recorded_at": "2026-11-10T11:51:31.381234-03:00",
+        "recorded_at": "2026-11-10T14:04:58.281575-03:00",
         "store_name": "Fast Shop",
         "product_name": "Sony PlayStation 5 Slim 1TB Com Leitor de Disco Blu-Ray (Mídia Física)",
         "final_price": 4464.06,
         "coupon_code": null,
         "payment_condition": "PIX à vista na Fast Shop"
+      },
+      {
+        "recorded_at": "2026-11-10T14:05:02.706676-03:00",
+        "store_name": "Promobit",
+        "product_name": "Controle Sem Fio Sony DualSense PS5 — Cores Oficiais (Starlight Blue / Camo / Cobalt / Cosmic Red)",
+        "final_price": 329.77,
+        "coupon_code": "MELIMAISPREDD",
+        "payment_condition": "PIX com cupom MELIMAISPREDD"
+      },
+      {
+        "recorded_at": "2026-11-10T14:05:02.708675-03:00",
+        "store_name": "Promobit",
+        "product_name": "Controle Sem Fio Sony DualSense PS5 — Cores Oficiais (Starlight Blue / Camo / Cobalt / Cosmic Red)",
+        "final_price": 346.0,
+        "coupon_code": "MELIMAISPREDD",
+        "payment_condition": "PIX com cupom MELIMAISPREDD"
+      },
+      {
+        "recorded_at": "2026-11-10T14:05:02.710672-03:00",
+        "store_name": "Promobit",
+        "product_name": "Sony PlayStation 5 Slim Digital + Bundle 2 Jogos (ASTRO BOT + Gran Turismo 7)",
+        "final_price": 3742.16,
+        "coupon_code": "AEMEGA18",
+        "payment_condition": "PIX com cupom AEMEGA18"
+      },
+      {
+        "recorded_at": "2026-11-10T14:05:02.712670-03:00",
+        "store_name": "Promobit",
+        "product_name": "Sony PlayStation 5 Slim Digital + Bundle 2 Jogos (ASTRO BOT + Gran Turismo 7)",
+        "final_price": 3747.53,
+        "coupon_code": "AEMEGA18",
+        "payment_condition": "PIX com cupom AEMEGA18"
+      },
+      {
+        "recorded_at": "2026-11-10T14:05:02.714668-03:00",
+        "store_name": "Promobit",
+        "product_name": "Sony PlayStation 5 Slim Digital + Bundle 2 Jogos (ASTRO BOT + Gran Turismo 7)",
+        "final_price": 3951.57,
+        "coupon_code": "VEMCOMPLAY",
+        "payment_condition": "PIX com cupom VEMCOMPLAY"
+      },
+      {
+        "recorded_at": "2026-11-10T14:05:02.716667-03:00",
+        "store_name": "Promobit",
+        "product_name": "Sony PlayStation 5 Slim 1TB Com Leitor de Disco Blu-Ray (Mídia Física)",
+        "final_price": 4249.0,
+        "coupon_code": "AEMEGA18",
+        "payment_condition": "PIX com cupom AEMEGA18"
+      },
+      {
+        "recorded_at": "2026-11-10T14:05:02.718664-03:00",
+        "store_name": "Promobit",
+        "product_name": "Sony PlayStation 5 Slim 1TB Com Leitor de Disco Blu-Ray (Mídia Física)",
+        "final_price": 4249.0,
+        "coupon_code": "AEMEGA18",
+        "payment_condition": "PIX com cupom AEMEGA18"
       }
     ],
     "top_hours": [
       {
-        "hour": 10,
-        "hour_label": "10:00",
-        "checks_count": 1678,
-        "offers_count": 1044,
-        "drops_count": 397,
-        "opportunities_count": 762,
-        "avg_discount_pct": 13.63,
+        "hour": 13,
+        "hour_label": "13:00",
+        "checks_count": 1433,
+        "offers_count": 894,
+        "drops_count": 327,
+        "opportunities_count": 643,
+        "avg_discount_pct": 13.74,
         "max_drop_pct": 43.88,
-        "opportunity_rate_pct": 45.41,
-        "drop_rate_pct": 23.66,
-        "quality_efficiency_index": 129.42
+        "opportunity_rate_pct": 44.87,
+        "drop_rate_pct": 22.82,
+        "quality_efficiency_index": 129.48
       },
       {
         "hour": 11,
         "hour_label": "11:00",
-        "checks_count": 1484,
-        "offers_count": 909,
-        "drops_count": 314,
-        "opportunities_count": 655,
-        "avg_discount_pct": 13.68,
+        "checks_count": 1535,
+        "offers_count": 939,
+        "drops_count": 330,
+        "opportunities_count": 672,
+        "avg_discount_pct": 13.53,
         "max_drop_pct": 43.88,
-        "opportunity_rate_pct": 44.14,
-        "drop_rate_pct": 21.16,
-        "quality_efficiency_index": 128.93
+        "opportunity_rate_pct": 43.78,
+        "drop_rate_pct": 21.5,
+        "quality_efficiency_index": 128.3
       },
       {
-        "hour": 15,
-        "hour_label": "15:00",
-        "checks_count": 838,
-        "offers_count": 488,
-        "drops_count": 131,
-        "opportunities_count": 349,
-        "avg_discount_pct": 13.32,
+        "hour": 12,
+        "hour_label": "12:00",
+        "checks_count": 1357,
+        "offers_count": 845,
+        "drops_count": 305,
+        "opportunities_count": 600,
+        "avg_discount_pct": 13.43,
         "max_drop_pct": 43.88,
-        "opportunity_rate_pct": 41.65,
-        "drop_rate_pct": 15.63,
-        "quality_efficiency_index": 126.61
+        "opportunity_rate_pct": 44.22,
+        "drop_rate_pct": 22.48,
+        "quality_efficiency_index": 128.22
       }
     ],
     "by_weekday": [
@@ -1719,48 +1768,48 @@
         "weekday": "Segunda-feira",
         "checks_count": 2535,
         "drops_count": 715,
-        "opportunities_count": 1130,
-        "avg_discount_pct": 8.04,
-        "opportunity_rate_pct": 44.58
+        "opportunities_count": 1048,
+        "avg_discount_pct": 7.9,
+        "opportunity_rate_pct": 41.34
       },
       {
         "weekday": "Terça-feira",
-        "checks_count": 1682,
-        "drops_count": 570,
-        "opportunities_count": 832,
-        "avg_discount_pct": 9.42,
-        "opportunity_rate_pct": 49.46
+        "checks_count": 3117,
+        "drops_count": 1042,
+        "opportunities_count": 1539,
+        "avg_discount_pct": 9.56,
+        "opportunity_rate_pct": 49.37
       },
       {
         "weekday": "Quarta-feira",
         "checks_count": 1741,
         "drops_count": 27,
-        "opportunities_count": 650,
-        "avg_discount_pct": 6.96,
-        "opportunity_rate_pct": 37.33
+        "opportunities_count": 653,
+        "avg_discount_pct": 6.81,
+        "opportunity_rate_pct": 37.51
       },
       {
         "weekday": "Quinta-feira",
         "checks_count": 5380,
         "drops_count": 214,
         "opportunities_count": 2062,
-        "avg_discount_pct": 7.15,
+        "avg_discount_pct": 7.0,
         "opportunity_rate_pct": 38.33
       },
       {
         "weekday": "Sexta-feira",
         "checks_count": 2803,
         "drops_count": 351,
-        "opportunities_count": 1153,
-        "avg_discount_pct": 7.94,
-        "opportunity_rate_pct": 41.13
+        "opportunities_count": 1154,
+        "avg_discount_pct": 7.8,
+        "opportunity_rate_pct": 41.17
       },
       {
         "weekday": "Sábado",
         "checks_count": 1,
         "drops_count": 0,
         "opportunities_count": 1,
-        "avg_discount_pct": 31.51,
+        "avg_discount_pct": 30.95,
         "opportunity_rate_pct": 100.0
       },
       {
@@ -1768,32 +1817,32 @@
         "checks_count": 2,
         "drops_count": 0,
         "opportunities_count": 2,
-        "avg_discount_pct": 16.42,
+        "avg_discount_pct": 16.32,
         "opportunity_rate_pct": 100.0
       }
     ],
     "purchase_recommendations": [
       {
         "category": "PS5 Slim Digital",
-        "best_offer_title": "Sony PlayStation 5 Slim Digital Console 825GB - International Version",
-        "store_name": "Amazon Brasil",
-        "final_price": 3881.0,
-        "opportunity_score": 69,
-        "classification": "Boa oportunidade",
-        "verdict": "MONITORAR E AGUARDAR — Há margem para queda adicional ou cupom na Black Friday.",
-        "reasoning": "Esta oferta está 15.3% abaixo da média dos últimos 30 dias (R$ 4584.65) e está distante (15.9% acima) do menor preço histórico (R$ 3349.00). Custa 20.2% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Classificação: Boa oportunidade (69/100).",
-        "url": "https://www.amazon.com.br/dp/B0FTRYCKT1"
+        "best_offer_title": "Console Playstation 5 - Bundle AStro Bot + Gran Turismo - Digital",
+        "store_name": "Promobit",
+        "final_price": 3742.16,
+        "opportunity_score": 85,
+        "classification": "Excelente oportunidade",
+        "verdict": "COMPRAR AGORA — Preço e índice de oportunidade altamente favoráveis.",
+        "reasoning": "Esta oferta está 18.5% abaixo da média dos últimos 30 dias (R$ 4589.71) e está 11.7% acima do mínimo histórico (R$ 3349.00). Apresentou queda rápida de 11.9% em relação à consulta anterior. Custa 20.2% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Cupom ativo (AEMEGA18) reduzindo o preço final. Classificação: Excelente oportunidade (85/100).",
+        "url": "https://www.aliexpress.com/item/1005010115972190.html"
       },
       {
         "category": "Controle DualSense",
-        "best_offer_title": "Controle Sem Fio DualSense PS5 Starlight Blue",
-        "store_name": "Fast Shop",
-        "final_price": 371.42,
-        "opportunity_score": 74,
-        "classification": "Boa oportunidade",
-        "verdict": "AGUARDAR — Monitorar quedas relâmpago ou cupons.",
-        "reasoning": "Esta oferta está 23.9% abaixo da média dos últimos 30 dias (R$ 487.94) e está 9.6% acima do mínimo histórico (R$ 339.00). Custa 24.2% menos que a média das outras lojas monitoradas. Oferta comercializada via marketplace. Frete grátis incluso no valor final. Classificação: Boa oportunidade (74/100).",
-        "url": "https://secure3.fastshop.com.br/controle-sem-fio-dualsense-ps5-starlight-blue-185913/p?idsku=196244"
+        "best_offer_title": "Dualsense Sem Fio PS5 - Starlight Blue",
+        "store_name": "Mercado Livre",
+        "final_price": 329.77,
+        "opportunity_score": 100,
+        "classification": "Oportunidade excepcional",
+        "verdict": "COMPRAR AGORA — Excelente relação preço/histórico para DualSense oficial.",
+        "reasoning": "Esta oferta está 32.3% abaixo da média dos últimos 30 dias (R$ 486.77) e atingiu ou superou o menor preço histórico registrado (R$ 329.77). Apresentou queda rápida de 40.8% em relação à consulta anterior. Custa 31.2% menos que a média das outras lojas monitoradas. Venda direta por loja oficial de alta reputação e com garantia nacional. Frete grátis incluso no valor final. Cupom ativo (MELIMAISPREDD) reduzindo o preço final. Atingiu sua meta de Preço Excelente (R$ 356.15)! Classificação: Oportunidade excepcional (100/100).",
+        "url": "https://meli.la/1QjvNka"
       }
     ]
   }

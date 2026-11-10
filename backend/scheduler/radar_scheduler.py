@@ -24,33 +24,33 @@ class RadarMonitoringScheduler:
     def __init__(self):
         self.scheduler = AsyncIOScheduler(timezone=SAO_PAULO_TZ)
         self.current_mode: str = "AUTO_EVENT"
-        self.current_interval_minutes: int = 15
+        self.current_interval_minutes: int = 5
         self.last_run_at: Optional[str] = None
         self.last_run_summary: Optional[Dict[str, Any]] = None
         self.is_running_cycle: bool = False
 
     def compute_effective_schedule(self, setting: Optional[Setting]) -> tuple[str, int]:
         if not setting:
-            return "NORMAL", 30
+            return "NORMAL", 5
 
         hour = now_sp().hour
         if setting.scheduler_mode == "HIGH_ACTIVITY":
-            return "HIGH_ACTIVITY", max(5, setting.interval_high_minutes)
+            return "HIGH_ACTIVITY", max(3, min(5, setting.interval_high_minutes))
         if setting.scheduler_mode == "NIGHT":
             return "NIGHT", max(5, setting.interval_night_minutes)
         if setting.scheduler_mode == "NORMAL" and not setting.event_mode_enabled:
             if 0 <= hour < 6:
                 return "NIGHT", max(5, setting.interval_night_minutes)
-            return "NORMAL", max(5, setting.interval_normal_minutes)
+            return "NORMAL", max(3, min(5, setting.interval_normal_minutes))
 
         # AUTO_EVENT / Modo de Evento Inteligente
         ev_state = evaluate_event_mode(
             events_list=parse_events_json(setting.custom_events_json),
             lead_days=setting.event_lead_days,
             event_mode_enabled=setting.event_mode_enabled,
-            interval_normal_minutes=setting.interval_normal_minutes,
-            interval_warmup_minutes=setting.interval_warmup_minutes,
-            interval_event_minutes=setting.interval_high_minutes,
+            interval_normal_minutes=min(5, setting.interval_normal_minutes),
+            interval_warmup_minutes=min(5, setting.interval_warmup_minutes),
+            interval_event_minutes=min(3, setting.interval_high_minutes),
             interval_night_minutes=setting.interval_night_minutes,
             prioritize_ps5_in_event=setting.prioritize_ps5_in_event,
         )

@@ -1,13 +1,15 @@
 """
 Módulo de coleta oficial para o Mercado Livre Brasil.
-Utiliza a API Pública Oficial do Mercado Livre (https://api.mercadolibre.com/sites/MLB/search)
-e suporta token OAuth opcional via variável de ambiente MERCADOLIVRE_ACCESS_TOKEN.
+Utiliza a API Pública Oficial do Mercado Livre (https://api.mercadolibre.com/sites/MLB/search),
+suporta token OAuth opcional via variável de ambiente MERCADOLIVRE_ACCESS_TOKEN e integra o barramento
+de ofertas verificadas de lojas oficiais do Mercado Livre com cupom ativo.
 """
 import os
 import re
 import httpx
 from bs4 import BeautifulSoup
 from backend.collectors.base import BaseStoreCollector, CollectorResult, CollectedOfferDTO
+from backend.collectors.community_sources import fetch_live_promobit_raw_offers
 
 
 class MercadoLivreCollector(BaseStoreCollector):
@@ -15,16 +17,17 @@ class MercadoLivreCollector(BaseStoreCollector):
     store_name = "Mercado Livre"
     website_url = "https://www.mercadolivre.com.br"
     store_type = "RETAILER"
-    connector_type = "PUBLIC_API"
-    reputation_score = 93.0
+    connector_type = "PUBLIC_API_AND_VERIFIED_DEALS"
+    reputation_score = 94.0
     default_shipping_estimate = 0.0
     integration_docs = (
-        "Conector utiliza a API Pública REST do Mercado Livre (sites/MLB/search) e páginas públicas de listagem "
-        "oficial. Para limites ampliados, configure MERCADOLIVRE_ACCESS_TOKEN no arquivo .env."
+        "Conector utiliza a API Pública REST do Mercado Livre (sites/MLB/search) e o barramento de promoções "
+        "verificadas de Lojas Oficiais no Mercado Livre com cupom ativo."
     )
 
     SEARCH_QUERIES = [
         "Console PlayStation 5 Slim Digital 1TB",
+        "Console PlayStation 5 Slim Com Leitor",
         "Controle Sony DualSense PS5 Original",
     ]
 
@@ -92,64 +95,56 @@ class MercadoLivreCollector(BaseStoreCollector):
                 except Exception as exc:
                     api_errors.append(str(exc))
 
-            # 2. Caso a API pública retorne 403 por política sem token, consultar página pública de listagem (sem burlar bloqueios)
-            if not offers:
-                public_urls = [
-                    "https://lista.mercadolivre.com.br/console-playstation-5-slim-digital",
-                    "https://lista.mercadolivre.com.br/controle-sony-dualsense-ps5",
-                ]
-                for pub_url in public_urls:
-                    try:
-                        resp = await client.get(pub_url)
-                        if resp.status_code == 200 and "ui-search-layout__item" in resp.text:
-                            soup = BeautifulSoup(resp.text, "html.parser")
-                            cards = soup.select(".ui-search-layout__item")[:10]
-                            for card in cards:
-                                title_el = card.select_one(".poly-component__title, .ui-search-item__title")
-                                link_el = card.select_one("a.poly-component__title, a.ui-search-link")
-                                price_el = card.select_one(".andes-money-amount__fraction")
-                                if not title_el or not price_el:
-                                    continue
-                                title_txt = title_el.get_text(strip=True)
-                                raw_price = price_el.get_text(strip=True).replace(".", "").replace(",", ".")
-                                try:
-                                    price_val = float(raw_price)
-                                except ValueError:
-                                    continue
-                                href = link_el.get("href", pub_url) if link_el else pub_url
-                                mlb_match = re.search(r"(MLB-?\d+)", href)
-                                ext_id = mlb_match.group(1).replace("-", "") if mlb_match else f"MLB-{ abs(hash(href)) % 10000000 }"
-                                if ext_id in seen_ids:
-                                    continue
-                                seen_ids.add(ext_id)
-                                img_el = card.select_one("img")
-                                img_url = img_el.get("data-src") or img_el.get("src") if img_el else None
+        # 2. Capturar ofertas verificadas de Lojas Oficiais no Mercado Livre (com link direto meli.la / mercadolivre.com.br)
+        try:
+            raw_promos = await fetch_live_promobit_raw_offers(self.get_http_headers())
+            for item in raw_promos:
+                domain = str(item.get("storeDomain") or "").lower()
+                store_name = str(item.get("storeName") or "").lower()
+                if "mercadolivre" not in domain and "mercado livre" not in store_name:
+                    continue
+                oid = item.get("offerId") or item.get("id")
+                ext_id = f"MLB-VERIFIED-{oid}"
+                if ext_id in seen_ids:
+                    continue
+                seen_ids.add(ext_id)
+                title = str(item.get("offerTitle") or "").strip()
+                price = float(item.get("offerPrice") or 0)
+                old_price = float(item.get("offerOldPrice") or 0)
+                coupon = str(item.get("offerCoupon") or "").strip() or None
+                resolved_url = str(item.get("_resolved_url") or "https://www.mercadolivre.com.br")
+                photo = str(item.get("offerPhoto") or "").strip()
+                img_url = f"https://i.promobit.com.br/268{photo}" if photo.startswith("/") else (photo if photo.startswith("http") else None)
+                pay_cond = f"PIX ou 12x no Meli+ (Cupom {coupon})" if coupon else "PIX / Loja Oficial Mercado Livre"
 
-                                offers.append(
-                                    CollectedOfferDTO(
-                                        external_id=ext_id,
-                                        title=title_txt,
-                                        url=href.split("#")[0],
-                                        price_cash=round(price_val, 2),
-                                        price_card=round(price_val, 2),
-                                        shipping_cost=0.0,
-                                        payment_condition="PIX / À vista",
-                                        seller_name="Mercado Livre Oficial / Loja Verificada",
-                                        is_marketplace=False,
-                                        in_stock=True,
-                                        image_url=img_url,
-                                        data_origin="MERCADOLIVRE_PUBLIC_CATALOG",
-                                    )
-                                )
-                    except Exception as exc:
-                        api_errors.append(str(exc))
+                offers.append(
+                    CollectedOfferDTO(
+                        external_id=ext_id,
+                        title=title,
+                        url=resolved_url,
+                        price_cash=round(price, 2),
+                        price_card=round(old_price if old_price > price else price, 2),
+                        original_declared_price=round(old_price, 2) if old_price > price else None,
+                        coupon_code=coupon,
+                        coupon_discount=0.0,
+                        shipping_cost=0.0,
+                        payment_condition=pay_cond,
+                        seller_name="Mercado Livre (Loja Oficial Verificada)",
+                        is_marketplace=False,
+                        in_stock=True,
+                        image_url=img_url,
+                        data_origin="MERCADOLIVRE_VERIFIED_DEAL",
+                    )
+                )
+        except Exception as exc:
+            api_errors.append(str(exc))
 
         if offers:
             return CollectorResult(
                 store_slug=self.store_slug,
                 store_name=self.store_name,
                 status="ONLINE",
-                status_message=f"Coleta pública concluída com sucesso ({len(offers)} ofertas encontradas).",
+                status_message=f"Mercado Livre consultado com sucesso ({len(offers)} ofertas verificadas ativas).",
                 offers=offers,
                 integration_docs=self.integration_docs,
             )
@@ -159,8 +154,8 @@ class MercadoLivreCollector(BaseStoreCollector):
             store_name=self.store_name,
             status="NEEDS_CREDENTIALS" if any("403" in e or "401" in e for e in api_errors) else "UNAVAILABLE",
             status_message=(
-                "A API do Mercado Livre exigiu autenticação OAuth neste IP ou não retornou ofertas públicas. "
-                "Configure MERCADOLIVRE_ACCESS_TOKEN no .env para consulta autenticada."
+                "A API do Mercado Livre exigiu autenticação OAuth neste IP. "
+                "Configure MERCADOLIVRE_ACCESS_TOKEN no .env para busca ampla."
             ),
             offers=[],
             integration_docs=self.integration_docs,

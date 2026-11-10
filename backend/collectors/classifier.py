@@ -85,6 +85,14 @@ ACCESSORY_OR_USED_EXCLUSION_KEYWORDS = [
     "gift card",
     "kit controle dual sense",
     "kit controle dualsense",
+    "planos tim",
+    "ultracombo",
+    "ssd interno",
+    "unidade interna",
+    "nvme",
+    "wd_black",
+    "hd externo",
+    "base carregadora",
 ]
 
 PARALLEL_CONTROLLER_KEYWORDS = [
@@ -374,7 +382,7 @@ def classify_offer_title(title: str, price: float = 0.0, seller_name: str = "") 
                 rejection_or_alt_reason="PS5 Pro 2TB — separado em alternativas para focar no menor preço do PS5 Slim.",
             )
 
-        # 3.2 Separar PS5 Fat (CFI-10xx / CFI-11xx / CFI-12xx ou explícito "ps5 fat")
+        # 3.2 Incluir PS5 Standard/Fat (CFI-10xx / CFI-11xx / CFI-12xx) como prioritário também (apenas PS5 Pro fica de fora)
         is_slim_explicit = "slim" in t_lower or (revision is not None and (revision.startswith("CFI-20") or revision.startswith("CFI-21")))
         is_fat = (
             "ps5 fat" in t_lower
@@ -385,15 +393,14 @@ def classify_offer_title(title: str, price: float = 0.0, seller_name: str = "") 
                 is_relevant=True,
                 category="PS5",
                 product_slug="ps5-fat-alternative",
-                subcategory="ALTERNATIVE",
-                edition_type="PS5 Fat (Modelo Antigo)",
-                is_priority=False,
+                subcategory="DISC_EDITION",
+                edition_type="PS5 Standard / Edição Padrão",
+                is_priority=True,
                 is_official=True,
                 color="Branco",
                 model_revision=revision or "CFI-1214",
                 is_national=is_national,
                 has_official_warranty=has_warranty,
-                rejection_or_alt_reason="PS5 Fat (geração anterior) — listado em Oportunidades Alternativas.",
             )
 
         # 3.3 Identificar se é Edição Digital (Sem Leitor) ou Com Leitor de Disco (Mídia Física)
@@ -435,7 +442,7 @@ def classify_offer_title(title: str, price: float = 0.0, seller_name: str = "") 
 
         has_extra_controller = any(
             ck in t_lower
-            for ck in ["2 controles", "dois controles", "controle adicional", "controle extra", "dual sense extra", "+ controle", "blue controller bundle"]
+            for ck in ["2 controles", "dois controles", "controle adicional", "controle extra", "dual sense extra", "blue controller bundle"]
         )
         has_bundle_games = any(
             gk in t_lower

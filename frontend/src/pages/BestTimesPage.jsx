@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Clock, Award, TrendingDown, Info } from 'lucide-react';
 import { radarApi } from '../services/api';
-import { BestTimesBarChart } from '../charts/RadarCharts';
 
 export default function BestTimesPage() {
   const [category, setCategory] = useState('');
@@ -120,63 +119,6 @@ export default function BestTimesPage() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
-
-      {/* Gráfico 1: Quantidade de Quedas e Ofertas por Hora do Dia */}
-      <div className="bg-[#0d141a] border border-[#1c2d38] rounded-xl p-5 space-y-3">
-        <h3 className="font-bold text-white text-sm">
-          Distribuição por Hora do Dia (00h às 23h): Quedas de Preço vs Ofertas com Desconto
-        </h3>
-        <BestTimesBarChart
-          data={(data?.by_hour || []).filter((x) => x.checks_count > 0 || x.hour % 2 === 0)}
-          xKey="hour_label"
-          bar1Key="drops_count"
-          bar1Name="Quedas Reais de Preço"
-          bar2Key="offers_count"
-          bar2Name="Ofertas Promocionais"
-        />
-      </div>
-
-      {/* Gráfico 2: Média de Desconto (%) e Taxa de Oportunidades por Hora */}
-      <div className="bg-[#0d141a] border border-[#1c2d38] rounded-xl p-5 space-y-3">
-        <h3 className="font-bold text-white text-sm">
-          Qualidade por Horário: Média de Desconto Real (%) vs Maior Queda (%)
-        </h3>
-        <BestTimesBarChart
-          data={(data?.by_hour || []).filter((x) => x.checks_count > 0)}
-          xKey="hour_label"
-          bar1Key="avg_discount_pct"
-          bar1Name="Média de Desconto (%)"
-          bar2Key="max_drop_pct"
-          bar2Name="Maior Queda Registrada (%)"
-        />
-      </div>
-
-      {/* Gráfico 3 & 4: Dia da Semana e Semana da Black Friday */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-[#0d141a] border border-[#1c2d38] rounded-xl p-5 space-y-3">
-          <h3 className="font-bold text-white text-sm">Comportamento por Dia da Semana</h3>
-          <BestTimesBarChart
-            data={data?.by_weekday || []}
-            xKey="weekday"
-            bar1Key="opportunities_count"
-            bar1Name="Oportunidades Qualificadas"
-            bar2Key="drops_count"
-            bar2Name="Quedas de Preço"
-          />
-        </div>
-
-        <div className="bg-[#0d141a] border border-[#1c2d38] rounded-xl p-5 space-y-3">
-          <h3 className="font-bold text-white text-sm">Comportamento por Semana de Novembro (Black Friday)</h3>
-          <BestTimesBarChart
-            data={data?.by_bf_week || []}
-            xKey="label"
-            bar1Key="opportunities_count"
-            bar1Name="Oportunidades"
-            bar2Key="avg_discount_pct"
-            bar2Name="Desconto Médio (%)"
-          />
         </div>
       </div>
     </div>

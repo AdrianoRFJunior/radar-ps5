@@ -6,6 +6,7 @@ REGRA DE OURO:
 3. Na Magazine Luiza, Amazon Brasil e Fast Shop, além da busca direta, utiliza o barramento público de comparação verificada (Zoom) resolvendo o redirecionamento 302 até a URL direta do produto na loja oficial (`magazineluiza.com.br/.../p/...`, `amazon.com.br/dp/...`, `fastshop.com.br/.../p`).
 4. Nunca inventa preços nem gera links quebrados; todas as ofertas ativas possuem link direto funcional verificado.
 """
+import asyncio
 import json
 import os
 import re
@@ -24,6 +25,9 @@ ZOOM_PRODUCT_HUB_URLS = [
     "https://www.zoom.com.br/console-de-video-game/playstation-5-slim-1tb-bundle-astro-bot-gran-turismo-7",
     "https://www.zoom.com.br/console-de-video-game/pre-venda-console-playstation-5-slim-1-tb-sony-1214a-4k",
     "https://www.zoom.com.br/console-de-video-game/console-playstation-5-slim-1tb-sony-4k-hdr",
+    "https://www.zoom.com.br/console-de-video-game/console-playstation-5-edicao-digital-sony-4k",
+    "https://www.zoom.com.br/console-de-video-game/playstation-5-slim-edicao-digital-1tb-bundle-astro-bot-gran-turismo-7",
+    "https://www.zoom.com.br/console-de-video-game/console-playstation-5-slim-825gb-sony-4k",
     "https://www.zoom.com.br/controle-joystick/controle-ps5-sem-fio-dualsense-sony",
 ]
 
@@ -48,6 +52,7 @@ async def _get_zoom_verified_offers_for_store(store_slug: str, headers: dict[str
         "casas-bahia": [],
         "ponto": [],
         "carrefour": [],
+        "americanas": [],
     }
     seen_oids: set[str] = set()
 
@@ -192,6 +197,10 @@ async def _get_zoom_verified_offers_for_store(store_slug: str, headers: dict[str
                         target_slug = "carrefour"
                         clean_url = loc.split("?")[0]
                         seller_label = "Carrefour (Venda Direta Oficial)"
+                    elif "americanas.com.br" in loc_lower:
+                        target_slug = "americanas"
+                        clean_url = loc.split("?")[0]
+                        seller_label = "Americanas (Loja Oficial Verificada)"
 
                     if not target_slug:
                         continue
@@ -553,13 +562,21 @@ class AmazonBrasilCollector(BaseStoreCollector):
         offers: list[CollectedOfferDTO] = []
         urls = [
             "https://www.amazon.com.br/s?k=PlayStation+5+Slim",
+            "https://www.amazon.com.br/s?k=PS5+Digital+1TB",
             "https://www.amazon.com.br/s?k=Controle+DualSense+PlayStation+5",
         ]
         blocked_by_captcha = False
         async with httpx.AsyncClient(timeout=self.timeout, follow_redirects=True, headers=self.get_http_headers()) as client:
+            try:
+                await client.get("https://www.amazon.com.br/")
+            except Exception:
+                pass
             for url in urls:
                 try:
                     resp = await client.get(url)
+                    if resp.status_code in (403, 503):
+                        await asyncio.sleep(0.8)
+                        resp = await client.get(url)
                     if (
                         "validateCaptcha" in resp.text
                         or "api-services-support@amazon.com" in resp.text
@@ -569,7 +586,7 @@ class AmazonBrasilCollector(BaseStoreCollector):
                         blocked_by_captcha = True
                         continue
                     soup = BeautifulSoup(resp.text, "html.parser")
-                    for item in soup.select("div[data-component-type='s-search-result']")[:24]:
+                    for item in soup.select("div[data-component-type='s-search-result']"):
                         asin = item.get("data-asin")
                         title_el = item.select_one("h2 span")
                         whole_el = item.select_one(".a-price-whole")
@@ -811,20 +828,57 @@ class CarrefourCollector(BaseStoreCollector):
     connector_type = "VTEX_PUBLIC_API"
     reputation_score = 92.0
     default_shipping_estimate = 0.0
-    integration_docs = "Verifica produtos reais com filtro estrito de título e link direto (/p)."
+    integration_docs = "Verifica produtos reais com filtro estrito de título e link direto (/produto/)."
 
     async def collect(self) -> CollectorResult:
         offers: list[CollectedOfferDTO] = []
+        seen_urls: set[str] = set()
         async with httpx.AsyncClient(timeout=self.timeout, follow_redirects=True, headers=self.get_http_headers()) as client:
-            for term in ["playstation-5-slim-digital", "controle-dualsense"]:
+            for term in ["playstation%205%20slim", "dualsense"]:
                 try:
                     resp = await client.get(f"https://www.carrefour.com.br/busca/{term}")
                     if resp.status_code == 200:
-                        offers.extend(
-                            _extract_verified_jsonld_offers(
-                                resp.text, "CRF", self.website_url, "Carrefour", "CARREFOUR_LIVE_JSONLD"
+                        soup = BeautifulSoup(resp.text, "html.parser")
+                        for a in soup.select("a[href^='/produto/']"):
+                            href = a.get("href", "").strip()
+                            if not href:
+                                continue
+                            full_url = f"https://www.carrefour.com.br{href.split('?')[0]}"
+                            if full_url in seen_urls:
+                                continue
+                            txt = " | ".join(a.stripped_strings)
+                            parts = [p.strip() for p in txt.split("|") if len(p.strip()) > 12 and "R$" not in p and "Desconto" not in p]
+                            if not parts:
+                                continue
+                            title = parts[0]
+                            prices = re.findall(r"R\$\s*([\d\.]+,\d{2})", txt)
+                            if not prices:
+                                continue
+                            vals = [float(p.replace(".", "").replace(",", ".")) for p in prices]
+                            price_pix = min(vals)
+                            price_card = max(vals) if len(vals) > 1 else price_pix
+                            if price_pix < 200:
+                                continue
+                            seen_urls.add(full_url)
+                            m_sku = re.search(r"-(\d+)$", full_url)
+                            sku = m_sku.group(1) if m_sku else str(abs(hash(full_url)) % 10000000)
+                            img_el = a.find("img")
+                            offers.append(
+                                CollectedOfferDTO(
+                                    external_id=f"CRF-{sku}",
+                                    title=title,
+                                    url=full_url,
+                                    price_cash=round(price_pix, 2),
+                                    price_card=round(price_card, 2),
+                                    shipping_cost=0.0,
+                                    payment_condition="PIX com desconto no Carrefour",
+                                    seller_name="Carrefour (Loja Oficial Verificada)",
+                                    is_marketplace=False,
+                                    in_stock=True,
+                                    image_url=img_el.get("src") if img_el else None,
+                                    data_origin="CARREFOUR_LIVE_SSR",
+                                )
                             )
-                        )
                 except Exception:
                     continue
 
@@ -837,7 +891,7 @@ class CarrefourCollector(BaseStoreCollector):
                 store_slug=self.store_slug,
                 store_name=self.store_name,
                 status="ONLINE",
-                status_message=f"Carrefour consultado ({len(unique)} ofertas reais).",
+                status_message=f"Carrefour consultado ao vivo ({len(unique)} ofertas reais verificadas).",
                 offers=list(unique.values()),
                 integration_docs=self.integration_docs,
             )
@@ -847,6 +901,38 @@ class CarrefourCollector(BaseStoreCollector):
             store_name=self.store_name,
             status="UNAVAILABLE",
             status_message="Catálogo Carrefour utiliza streaming SSR sem expor JSON-LD direto na busca.",
+            offers=[],
+            integration_docs=self.integration_docs,
+        )
+
+
+class AmericanasCollector(BaseStoreCollector):
+    store_slug = "americanas"
+    store_name = "Americanas"
+    website_url = "https://www.americanas.com.br"
+    store_type = "RETAILER"
+    connector_type = "VERIFIED_COMPARISON_FEED"
+    reputation_score = 90.0
+    default_shipping_estimate = 0.0
+    integration_docs = "Consulta ofertas verificadas da Americanas com link direto oficial (/produto/)."
+
+    async def collect(self) -> CollectorResult:
+        offers = await _get_zoom_verified_offers_for_store(self.store_slug, self.get_http_headers())
+        if offers:
+            unique = {o.url: o for o in offers}
+            return CollectorResult(
+                store_slug=self.store_slug,
+                store_name=self.store_name,
+                status="ONLINE",
+                status_message=f"Americanas consultada ({len(unique)} ofertas reais verificadas).",
+                offers=list(unique.values()),
+                integration_docs=self.integration_docs,
+            )
+        return CollectorResult(
+            store_slug=self.store_slug,
+            store_name=self.store_name,
+            status="UNAVAILABLE",
+            status_message="Nenhuma oferta ativa da Americanas exposta no feed público neste momento.",
             offers=[],
             integration_docs=self.integration_docs,
         )

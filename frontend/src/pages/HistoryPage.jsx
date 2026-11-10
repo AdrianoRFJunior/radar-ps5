@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { LineChart } from 'lucide-react';
 import { radarApi, formatBRL, formatDateTimeSP } from '../services/api';
-import { PriceHistoryAreaChart } from '../charts/RadarCharts';
 
 const PERIODS = [
   { id: '24h', label: '24 horas' },
@@ -189,28 +188,7 @@ export default function HistoryPage() {
         </div>
       </div>
 
-      {/* Gráfico Interativo de Evolução Histórica */}
-      <div className="bg-[#0b1116] border border-[#182631] rounded-2xl p-3.5 sm:p-5">
-        <div className="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4">
-          <h3 className="font-bold text-white text-xs sm:text-base">
-            Curva de Evolução de Preços ({stats.count || 0} coletas no período)
-          </h3>
-          <span className="text-[11px] sm:text-xs font-mono text-slate-400">Horário: Brasília (BRT)</span>
-        </div>
-        {loading ? (
-          <div className="h-64 sm:h-72 flex items-center justify-center text-slate-400 text-xs sm:text-sm">
-            Carregando gráfico histórico...
-          </div>
-        ) : (
-          <PriceHistoryAreaChart
-            data={data?.history || []}
-            meanPrice={stats.mean_price}
-            minPrice={stats.min_price}
-          />
-        )}
-      </div>
-
-      {/* Log de Registros Históricos */}
+      {/* Log de Registros Históricos (Leve, sem gráficos pesados) */}
       <div className="bg-[#0b1116] border border-[#182631] rounded-2xl overflow-hidden shadow-lg">
         <div className="p-3.5 sm:p-5 border-b border-[#182631]">
           <h3 className="font-bold text-white text-xs sm:text-base">

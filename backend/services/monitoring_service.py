@@ -967,7 +967,8 @@ async def run_monitoring_cycle(db: Session, store_slug_filter: Optional[str] = N
                         saved_count += 1
                         seen_offer_ids.add(upserted.id)
 
-                if seen_offer_ids:
+                is_ci_partial = os.getenv("GITHUB_ACTIONS") == "true" and store.slug in ("amazon-br", "carrefour") and len(seen_offer_ids) < 10
+                if seen_offer_ids and not is_ci_partial:
                     (
                         db.query(Offer)
                         .filter(Offer.store_id == store.id, Offer.id.notin_(seen_offer_ids))

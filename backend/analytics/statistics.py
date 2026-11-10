@@ -207,5 +207,5 @@ def get_product_history_and_stats(
 
     return {
         "statistics": base_stats,
-        "history": chart_points,
+        "history": chart_points[-25:],
     }
