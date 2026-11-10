@@ -1,0 +1,17 @@
+# Ambientes virtuais Python
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Dependências e builds Node
+frontend/node_modules/
+frontend/dist/
+
+# Backups volumosos e logs locais
+backups/*.db
+*.log
+ngrok.exe
+ngrok.zip

@@ -1,0 +1,72 @@
+name: Atualizar Preços e Publicar no GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  schedule:
+    # Executa automaticamente a cada 20 minutos na nuvem do GitHub
+    - cron: "*/20 * * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Instalar dependências do Backend (Coletores)
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Executar varredura de preços nas lojas e exportar JSONs
+        run: |
+          python scripts/export_static_data.py --scan
+
+      - name: Salvar histórico atualizado no repositório
+        run: |
+          git config user.name "radar-bf-bot"
+          git config user.email "radar-bf-bot@users.noreply.github.com"
+          git add frontend/public/data/*.json data/radar_bf2026.db || true
+          git diff --staged --quiet || (git commit -m "chore(radar): atualização automática de preços [skip ci]" && git push)
+
+      - name: Configurar Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Compilar Frontend React (Vite)
+        working-directory: ./frontend
+        run: |
+          npm ci
+          npm run build
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Enviar artefato do site para o GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./frontend/dist"
+
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
