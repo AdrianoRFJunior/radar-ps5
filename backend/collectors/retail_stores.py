@@ -19,6 +19,7 @@ from backend.collectors.base import BaseStoreCollector, CollectorResult, Collect
 
 # Cache em memória de curta duração (90s) para evitar múltiplas requisições repetidas ao barramento comparador no mesmo ciclo
 _ZOOM_FEED_CACHE: dict[str, object] = {"timestamp": 0.0, "offers_by_store": {}}
+_ZOOM_LOCK = asyncio.Lock()
 
 ZOOM_PRODUCT_HUB_URLS = [
     "https://www.zoom.com.br/console-de-video-game/console-playstation-5-slim-825gb-sony-ps5-edicao-digital-bundle-4k",
@@ -35,119 +36,146 @@ ZOOM_PRODUCT_HUB_URLS = [
 async def _get_zoom_verified_offers_for_store(store_slug: str, headers: dict[str, str]) -> list[CollectedOfferDTO]:
     """
     Consulta as páginas agregadoras públicas do Zoom para PS5 Slim (Digital e Com Leitor) e DualSense,
-    resolvendo cada OID (`redirect=auto&logAndRedirect=1`) para obter o link direto real na loja oficial
-    (Magazine Luiza, Amazon Brasil, Fast Shop, KaBuM!, Casas Bahia, Ponto, Carrefour).
+    resolvendo cada OID em paralelo para obter o link direto real na loja oficial
+    (Magazine Luiza, Amazon Brasil, Fast Shop, KaBuM!, Casas Bahia, Ponto, Carrefour, Americanas).
     """
     now = time.time()
     cached_ts = float(_ZOOM_FEED_CACHE.get("timestamp") or 0.0)
     cached_map = _ZOOM_FEED_CACHE.get("offers_by_store")
-    if (now - cached_ts) < 90.0 and isinstance(cached_map, dict) and cached_map:
+    if (now - cached_ts) < 180.0 and isinstance(cached_map, dict) and cached_map:
         return list(cached_map.get(store_slug, []))
 
-    offers_by_store: dict[str, list[CollectedOfferDTO]] = {
-        "kabum": [],
-        "magazine-luiza": [],
-        "amazon-br": [],
-        "fast-shop": [],
-        "casas-bahia": [],
-        "ponto": [],
-        "carrefour": [],
-        "americanas": [],
-    }
-    seen_oids: set[str] = set()
+    async with _ZOOM_LOCK:
+        now = time.time()
+        cached_ts = float(_ZOOM_FEED_CACHE.get("timestamp") or 0.0)
+        cached_map = _ZOOM_FEED_CACHE.get("offers_by_store")
+        if (now - cached_ts) < 180.0 and isinstance(cached_map, dict) and cached_map:
+            return list(cached_map.get(store_slug, []))
 
-    async with httpx.AsyncClient(timeout=12.0, follow_redirects=True, headers=headers) as client:
-        # 1. Buscar também na listagem de busca do DualSense para pegar cores em promoção (ex: Fast Shop R$ 379)
-        search_urls = [
-            "https://www.zoom.com.br/search?q=controle+dualsense+ps5",
-            "https://www.zoom.com.br/search?q=console+playstation+5+slim",
-        ]
-        candidate_leads: list[tuple[str, str, float, str]] = []  # (oid, title, price, store_hint)
+        offers_by_store: dict[str, list[CollectedOfferDTO]] = {
+            "kabum": [],
+            "magazine-luiza": [],
+            "amazon-br": [],
+            "fast-shop": [],
+            "casas-bahia": [],
+            "ponto": [],
+            "carrefour": [],
+            "americanas": [],
+        }
+        seen_oids: set[str] = set()
 
-        for s_url in search_urls:
-            try:
-                r = await client.get(s_url)
-                if r.status_code != 200:
+        async with httpx.AsyncClient(timeout=10.0, follow_redirects=True, headers=headers) as client:
+            candidate_leads: list[tuple[str, str, float, str]] = []  # (oid, title, price, store_hint)
+            all_urls = [
+                "https://www.zoom.com.br/search?q=controle+dualsense+ps5",
+                "https://www.zoom.com.br/search?q=console+playstation+5+slim",
+            ] + ZOOM_PRODUCT_HUB_URLS
+
+            sem_zoom = asyncio.Semaphore(6)
+
+            async def fetch_zoom_page(url: str):
+                async with sem_zoom:
+                    try:
+                        r = await client.get(url)
+                        if r.status_code == 200:
+                            return url, r.text
+                    except Exception:
+                        pass
+                    return url, None
+
+            page_results = await asyncio.gather(*[fetch_zoom_page(u) for u in all_urls])
+
+            for url, html_text in page_results:
+                if not html_text:
                     continue
-                soup = BeautifulSoup(r.text, "html.parser")
-                for card in soup.select("[data-testid='product-card']"):
-                    a_el = card.find("a", href=True)
-                    if not a_el:
-                        continue
-                    href = a_el.get("href", "")
-                    m_oid = re.search(r"oid=(\d+)", href)
-                    if not m_oid:
-                        continue
-                    oid = m_oid.group(1)
-                    if oid in seen_oids:
-                        continue
-                    t_el = card.select_one("[data-testid='product-card::name']") or card.find("h2")
-                    p_el = card.select_one("[data-testid='product-card::price']")
-                    if not t_el or not p_el:
-                        continue
-                    title = t_el.get_text(strip=True)
-                    m_p = re.search(r"R\$\s*([\d\.]+,\d{2})", p_el.get_text(strip=True))
-                    if not m_p:
-                        continue
-                    price = float(m_p.group(1).replace(".", "").replace(",", "."))
-                    seen_oids.add(oid)
-                    candidate_leads.append((oid, title, price, ""))
-            except Exception:
-                continue
-
-        # 2. Buscar todas as ofertas multi-loja nas páginas de produto do PS5 Slim (Digital e Disco) e DualSense
-        for hub_url in ZOOM_PRODUCT_HUB_URLS:
-            try:
-                r = await client.get(hub_url)
-                if r.status_code != 200:
-                    continue
-                soup = BeautifulSoup(r.text, "html.parser")
-                h1_el = soup.find("h1")
-                fallback_title = h1_el.get_text(strip=True) if h1_el else "Console Sony PlayStation 5 Slim"
-                for a in soup.select("a[href*='/lead?']"):
-                    href = a.get("href", "")
-                    m_oid = re.search(r"oid=(\d+)", href)
-                    if not m_oid:
-                        continue
-                    oid = m_oid.group(1)
-                    if oid in seen_oids:
-                        continue
-                    parent = a.find_parent("li") or a.parent.parent
-                    if not parent:
-                        continue
-                    imgs = parent.find_all("img", alt=True)
-                    alts = [
-                        img["alt"].strip()
-                        for img in imgs
-                        if img.get("alt") and "Logo Zoom" not in img.get("alt")
-                    ]
-                    txt = " | ".join(parent.stripped_strings)
-                    m_price = re.search(r"R\$\s*([\d\.]+,\d{2})", txt)
-                    if not m_price:
-                        continue
-                    price = float(m_price.group(1).replace(".", "").replace(",", "."))
-                    title = alts[0] if alts else fallback_title
-                    store_hint = alts[-1] if len(alts) > 1 else ""
-                    seen_oids.add(oid)
-                    candidate_leads.append((oid, title, price, store_hint))
-            except Exception:
-                continue
-
-        # 3. Resolver cada OID via HTTP 302 para obter a URL oficial exata do produto na loja varejista
-        no_redir_client = httpx.AsyncClient(timeout=8.0, follow_redirects=False, headers=headers)
-        try:
-            for oid, raw_title, price_val, store_hint in candidate_leads:
                 try:
-                    lead_url = f"https://www.zoom.com.br/lead?oid={oid}&channel=1&index=0&sortorder=0&redirect=auto&logAndRedirect=1"
-                    rl = await no_redir_client.get(lead_url)
-                    loc = rl.headers.get("location") or ""
-                    if "awin1.com" in loc and "ued=" in loc:
-                        qs = parse_qs(urlparse(loc).query)
-                        if "ued" in qs:
-                            loc = unquote(qs["ued"][0])
-                    if not loc.startswith("http"):
-                        continue
+                    soup = BeautifulSoup(html_text, "html.parser")
+                    h1_el = soup.find("h1")
+                    fallback_title = h1_el.get_text(strip=True) if h1_el else "Console Sony PlayStation 5 Slim"
 
+                    # 1. Cards de busca
+                    for card in soup.select("[data-testid='product-card']"):
+                        a_el = card.find("a", href=True)
+                        if not a_el:
+                            continue
+                        href = a_el.get("href", "")
+                        m_oid = re.search(r"oid=(\d+)", href)
+                        if not m_oid:
+                            continue
+                        oid = m_oid.group(1)
+                        if oid in seen_oids:
+                            continue
+                        t_el = card.select_one("[data-testid='product-card::name']") or card.find("h2")
+                        p_el = card.select_one("[data-testid='product-card::price']")
+                        if not t_el or not p_el:
+                            continue
+                        title = t_el.get_text(strip=True)
+                        m_p = re.search(r"R\$\s*([\d\.]+,\d{2})", p_el.get_text(strip=True))
+                        if not m_p:
+                            continue
+                        price = float(m_p.group(1).replace(".", "").replace(",", "."))
+                        seen_oids.add(oid)
+                        candidate_leads.append((oid, title, price, ""))
+
+                    # 2. Links de produto /lead?
+                    for a in soup.select("a[href*='/lead?']"):
+                        href = a.get("href", "")
+                        m_oid = re.search(r"oid=(\d+)", href)
+                        if not m_oid:
+                            continue
+                        oid = m_oid.group(1)
+                        if oid in seen_oids:
+                            continue
+                        parent = a.find_parent("li") or a.parent.parent
+                        if not parent:
+                            continue
+                        imgs = parent.find_all("img", alt=True)
+                        alts = [
+                            img["alt"].strip()
+                            for img in imgs
+                            if img.get("alt") and "Logo Zoom" not in img.get("alt")
+                        ]
+                        txt = " | ".join(parent.stripped_strings)
+                        m_price = re.search(r"R\$\s*([\d\.]+,\d{2})", txt)
+                        if not m_price:
+                            continue
+                        price = float(m_price.group(1).replace(".", "").replace(",", "."))
+                        title = alts[0] if alts else fallback_title
+                        store_hint = alts[-1] if len(alts) > 1 else ""
+                        seen_oids.add(oid)
+                        candidate_leads.append((oid, title, price, store_hint))
+                except Exception:
+                    continue
+
+            # 3. Resolver OIDs em PARALELO (semáforo de 8 conexões) para link direto real
+            sem_lead = asyncio.Semaphore(8)
+            no_redir_client = httpx.AsyncClient(timeout=6.0, follow_redirects=False, headers=headers)
+
+            async def resolve_one_lead(oid: str, raw_title: str, price_val: float, store_hint: str):
+                async with sem_lead:
+                    try:
+                        lead_url = f"https://www.zoom.com.br/lead?oid={oid}&channel=1&index=0&sortorder=0&redirect=auto&logAndRedirect=1"
+                        rl = await no_redir_client.get(lead_url)
+                        loc = rl.headers.get("location") or ""
+                        if "awin1.com" in loc and "ued=" in loc:
+                            qs = parse_qs(urlparse(loc).query)
+                            if "ued" in qs:
+                                loc = unquote(qs["ued"][0])
+                        if not loc.startswith("http"):
+                            return None
+                        return (oid, raw_title, price_val, store_hint, loc)
+                    except Exception:
+                        return None
+
+            try:
+                resolved_leads = await asyncio.gather(*[
+                    resolve_one_lead(oid, t, p, sh) for oid, t, p, sh in candidate_leads[:35]
+                ])
+
+                for item in resolved_leads:
+                    if not item:
+                        continue
+                    oid, raw_title, price_val, store_hint, loc = item
                     loc_lower = loc.lower()
                     target_slug = None
                     clean_url = loc
@@ -162,14 +190,11 @@ async def _get_zoom_verified_offers_for_store(store_slug: str, headers: dict[str
                         seller_label = "KaBuM! (Venda Direta Oficial)"
                     elif "magazineluiza.com.br" in loc_lower or "magalu.com" in loc_lower:
                         target_slug = "magazine-luiza"
-                        # Preservar query string de parceiro (partner_id / seller_id) para garantir o mesmo preço PIX ao abrir o link
                         clean_url = loc
                         if "seller_id=kabum" in loc_lower:
                             seller_label = "KaBuM! Oficial via Magazine Luiza"
-                            is_mkt = False
                         elif "seller_id=magazineluiza" in loc_lower or "seller_id=" not in loc_lower:
                             seller_label = "Magazine Luiza (Venda Direta Oficial)"
-                            is_mkt = False
                         else:
                             seller_label = "Parceiro Marketplace Magalu"
                             is_mkt = True
@@ -205,7 +230,6 @@ async def _get_zoom_verified_offers_for_store(store_slug: str, headers: dict[str
                     if not target_slug:
                         continue
 
-                    # Garantir que o título tenha PlayStation 5 ou DualSense e não perca "Edição Digital" caso o alt da imagem tenha sido truncado
                     t_norm = raw_title.strip()
                     if t_norm.endswith("+ 2") and "edicao-digital" in loc_lower:
                         t_norm = f"{t_norm} Jogos Digitais, Edição Digital"
@@ -232,14 +256,12 @@ async def _get_zoom_verified_offers_for_store(store_slug: str, headers: dict[str
                             data_origin=f"{target_slug.upper().replace('-', '_')}_VERIFIED_FEED",
                         )
                     )
-                except Exception:
-                    continue
-        finally:
-            await no_redir_client.aclose()
+            finally:
+                await no_redir_client.aclose()
 
-    _ZOOM_FEED_CACHE["timestamp"] = time.time()
-    _ZOOM_FEED_CACHE["offers_by_store"] = offers_by_store
-    return list(offers_by_store.get(store_slug, []))
+        _ZOOM_FEED_CACHE["timestamp"] = time.time()
+        _ZOOM_FEED_CACHE["offers_by_store"] = offers_by_store
+        return list(offers_by_store.get(store_slug, []))
 
 
 def _extract_verified_jsonld_offers(
@@ -423,12 +445,13 @@ class KabumCollector(BaseStoreCollector):
                         seen_codes.add(code)
                         offers.append(res_dto)
 
-            # 2. Complementar com varredura da categoria ordenada por menor preço (sort=price)
-            for web_url in self.CATALOG_WEB_URLS:
+            # 2. Complementar com varredura da categoria ordenada por menor preço em paralelo
+            async def fetch_kabum_catalog(web_url: str):
+                cat_offers = []
                 try:
-                    resp = await client.get(web_url)
+                    resp = await client.get(web_url, timeout=5.0)
                     if resp.status_code != 200:
-                        continue
+                        return []
                     soup = BeautifulSoup(resp.text, "html.parser")
                     nd = soup.find("script", id="__NEXT_DATA__")
                     if nd and nd.string:
@@ -455,11 +478,10 @@ class KabumCollector(BaseStoreCollector):
                             old_price = float(item.get("oldPrice") or 0)
                             if price_pix <= 0 or not name:
                                 continue
-                            seen_codes.add(code)
                             seller_raw = str(item.get("sellerName") or "KaBuM!").strip()
                             is_mkt = seller_raw.lower() not in ("kabum!", "kabum")
                             seller_label = f"{seller_raw} (Marketplace KaBuM!)" if is_mkt else "KaBuM! (Venda Direta Oficial)"
-                            offers.append(
+                            cat_offers.append(
                                 CollectedOfferDTO(
                                     external_id=f"KABUM-{code}",
                                     title=name,
@@ -478,7 +500,16 @@ class KabumCollector(BaseStoreCollector):
                                 )
                             )
                 except Exception:
-                    continue
+                    pass
+                return cat_offers
+
+            cat_results = await asyncio.gather(*[fetch_kabum_catalog(u) for u in self.CATALOG_WEB_URLS])
+            for cat_list in cat_results:
+                for c_dto in cat_list:
+                    c_code = c_dto.external_id.replace("KABUM-", "")
+                    if c_code not in seen_codes:
+                        seen_codes.add(c_code)
+                        offers.append(c_dto)
 
         if offers:
             return CollectorResult(
