@@ -8,6 +8,7 @@ import {
   Scale,
 } from 'lucide-react';
 import { radarApi, formatBRL, formatDateTimeSP, getScoreBadgeStyle } from '../services/api';
+import PriceBreakdown from '../components/PriceBreakdown';
 
 export default function ComparatorPage() {
   const [categoryFilter, setCategoryFilter] = useState('ALL');
@@ -138,32 +139,17 @@ export default function ComparatorPage() {
                   <span className="text-slate-400">• {o.is_national ? 'Nacional Anatel' : 'Importado'}</span>
                 </div>
 
-                {/* Linha 4: Preços */}
-                <div className="p-2.5 rounded-xl bg-[#080d11] border border-[#182631] flex items-center justify-between gap-2">
-                  <div>
-                    <span className="text-[10px] font-mono uppercase text-slate-400 block">Menor Preço (PIX)</span>
-                    <div className="text-base font-extrabold font-mono text-emerald-400">
-                      {formatBRL(o.final_price)}
-                    </div>
-                    <div className="text-[10px] text-slate-400 flex items-center gap-1 mt-0.5">
-                      <Truck className="w-3 h-3 text-emerald-400 shrink-0" />
-                      <span>{o.shipping_cost > 0 ? `+Frete ${formatBRL(o.shipping_cost)}` : 'Frete Grátis'}</span>
-                    </div>
-                  </div>
-
-                  <div className="text-right">
-                    <span className="text-[10px] font-mono uppercase text-amber-300 block">vs Recorde</span>
-                    <div className="text-xs font-bold font-mono text-amber-300 flex items-center justify-end gap-1">
-                      <Award className="w-3 h-3 shrink-0" />
-                      <span>{formatBRL(o.min_historical_price)}</span>
-                    </div>
-                    <span className="text-[10px] font-mono text-slate-400">
-                      {o.diff_vs_historical_low && o.diff_vs_historical_low > 0
-                        ? `+${formatBRL(o.diff_vs_historical_low)}`
-                        : 'No piso!'}
-                    </span>
-                  </div>
-                </div>
+                {/* Linha 4: Bloco de Preços com Cupom e Parcelamento */}
+                <PriceBreakdown
+                  finalPrice={o.final_price}
+                  originalPrice={o.original_declared_price}
+                  priceCard={o.price_card}
+                  installmentsText={o.installments_text}
+                  couponCode={o.coupon_code}
+                  shippingCost={o.shipping_cost}
+                  paymentCondition={o.payment_condition}
+                  layout="compact"
+                />
 
                 {/* Linha 5: Observação e Botão */}
                 <div className="flex items-center justify-between gap-2 pt-0.5">
@@ -207,8 +193,7 @@ export default function ComparatorPage() {
               <tr className="bg-[#080d11] text-slate-400 font-mono text-[11px] uppercase border-b border-[#182631] whitespace-nowrap">
                 <th className="py-3.5 px-4">Loja & Vendedor</th>
                 <th className="py-3.5 px-4">Produto Novo & Versão</th>
-                <th className="py-3.5 px-4">Menor Preço (PIX)</th>
-                <th className="py-3.5 px-4">Preço Cartão</th>
+                <th className="py-3.5 px-4">Menor Preço & Condições</th>
                 <th className="py-3.5 px-4">vs Recorde Histórico</th>
                 <th className="py-3.5 px-4">Auditoria de Confiabilidade</th>
                 <th className="py-3.5 px-4">Score</th>
@@ -255,23 +240,17 @@ export default function ComparatorPage() {
                       </div>
                     </td>
 
-                    <td className="py-3.5 px-4 align-middle font-mono whitespace-nowrap">
-                      <div className="font-extrabold text-base text-emerald-400">
-                        {formatBRL(o.final_price)}
-                      </div>
-                      <div className="text-[10px] text-slate-400 flex items-center gap-1 mt-0.5">
-                        <Truck className="w-3 h-3 text-emerald-400 shrink-0" />
-                        <span>
-                          {o.shipping_cost > 0 ? `+Frete ${formatBRL(o.shipping_cost)}` : 'Frete Grátis'}
-                        </span>
-                      </div>
-                    </td>
-
-                    <td className="py-3.5 px-4 align-middle font-mono text-slate-300 whitespace-nowrap">
-                      <div>{formatBRL(o.price_card)}</div>
-                      {o.installments_text && (
-                        <div className="text-[10px] text-slate-400">{o.installments_text}</div>
-                      )}
+                    <td className="py-3.5 px-4 align-middle whitespace-nowrap min-w-[210px]">
+                      <PriceBreakdown
+                        finalPrice={o.final_price}
+                        originalPrice={o.original_declared_price}
+                        priceCard={o.price_card}
+                        installmentsText={o.installments_text}
+                        couponCode={o.coupon_code}
+                        shippingCost={o.shipping_cost}
+                        paymentCondition={o.payment_condition}
+                        layout="table"
+                      />
                     </td>
 
                     <td className="py-3.5 px-4 align-middle font-mono text-xs whitespace-nowrap">

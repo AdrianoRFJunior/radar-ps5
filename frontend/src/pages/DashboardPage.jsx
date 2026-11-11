@@ -17,6 +17,8 @@ import {
   LineChart,
 } from 'lucide-react';
 import { formatBRL, formatDateTimeSP, getScoreBadgeStyle } from '../services/api';
+import PriceBreakdown from '../components/PriceBreakdown';
+import CouponBadge from '../components/CouponBadge';
 
 function EventModeBanner({ eventMode, indicators, onTriggerScan, scanning }) {
   if (!eventMode) return null;
@@ -215,43 +217,17 @@ function LowestPriceHeroCard({
           </div>
         </div>
 
-        {/* Linha 3: Bloco Principal de Preço */}
-        <div
-          className={`p-3 sm:p-3.5 rounded-xl border flex items-center justify-between gap-2 sm:gap-3 ${
-            isCyan
-              ? 'bg-cyan-950/20 border-cyan-500/30'
-              : 'bg-emerald-950/25 border-emerald-500/30'
-          }`}
-        >
-          <div className="space-y-0.5 min-w-0">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-slate-300 font-bold block truncate">
-              MENOR PREÇO HOJE (PIX)
-            </span>
-            <div className="flex items-center gap-1 text-[10px] sm:text-[11px] text-slate-300">
-              <Truck className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400 shrink-0" />
-              <span className="truncate">
-                {offer.shipping_cost > 0
-                  ? `+Frete ${formatBRL(offer.shipping_cost)}`
-                  : 'Frete Grátis • Venda Direta'}
-              </span>
-            </div>
-          </div>
-
-          <div className="text-right shrink-0">
-            <div
-              className={`text-xl sm:text-2xl font-extrabold font-mono whitespace-nowrap tracking-tight ${
-                isCyan ? 'text-cyan-400' : 'text-emerald-400'
-              }`}
-            >
-              {formatBRL(offer.final_price)}
-            </div>
-            {offer.price_card && (
-              <div className="text-[10px] sm:text-[11px] font-mono text-slate-400 whitespace-nowrap">
-                Cartão: {formatBRL(offer.price_card)}
-              </div>
-            )}
-          </div>
-        </div>
+        {/* Linha 3: Bloco Principal de Preço com Cupom e Parcelamento */}
+        <PriceBreakdown
+          finalPrice={offer.final_price}
+          originalPrice={offer.original_declared_price}
+          priceCard={offer.price_card}
+          installmentsText={offer.installments_text}
+          couponCode={offer.coupon_code}
+          shippingCost={offer.shipping_cost}
+          paymentCondition={offer.payment_condition}
+          layout="hero"
+        />
 
         {/* Linha 4: Comparação Dupla (Recorde Histórico vs Média 30 Dias) */}
         <div className="grid grid-cols-2 gap-2 sm:gap-2.5">
@@ -486,30 +462,17 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
                   <span className="text-slate-400">• {o.is_national ? 'Nacional Anatel' : 'Importado'}</span>
                 </div>
 
-                {/* Linha 4: Bloco de Preços no Celular */}
-                <div className="p-2.5 rounded-xl bg-[#080d11] border border-[#182631] flex items-center justify-between gap-2">
-                  <div>
-                    <span className="text-[10px] font-mono uppercase text-slate-400 block">Menor Preço (PIX)</span>
-                    <div className="text-base font-extrabold font-mono text-emerald-400">
-                      {formatBRL(o.final_price)}
-                    </div>
-                    {o.price_card && (
-                      <div className="text-[10px] font-mono text-slate-400">
-                        Cartão: {formatBRL(o.price_card)}
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="text-right">
-                    <span className="text-[10px] font-mono uppercase text-amber-300 block">vs Recorde</span>
-                    <div className="text-xs font-bold font-mono text-amber-300">
-                      {formatBRL(o.min_historical_price)}
-                    </div>
-                    <span className="text-[10px] font-mono text-slate-400">
-                      {diffHist && diffHist > 0 ? `+${formatBRL(diffHist)}` : 'No recorde!'}
-                    </span>
-                  </div>
-                </div>
+                {/* Linha 4: Bloco de Preços no Celular com Cupom e Parcelamento */}
+                <PriceBreakdown
+                  finalPrice={o.final_price}
+                  originalPrice={o.original_declared_price}
+                  priceCard={o.price_card}
+                  installmentsText={o.installments_text}
+                  couponCode={o.coupon_code}
+                  shippingCost={o.shipping_cost}
+                  paymentCondition={o.payment_condition}
+                  layout="compact"
+                />
 
                 {/* Linha 5: Observação de Confiabilidade & Botão Abrir */}
                 <div className="flex items-center justify-between gap-2 pt-0.5">
@@ -551,7 +514,7 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
               <tr className="bg-[#080d11] text-slate-400 font-mono text-[11px] uppercase border-b border-[#182631] whitespace-nowrap">
                 <th className="py-3.5 px-4">Produto Novo & Versão</th>
                 <th className="py-3.5 px-4">Loja</th>
-                <th className="py-3.5 px-4">Menor Preço (PIX)</th>
+                <th className="py-3.5 px-4">Menor Preço & Condições</th>
                 <th className="py-3.5 px-4">vs Recorde Histórico</th>
                 <th className="py-3.5 px-4">Auditoria de Confiabilidade</th>
                 <th className="py-3.5 px-4 text-right">Ação</th>
@@ -592,13 +555,17 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
                       <div className="text-[11px] text-slate-400">{o.seller_name}</div>
                     </td>
 
-                    <td className="py-3.5 px-4 align-middle font-mono whitespace-nowrap">
-                      <div className="font-extrabold text-base text-emerald-400">
-                        {formatBRL(o.final_price)}
-                      </div>
-                      <div className="text-[11px] text-slate-400">
-                        Cartão: {formatBRL(o.price_card)}
-                      </div>
+                    <td className="py-3.5 px-4 align-middle whitespace-nowrap min-w-[200px]">
+                      <PriceBreakdown
+                        finalPrice={o.final_price}
+                        originalPrice={o.original_declared_price}
+                        priceCard={o.price_card}
+                        installmentsText={o.installments_text}
+                        couponCode={o.coupon_code}
+                        shippingCost={o.shipping_cost}
+                        paymentCondition={o.payment_condition}
+                        layout="table"
+                      />
                     </td>
 
                     <td className="py-3.5 px-4 align-middle font-mono text-xs whitespace-nowrap">

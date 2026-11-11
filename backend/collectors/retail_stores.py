@@ -362,39 +362,40 @@ class KabumCollector(BaseStoreCollector):
         seen_codes: set[str] = set()
 
         async with httpx.AsyncClient(timeout=self.timeout, follow_redirects=True, headers=self.get_http_headers()) as client:
-            # 1. Consultar diretamente o JSON de cada SKU prioritário para obter o preço PIX exato ao vivo (sem cache defasado de vitrine)
-            for code in self.PRIORITY_KABUM_SKUS:
-                try:
-                    prod_url = f"https://www.kabum.com.br/produto/{code}"
-                    resp = await client.get(prod_url)
-                    if resp.status_code != 200:
-                        continue
-                    soup = BeautifulSoup(resp.text, "html.parser")
-                    nd = soup.find("script", id="__NEXT_DATA__")
-                    if not nd or not nd.string:
-                        continue
-                    data = json.loads(nd.string)
-                    prod = data.get("props", {}).get("pageProps", {}).get("product", {})
-                    if isinstance(prod, str):
-                        prod = json.loads(prod)
-                    if not isinstance(prod, dict) or not prod.get("available", False):
-                        continue
+            # 1. Consultar em paralelo o JSON de cada SKU prioritário para obter o preço PIX exato ao vivo (sem cache defasado)
+            sem = asyncio.Semaphore(5)
 
-                    title = str(prod.get("title") or "").strip()
-                    prices = prod.get("prices") or {}
-                    price_pix = float(prices.get("priceWithDiscount") or prices.get("price") or prod.get("price") or 0)
-                    price_card = float(prices.get("price") or prod.get("price") or price_pix)
-                    old_price = float(prices.get("oldPrice") or 0)
-                    if price_pix <= 0 or not title:
-                        continue
+            async def fetch_kabum_sku(code: str):
+                async with sem:
+                    try:
+                        prod_url = f"https://www.kabum.com.br/produto/{code}"
+                        resp = await client.get(prod_url)
+                        if resp.status_code != 200:
+                            return None
+                        soup = BeautifulSoup(resp.text, "html.parser")
+                        nd = soup.find("script", id="__NEXT_DATA__")
+                        if not nd or not nd.string:
+                            return None
+                        data = json.loads(nd.string)
+                        prod = data.get("props", {}).get("pageProps", {}).get("product", {})
+                        if isinstance(prod, str):
+                            prod = json.loads(prod)
+                        if not isinstance(prod, dict) or not prod.get("available", False):
+                            return None
 
-                    seen_codes.add(code)
-                    seller_raw = str(prod.get("sellerName") or "KaBuM!").strip()
-                    is_mkt = seller_raw.lower() not in ("kabum!", "kabum")
-                    seller_label = f"{seller_raw} (Marketplace KaBuM!)" if is_mkt else "KaBuM! (Venda Direta Oficial)"
+                        title = str(prod.get("title") or "").strip()
+                        prices = prod.get("prices") or {}
+                        price_pix = float(prices.get("priceWithDiscount") or prices.get("price") or prod.get("price") or 0)
+                        price_card = float(prices.get("price") or prod.get("price") or price_pix)
+                        old_price = float(prices.get("oldPrice") or 0)
+                        if price_pix <= 0 or not title:
+                            return None
 
-                    offers.append(
-                        CollectedOfferDTO(
+                        seller_raw = str(prod.get("sellerName") or "KaBuM!").strip()
+                        is_mkt = seller_raw.lower() not in ("kabum!", "kabum")
+                        seller_label = f"{seller_raw} (Marketplace KaBuM!)" if is_mkt else "KaBuM! (Venda Direta Oficial)"
+
+                        return CollectedOfferDTO(
                             external_id=f"KABUM-{code}",
                             title=title,
                             url=prod_url,
@@ -410,9 +411,17 @@ class KabumCollector(BaseStoreCollector):
                             image_url=prod.get("thumbnail"),
                             data_origin="KABUM_LIVE_SKU_JSON",
                         )
-                    )
-                except Exception:
-                    continue
+                    except Exception:
+                        return None
+
+            sku_tasks = [fetch_kabum_sku(code) for code in self.PRIORITY_KABUM_SKUS]
+            sku_results = await asyncio.gather(*sku_tasks)
+            for res_dto in sku_results:
+                if res_dto:
+                    code = res_dto.external_id.replace("KABUM-", "")
+                    if code not in seen_codes:
+                        seen_codes.add(code)
+                        offers.append(res_dto)
 
             # 2. Complementar com varredura da categoria ordenada por menor preço (sort=price)
             for web_url in self.CATALOG_WEB_URLS:

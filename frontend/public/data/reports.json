@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T09:54:28.066740-03:00",
+  "generated_at": "2026-11-11T10:04:00.015694-03:00",
   "daily_report": {
     "date_reference": "11/11/2026",
     "lowest_prices": {
@@ -1422,7 +1422,7 @@
     "store_comparison": [
       {
         "store_name": "KaBuM!",
-        "status": "ERROR",
+        "status": "UNAVAILABLE",
         "reputation_score": 96.0,
         "active_offers_count": 51,
         "min_ps5_price": 4277.07,
@@ -1431,7 +1431,7 @@
       },
       {
         "store_name": "Magazine Luiza",
-        "status": "ERROR",
+        "status": "UNAVAILABLE",
         "reputation_score": 95.0,
         "active_offers_count": 10,
         "min_ps5_price": 4323.06,
@@ -1440,7 +1440,7 @@
       },
       {
         "store_name": "Amazon Brasil",
-        "status": "ERROR",
+        "status": "UNAVAILABLE",
         "reputation_score": 98.0,
         "active_offers_count": 63,
         "min_ps5_price": 3881.0,
@@ -1449,7 +1449,7 @@
       },
       {
         "store_name": "Fast Shop",
-        "status": "ERROR",
+        "status": "UNAVAILABLE",
         "reputation_score": 96.0,
         "active_offers_count": 3,
         "min_ps5_price": 4135.06,
@@ -1458,7 +1458,7 @@
       },
       {
         "store_name": "Casas Bahia",
-        "status": "BLOCKED_ANTIBOT",
+        "status": "UNAVAILABLE",
         "reputation_score": 91.0,
         "active_offers_count": 0,
         "min_ps5_price": null,
@@ -1467,7 +1467,7 @@
       },
       {
         "store_name": "Ponto",
-        "status": "BLOCKED_ANTIBOT",
+        "status": "UNAVAILABLE",
         "reputation_score": 91.0,
         "active_offers_count": 0,
         "min_ps5_price": null,
@@ -1476,7 +1476,7 @@
       },
       {
         "store_name": "Carrefour",
-        "status": "ERROR",
+        "status": "UNAVAILABLE",
         "reputation_score": 92.0,
         "active_offers_count": 21,
         "min_ps5_price": 4099.0,
@@ -1503,7 +1503,7 @@
       },
       {
         "store_name": "Mercado Livre",
-        "status": "ERROR",
+        "status": "UNAVAILABLE",
         "reputation_score": 94.0,
         "active_offers_count": 2,
         "min_ps5_price": null,
@@ -1512,7 +1512,7 @@
       },
       {
         "store_name": "Americanas",
-        "status": "ERROR",
+        "status": "UNAVAILABLE",
         "reputation_score": 90.0,
         "active_offers_count": 7,
         "min_ps5_price": 3999.99,

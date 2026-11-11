@@ -23,7 +23,7 @@ from backend.models.models import (
     Coupon,
     Setting,
 )
-from backend.collectors.base import CollectedOfferDTO, CollectorResult
+from backend.collectors.base import BaseStoreCollector, CollectedOfferDTO, CollectorResult
 from backend.collectors.classifier import classify_offer_title
 from backend.collectors.registry import get_all_collectors, get_collector_by_slug
 from backend.analytics.fake_discount import evaluate_fake_discount
@@ -929,24 +929,44 @@ async def run_monitoring_cycle(db: Session, store_slug_filter: Optional[str] = N
     collectors = [get_collector_by_slug(store_slug_filter)] if store_slug_filter else get_all_collectors()
     collectors = [c for c in collectors if c is not None]
 
+    # Filtrar lojas habilitadas no banco
+    enabled_pairs = []
+    for c in collectors:
+        st = db.query(Store).filter(Store.slug == c.store_slug).first()
+        if st and st.is_enabled:
+            enabled_pairs.append((c, st.id, st.slug, st.name))
+
+    # Executar a coleta de todas as lojas em paralelo com timeout individual de 14 segundos
+    async def _safe_collect(c: BaseStoreCollector, s_id: int, s_slug: str, s_name: str):
+        t0 = time.perf_counter()
+        st_time = now_sp()
+        try:
+            res = await asyncio.wait_for(c.collect(), timeout=14.0)
+        except Exception as exc:
+            res = CollectorResult(
+                store_slug=s_slug,
+                store_name=s_name,
+                status="UNAVAILABLE",
+                status_message=f"Timeout ou erro: {str(exc)[:100]}",
+                offers=[],
+                integration_docs=c.integration_docs,
+            )
+        dur = int((time.perf_counter() - t0) * 1000)
+        fin_time = now_sp()
+        return (c, s_id, s_slug, s_name, res, dur, st_time, fin_time)
+
+    collected_results = await asyncio.gather(*[_safe_collect(c, sid, sslug, sname) for c, sid, sslug, sname in enabled_pairs])
+
     summary_logs = []
     total_found = 0
     total_saved = 0
 
-    for collector in collectors:
-        await asyncio.sleep(0.05)
-        store = db.query(Store).filter(Store.slug == collector.store_slug).first()
-        if not store or not store.is_enabled:
+    for c, store_id, store_slug, store_name, result, duration_ms, start_time, finish_time in collected_results:
+        store = db.query(Store).filter(Store.id == store_id).first()
+        if not store:
             continue
 
-        start_time = now_sp()
-        t0 = time.perf_counter()
-
         try:
-            result: CollectorResult = await collector.collect()
-            duration_ms = int((time.perf_counter() - t0) * 1000)
-            finish_time = now_sp()
-
             store.status = result.status
             store.status_message = result.status_message
             store.last_check_at = finish_time
@@ -1006,27 +1026,6 @@ async def run_monitoring_cycle(db: Session, store_slug_filter: Optional[str] = N
             )
         except Exception as exc:
             db.rollback()
-            duration_ms = int((time.perf_counter() - t0) * 1000)
-            finish_time = now_sp()
-            store = db.query(Store).filter(Store.slug == collector.store_slug).first()
-            if store:
-                store.status = "ERROR"
-                store.status_message = f"Falha de conexão/execução: {str(exc)}"
-                store.last_check_at = finish_time
-                log_entry = MonitoringLog(
-                    store_id=store.id,
-                    store_name=store.name,
-                    status="ERROR",
-                    offers_found=0,
-                    offers_updated=0,
-                    history_entries_created=0,
-                    error_message=str(exc),
-                    duration_ms=duration_ms,
-                    started_at=start_time,
-                    finished_at=finish_time,
-                )
-                db.add(log_entry)
-                db.commit()
             summary_logs.append(
                 {
                     "store_slug": store.slug,
@@ -1040,6 +1039,13 @@ async def run_monitoring_cycle(db: Session, store_slug_filter: Optional[str] = N
             )
 
     recalculate_all_offers_intelligence(db)
+
+    # Exportar instantaneamente os snapshots estáticos JSON
+    try:
+        from backend.services.export_service import export_static_snapshots
+        export_static_snapshots(db)
+    except Exception:
+        pass
 
     return {
         "executed_at": format_sp_iso(now_sp()),

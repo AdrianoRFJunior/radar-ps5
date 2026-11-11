@@ -24,22 +24,22 @@ while ($true) {
         Start-Sleep -Seconds 2
     }
 
-    # 3. Garantir Túnel Fixo do Ngrok ativo
+    # 3. Garantir Túnel Fixo do Ngrok ativo apontando para a API FastAPI na porta 8000
     $ngrokProc = Get-Process -Name "ngrok" -ErrorAction SilentlyContinue
     if (-not $ngrokProc) {
-        Start-Process -FilePath $ngrokExe -ArgumentList "http 5173 --url=https://shredder-cloud-ladder.ngrok-free.dev" -WorkingDirectory $projectDir -WindowStyle Hidden
+        Start-Process -FilePath $ngrokExe -ArgumentList "http 8000 --url=https://shredder-cloud-ladder.ngrok-free.dev" -WorkingDirectory $projectDir -WindowStyle Hidden
         Start-Sleep -Seconds 3
     }
 
-    # 4. A cada 10 minutos (60 ciclos de 10s), exportar JSONs atualizados e sincronizar com GitHub Pages
+    # 4. A cada 10 minutos (60 ciclos de 10s), executar varredura automática, exportar JSONs e sincronizar com o GitHub Pages
     $cycleCounter++
     if ($cycleCounter -ge 60) {
         $cycleCounter = 0
         Set-Location $projectDir
-        & $pythonExe scripts/export_static_data.py --scan | Out-Null
-        & $gitExe add frontend/public/data/*.json 2>$null
-        & $gitExe commit -m "chore(radar): sincronização automática de preços em tempo real" 2>$null
-        & $gitExe push origin main 2>$null
+        & $pythonExe scripts/export_static_data.py --scan
+        & $gitExe add frontend/public/data/*.json backend/radar_bf2026.db
+        & $gitExe commit -m "chore(radar): sincronização automática de preços a cada 10 minutos"
+        & $gitExe push origin main
     }
 
     Start-Sleep -Seconds 10

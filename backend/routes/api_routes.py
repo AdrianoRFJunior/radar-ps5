@@ -721,7 +721,12 @@ async def trigger_manual_monitoring(
     db: Session = Depends(get_db),
 ):
     result = await run_monitoring_cycle(db, store_slug_filter=store_slug)
-    return result
+    dash = get_dashboard_data(db=db)
+    return {
+        "status": "SUCCESS",
+        "result": result,
+        "dashboard": dash,
+    }
 
 
 @router.get("/monitoring/logs")

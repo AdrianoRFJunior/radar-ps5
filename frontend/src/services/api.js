@@ -214,7 +214,14 @@ export const radarApi = {
     request(
       `/monitoring/run${storeSlug ? `?store_slug=${storeSlug}` : ''}`,
       { method: 'POST' },
-      async () => ({ status: 'STATIC_SNAPSHOT_REFRESHED' })
+      async () => {
+        try {
+          const freshData = await fetchStaticJson('dashboard.json');
+          return { status: 'STATIC_SNAPSHOT_REFRESHED', dashboard: freshData };
+        } catch {
+          return { status: 'STATIC_SNAPSHOT_REFRESHED' };
+        }
+      }
     ),
 
   getMonitoringLogs: () => request('/monitoring/logs', {}, () => fetchStaticJson('logs.json')),
