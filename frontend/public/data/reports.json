@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T07:38:24.588557-03:00",
+  "generated_at": "2026-11-11T07:49:39.017634-03:00",
   "daily_report": {
     "date_reference": "11/11/2026",
     "lowest_prices": {
@@ -1503,7 +1503,7 @@
       },
       {
         "store_name": "Mercado Livre",
-        "status": "NEEDS_CREDENTIALS",
+        "status": "ERROR",
         "reputation_score": 94.0,
         "active_offers_count": 2,
         "min_ps5_price": null,
