@@ -1,6 +1,11 @@
 {
   "backups": [
     {
+      "filename": "radar_bf2026_backup_20261111_161113.db",
+      "size_kb": 8744.0,
+      "modified_at": "2026-11-11T16:11:13.071041"
+    },
+    {
       "filename": "radar_bf2026_backup_20261111_101112.db",
       "size_kb": 8620.0,
       "modified_at": "2026-11-11T10:11:12.921342"
@@ -44,11 +49,6 @@
       "filename": "radar_bf2026_backup_20261110_104006.db",
       "size_kb": 6532.0,
       "modified_at": "2026-11-10T10:40:06.510158"
-    },
-    {
-      "filename": "radar_bf2026_backup_20261110_104003.db",
-      "size_kb": 6532.0,
-      "modified_at": "2026-11-10T10:40:03.943090"
     }
   ]
 }
