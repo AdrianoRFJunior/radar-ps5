@@ -16,7 +16,7 @@
       "status_message": "Falha de conexão/execução: name 'os' is not defined",
       "connector_type": "OFFICIAL_PAAPI_OR_VERIFIED_FEED",
       "integration_docs": "Consulta catálogo público da Amazon Brasil e barramento de ASINs verificados (/dp/<ASIN>).",
-      "last_check_at": "2026-11-11T09:42:56.431673-03:00",
+      "last_check_at": "2026-11-11T09:54:17.219938-03:00",
       "last_success_at": "2026-11-10T14:04:56.952378-03:00"
     },
     {
@@ -26,7 +26,7 @@
       "status_message": "Falha de conexão/execução: name 'os' is not defined",
       "connector_type": "VERIFIED_COMPARISON_FEED",
       "integration_docs": "Consulta ofertas verificadas da Americanas com link direto oficial (/produto/).",
-      "last_check_at": "2026-11-11T09:43:01.259901-03:00",
+      "last_check_at": "2026-11-11T09:54:21.621913-03:00",
       "last_success_at": "2026-11-10T14:05:02.503135-03:00"
     },
     {
@@ -36,7 +36,7 @@
       "status_message": "Falha de conexão/execução: name 'os' is not defined",
       "connector_type": "VTEX_PUBLIC_API",
       "integration_docs": "Verifica produtos reais com filtro estrito de título e link direto (/p).",
-      "last_check_at": "2026-11-11T09:43:01.192789-03:00",
+      "last_check_at": "2026-11-11T09:54:21.544963-03:00",
       "last_success_at": "2026-11-10T14:05:02.382120-03:00"
     },
     {
@@ -46,7 +46,7 @@
       "status_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
       "connector_type": "PUBLIC_JSONLD_FEED",
       "integration_docs": "Suporta API Lomadee (LOMADEE_APP_TOKEN no .env) e feed público verificado.",
-      "last_check_at": "2026-11-11T09:43:01.313641-03:00",
+      "last_check_at": "2026-11-11T09:54:21.690484-03:00",
       "last_success_at": null
     },
     {
@@ -56,7 +56,7 @@
       "status_message": "Falha de conexão/execução: name 'os' is not defined",
       "connector_type": "PUBLIC_VERIFIED_FEED",
       "integration_docs": "Conector Fast Shop verifica JSON-LD e barramento público de ofertas com link direto (/p).",
-      "last_check_at": "2026-11-11T09:42:57.501421-03:00",
+      "last_check_at": "2026-11-11T09:54:18.325542-03:00",
       "last_success_at": "2026-11-10T14:04:58.275579-03:00"
     },
     {
@@ -66,7 +66,7 @@
       "status_message": "Falha de conexão/execução: name 'os' is not defined",
       "connector_type": "OFFICIAL_PUBLIC_API_V2_AND_SKU_JSON",
       "integration_docs": "Consulta a API/Catálogo da KaBuM! ordenado pelo menor preço (sort=price) e valida o JSON direto da página de cada SKU (pageProps.product.prices.priceWithDiscount) para capturar o menor preço real no PIX.",
-      "last_check_at": "2026-11-11T09:42:34.713135-03:00",
+      "last_check_at": "2026-11-11T09:53:53.529298-03:00",
       "last_success_at": "2026-11-10T14:04:33.460820-03:00"
     },
     {
@@ -76,7 +76,7 @@
       "status_message": "Falha de conexão/execução: name 'os' is not defined",
       "connector_type": "PUBLIC_JSONLD_AND_VERIFIED_FEED",
       "integration_docs": "Consulta páginas públicas da Magazine Luiza e barramento comparador verificado com link direto (/p/).",
-      "last_check_at": "2026-11-11T09:42:52.223316-03:00",
+      "last_check_at": "2026-11-11T09:54:11.715623-03:00",
       "last_success_at": "2026-11-10T14:04:51.642707-03:00"
     },
     {
@@ -86,7 +86,7 @@
       "status_message": "Falha de conexão/execução: name 'os' is not defined",
       "connector_type": "PUBLIC_API_AND_VERIFIED_DEALS",
       "integration_docs": "Conector utiliza a API Pública REST do Mercado Livre (sites/MLB/search) e o barramento de promoções verificadas de Lojas Oficiais no Mercado Livre com cupom ativo.",
-      "last_check_at": "2026-11-11T09:42:21.056677-03:00",
+      "last_check_at": "2026-11-11T09:53:40.513110-03:00",
       "last_success_at": "2026-11-10T14:04:20.132237-03:00"
     },
     {
@@ -96,7 +96,7 @@
       "status_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
       "connector_type": "PUBLIC_FEED",
       "integration_docs": "Consulta o feed público de promoções do Pelando via dados estruturados públicos (__NEXT_DATA__ / JSON-LD). Respeita rate-limiting e políticas anti-bot.",
-      "last_check_at": "2026-11-11T09:43:02.365259-03:00",
+      "last_check_at": "2026-11-11T09:54:22.799059-03:00",
       "last_success_at": null
     },
     {
@@ -106,7 +106,7 @@
       "status_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
       "connector_type": "PUBLIC_JSONLD_FEED",
       "integration_docs": "Suporta API Lomadee (LOMADEE_APP_TOKEN no .env) e feed público verificado.",
-      "last_check_at": "2026-11-11T09:43:01.377491-03:00",
+      "last_check_at": "2026-11-11T09:54:21.751128-03:00",
       "last_success_at": null
     },
     {
@@ -116,11 +116,374 @@
       "status_message": "Falha de conexão/execução: name 'os' is not defined",
       "connector_type": "PUBLIC_FEED",
       "integration_docs": "Consulta ofertas públicas moderadas pela comunidade Promobit via JSON-LD / NextData público. Respeita estritamente limites de requisição e não contorna proteções.",
-      "last_check_at": "2026-11-11T09:43:01.456368-03:00",
+      "last_check_at": "2026-11-11T09:54:21.832541-03:00",
       "last_success_at": "2026-11-10T14:05:02.705677-03:00"
     }
   ],
   "logs": [
+    {
+      "id": 5719,
+      "store_name": "Pelando",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
+      "duration_ms": 908,
+      "started_at": "2026-11-11T09:54:21.890621-03:00",
+      "finished_at": "2026-11-11T09:54:22.799059-03:00"
+    },
+    {
+      "id": 5718,
+      "store_name": "Promobit",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 19,
+      "started_at": "2026-11-11T09:54:21.813641-03:00",
+      "finished_at": "2026-11-11T09:54:21.832541-03:00"
+    },
+    {
+      "id": 5717,
+      "store_name": "Ponto",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 0,
+      "started_at": "2026-11-11T09:54:21.751128-03:00",
+      "finished_at": "2026-11-11T09:54:21.751128-03:00"
+    },
+    {
+      "id": 5716,
+      "store_name": "Casas Bahia",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 0,
+      "started_at": "2026-11-11T09:54:21.690484-03:00",
+      "finished_at": "2026-11-11T09:54:21.690484-03:00"
+    },
+    {
+      "id": 5715,
+      "store_name": "Americanas",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 10,
+      "started_at": "2026-11-11T09:54:21.611415-03:00",
+      "finished_at": "2026-11-11T09:54:21.621913-03:00"
+    },
+    {
+      "id": 5714,
+      "store_name": "Carrefour",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 3162,
+      "started_at": "2026-11-11T09:54:18.382881-03:00",
+      "finished_at": "2026-11-11T09:54:21.544963-03:00"
+    },
+    {
+      "id": 5713,
+      "store_name": "Fast Shop",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 1044,
+      "started_at": "2026-11-11T09:54:17.281176-03:00",
+      "finished_at": "2026-11-11T09:54:18.325542-03:00"
+    },
+    {
+      "id": 5712,
+      "store_name": "Amazon Brasil",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 5437,
+      "started_at": "2026-11-11T09:54:11.782837-03:00",
+      "finished_at": "2026-11-11T09:54:17.219938-03:00"
+    },
+    {
+      "id": 5711,
+      "store_name": "Magazine Luiza",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 18122,
+      "started_at": "2026-11-11T09:53:53.593571-03:00",
+      "finished_at": "2026-11-11T09:54:11.715623-03:00"
+    },
+    {
+      "id": 5710,
+      "store_name": "KaBuM!",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 12946,
+      "started_at": "2026-11-11T09:53:40.582619-03:00",
+      "finished_at": "2026-11-11T09:53:53.529298-03:00"
+    },
+    {
+      "id": 5709,
+      "store_name": "Mercado Livre",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 3035,
+      "started_at": "2026-11-11T09:53:37.477260-03:00",
+      "finished_at": "2026-11-11T09:53:40.513110-03:00"
+    },
+    {
+      "id": 5708,
+      "store_name": "Pelando",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
+      "duration_ms": 1154,
+      "started_at": "2026-11-11T09:51:57.751566-03:00",
+      "finished_at": "2026-11-11T09:51:58.905951-03:00"
+    },
+    {
+      "id": 5707,
+      "store_name": "Promobit",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 19,
+      "started_at": "2026-11-11T09:51:57.674721-03:00",
+      "finished_at": "2026-11-11T09:51:57.694983-03:00"
+    },
+    {
+      "id": 5706,
+      "store_name": "Ponto",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 0,
+      "started_at": "2026-11-11T09:51:57.627360-03:00",
+      "finished_at": "2026-11-11T09:51:57.627360-03:00"
+    },
+    {
+      "id": 5705,
+      "store_name": "Casas Bahia",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 0,
+      "started_at": "2026-11-11T09:51:57.565417-03:00",
+      "finished_at": "2026-11-11T09:51:57.565417-03:00"
+    },
+    {
+      "id": 5704,
+      "store_name": "Americanas",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 9,
+      "started_at": "2026-11-11T09:51:57.518381-03:00",
+      "finished_at": "2026-11-11T09:51:57.527373-03:00"
+    },
+    {
+      "id": 5703,
+      "store_name": "Carrefour",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 3132,
+      "started_at": "2026-11-11T09:51:54.319657-03:00",
+      "finished_at": "2026-11-11T09:51:57.451725-03:00"
+    },
+    {
+      "id": 5702,
+      "store_name": "Fast Shop",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 895,
+      "started_at": "2026-11-11T09:51:53.357840-03:00",
+      "finished_at": "2026-11-11T09:51:54.252785-03:00"
+    },
+    {
+      "id": 5701,
+      "store_name": "Amazon Brasil",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 5489,
+      "started_at": "2026-11-11T09:51:47.805955-03:00",
+      "finished_at": "2026-11-11T09:51:53.296159-03:00"
+    },
+    {
+      "id": 5700,
+      "store_name": "Magazine Luiza",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 18738,
+      "started_at": "2026-11-11T09:51:28.998279-03:00",
+      "finished_at": "2026-11-11T09:51:47.737214-03:00"
+    },
+    {
+      "id": 5699,
+      "store_name": "KaBuM!",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 13410,
+      "started_at": "2026-11-11T09:51:15.526491-03:00",
+      "finished_at": "2026-11-11T09:51:28.936003-03:00"
+    },
+    {
+      "id": 5698,
+      "store_name": "Mercado Livre",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 3139,
+      "started_at": "2026-11-11T09:51:12.321680-03:00",
+      "finished_at": "2026-11-11T09:51:15.461042-03:00"
+    },
+    {
+      "id": 5697,
+      "store_name": "Pelando",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
+      "duration_ms": 949,
+      "started_at": "2026-11-11T09:46:57.303229-03:00",
+      "finished_at": "2026-11-11T09:46:58.252954-03:00"
+    },
+    {
+      "id": 5696,
+      "store_name": "Promobit",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 15,
+      "started_at": "2026-11-11T09:46:57.225517-03:00",
+      "finished_at": "2026-11-11T09:46:57.241376-03:00"
+    },
+    {
+      "id": 5695,
+      "store_name": "Ponto",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 0,
+      "started_at": "2026-11-11T09:46:57.163837-03:00",
+      "finished_at": "2026-11-11T09:46:57.163837-03:00"
+    },
+    {
+      "id": 5694,
+      "store_name": "Casas Bahia",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 0,
+      "started_at": "2026-11-11T09:46:57.102728-03:00",
+      "finished_at": "2026-11-11T09:46:57.102728-03:00"
+    },
+    {
+      "id": 5693,
+      "store_name": "Americanas",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 8,
+      "started_at": "2026-11-11T09:46:57.025571-03:00",
+      "finished_at": "2026-11-11T09:46:57.033564-03:00"
+    },
+    {
+      "id": 5692,
+      "store_name": "Carrefour",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 4094,
+      "started_at": "2026-11-11T09:46:52.870562-03:00",
+      "finished_at": "2026-11-11T09:46:56.964878-03:00"
+    },
+    {
+      "id": 5691,
+      "store_name": "Fast Shop",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 879,
+      "started_at": "2026-11-11T09:46:51.924731-03:00",
+      "finished_at": "2026-11-11T09:46:52.804500-03:00"
+    },
+    {
+      "id": 5690,
+      "store_name": "Amazon Brasil",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 5751,
+      "started_at": "2026-11-11T09:46:46.111898-03:00",
+      "finished_at": "2026-11-11T09:46:51.863165-03:00"
+    },
+    {
+      "id": 5689,
+      "store_name": "Magazine Luiza",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 17919,
+      "started_at": "2026-11-11T09:46:28.115743-03:00",
+      "finished_at": "2026-11-11T09:46:46.035566-03:00"
+    },
+    {
+      "id": 5688,
+      "store_name": "KaBuM!",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 13055,
+      "started_at": "2026-11-11T09:46:14.981570-03:00",
+      "finished_at": "2026-11-11T09:46:28.037144-03:00"
+    },
+    {
+      "id": 5687,
+      "store_name": "Mercado Livre",
+      "status": "ERROR",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "name 'os' is not defined",
+      "duration_ms": 2604,
+      "started_at": "2026-11-11T09:46:12.313327-03:00",
+      "finished_at": "2026-11-11T09:46:14.916889-03:00"
+    },
     {
       "id": 5686,
       "store_name": "Pelando",
@@ -197,369 +560,6 @@
       "duration_ms": 1008,
       "started_at": "2026-11-11T09:42:56.492394-03:00",
       "finished_at": "2026-11-11T09:42:57.501421-03:00"
-    },
-    {
-      "id": 5679,
-      "store_name": "Amazon Brasil",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 4148,
-      "started_at": "2026-11-11T09:42:52.282402-03:00",
-      "finished_at": "2026-11-11T09:42:56.431673-03:00"
-    },
-    {
-      "id": 5678,
-      "store_name": "Magazine Luiza",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 17453,
-      "started_at": "2026-11-11T09:42:34.770880-03:00",
-      "finished_at": "2026-11-11T09:42:52.223316-03:00"
-    },
-    {
-      "id": 5677,
-      "store_name": "KaBuM!",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 13587,
-      "started_at": "2026-11-11T09:42:21.126203-03:00",
-      "finished_at": "2026-11-11T09:42:34.713135-03:00"
-    },
-    {
-      "id": 5676,
-      "store_name": "Mercado Livre",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 2618,
-      "started_at": "2026-11-11T09:42:18.438444-03:00",
-      "finished_at": "2026-11-11T09:42:21.056677-03:00"
-    },
-    {
-      "id": 5675,
-      "store_name": "Pelando",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
-      "duration_ms": 1063,
-      "started_at": "2026-11-11T09:42:03.578492-03:00",
-      "finished_at": "2026-11-11T09:42:04.642866-03:00"
-    },
-    {
-      "id": 5674,
-      "store_name": "Promobit",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 27,
-      "started_at": "2026-11-11T09:42:03.486217-03:00",
-      "finished_at": "2026-11-11T09:42:03.513180-03:00"
-    },
-    {
-      "id": 5673,
-      "store_name": "Ponto",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 0,
-      "started_at": "2026-11-11T09:42:03.424679-03:00",
-      "finished_at": "2026-11-11T09:42:03.424679-03:00"
-    },
-    {
-      "id": 5672,
-      "store_name": "Casas Bahia",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 0,
-      "started_at": "2026-11-11T09:42:03.364616-03:00",
-      "finished_at": "2026-11-11T09:42:03.364616-03:00"
-    },
-    {
-      "id": 5671,
-      "store_name": "Americanas",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 15,
-      "started_at": "2026-11-11T09:42:03.287090-03:00",
-      "finished_at": "2026-11-11T09:42:03.302076-03:00"
-    },
-    {
-      "id": 5670,
-      "store_name": "Carrefour",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 3527,
-      "started_at": "2026-11-11T09:41:59.686107-03:00",
-      "finished_at": "2026-11-11T09:42:03.214001-03:00"
-    },
-    {
-      "id": 5669,
-      "store_name": "Fast Shop",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 1140,
-      "started_at": "2026-11-11T09:41:58.481410-03:00",
-      "finished_at": "2026-11-11T09:41:59.621632-03:00"
-    },
-    {
-      "id": 5668,
-      "store_name": "Amazon Brasil",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 6228,
-      "started_at": "2026-11-11T09:41:52.184879-03:00",
-      "finished_at": "2026-11-11T09:41:58.413410-03:00"
-    },
-    {
-      "id": 5666,
-      "store_name": "Pelando",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
-      "duration_ms": 1088,
-      "started_at": "2026-11-11T09:41:44.586345-03:00",
-      "finished_at": "2026-11-11T09:41:45.674083-03:00"
-    },
-    {
-      "id": 5665,
-      "store_name": "Promobit",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 20,
-      "started_at": "2026-11-11T09:41:44.494177-03:00",
-      "finished_at": "2026-11-11T09:41:44.515150-03:00"
-    },
-    {
-      "id": 5664,
-      "store_name": "Ponto",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 0,
-      "started_at": "2026-11-11T09:41:44.446260-03:00",
-      "finished_at": "2026-11-11T09:41:44.446260-03:00"
-    },
-    {
-      "id": 5663,
-      "store_name": "Casas Bahia",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 0,
-      "started_at": "2026-11-11T09:41:44.382034-03:00",
-      "finished_at": "2026-11-11T09:41:44.382034-03:00"
-    },
-    {
-      "id": 5662,
-      "store_name": "Americanas",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 7,
-      "started_at": "2026-11-11T09:41:44.318576-03:00",
-      "finished_at": "2026-11-11T09:41:44.326568-03:00"
-    },
-    {
-      "id": 5661,
-      "store_name": "Carrefour",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 3411,
-      "started_at": "2026-11-11T09:41:40.861491-03:00",
-      "finished_at": "2026-11-11T09:41:44.272386-03:00"
-    },
-    {
-      "id": 5660,
-      "store_name": "Fast Shop",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 953,
-      "started_at": "2026-11-11T09:41:39.868580-03:00",
-      "finished_at": "2026-11-11T09:41:40.823011-03:00"
-    },
-    {
-      "id": 5659,
-      "store_name": "Amazon Brasil",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 6417,
-      "started_at": "2026-11-11T09:41:33.381815-03:00",
-      "finished_at": "2026-11-11T09:41:39.799509-03:00"
-    },
-    {
-      "id": 5667,
-      "store_name": "Magazine Luiza",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 26459,
-      "started_at": "2026-11-11T09:41:25.651184-03:00",
-      "finished_at": "2026-11-11T09:41:52.110880-03:00"
-    },
-    {
-      "id": 5657,
-      "store_name": "KaBuM!",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 11856,
-      "started_at": "2026-11-11T09:41:13.729523-03:00",
-      "finished_at": "2026-11-11T09:41:25.586289-03:00"
-    },
-    {
-      "id": 5656,
-      "store_name": "Mercado Livre",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 1014,
-      "started_at": "2026-11-11T09:41:12.642084-03:00",
-      "finished_at": "2026-11-11T09:41:13.656073-03:00"
-    },
-    {
-      "id": 5658,
-      "store_name": "Magazine Luiza",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 21739,
-      "started_at": "2026-11-11T09:41:11.528747-03:00",
-      "finished_at": "2026-11-11T09:41:33.267850-03:00"
-    },
-    {
-      "id": 5655,
-      "store_name": "KaBuM!",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 13229,
-      "started_at": "2026-11-11T09:40:58.242348-03:00",
-      "finished_at": "2026-11-11T09:41:11.472158-03:00"
-    },
-    {
-      "id": 5654,
-      "store_name": "Mercado Livre",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 2971,
-      "started_at": "2026-11-11T09:40:55.202156-03:00",
-      "finished_at": "2026-11-11T09:40:58.173651-03:00"
-    },
-    {
-      "id": 5653,
-      "store_name": "Pelando",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
-      "duration_ms": 884,
-      "started_at": "2026-11-11T09:36:54.006323-03:00",
-      "finished_at": "2026-11-11T09:36:54.891139-03:00"
-    },
-    {
-      "id": 5652,
-      "store_name": "Promobit",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 16,
-      "started_at": "2026-11-11T09:36:53.927129-03:00",
-      "finished_at": "2026-11-11T09:36:53.943213-03:00"
-    },
-    {
-      "id": 5651,
-      "store_name": "Ponto",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 0,
-      "started_at": "2026-11-11T09:36:53.864562-03:00",
-      "finished_at": "2026-11-11T09:36:53.864562-03:00"
-    },
-    {
-      "id": 5650,
-      "store_name": "Casas Bahia",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 0,
-      "started_at": "2026-11-11T09:36:53.805842-03:00",
-      "finished_at": "2026-11-11T09:36:53.805842-03:00"
-    },
-    {
-      "id": 5649,
-      "store_name": "Americanas",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 8,
-      "started_at": "2026-11-11T09:36:53.725796-03:00",
-      "finished_at": "2026-11-11T09:36:53.733787-03:00"
-    },
-    {
-      "id": 5648,
-      "store_name": "Carrefour",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 2434,
-      "started_at": "2026-11-11T09:36:51.232820-03:00",
-      "finished_at": "2026-11-11T09:36:53.667404-03:00"
-    },
-    {
-      "id": 5647,
-      "store_name": "Fast Shop",
-      "status": "ERROR",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "name 'os' is not defined",
-      "duration_ms": 842,
-      "started_at": "2026-11-11T09:36:50.322328-03:00",
-      "finished_at": "2026-11-11T09:36:51.165055-03:00"
     }
   ]
 }
