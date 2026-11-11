@@ -46,7 +46,7 @@
       "status_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
       "connector_type": "PUBLIC_JSONLD_FEED",
       "integration_docs": "Suporta API Lomadee (LOMADEE_APP_TOKEN no .env) e feed público verificado.",
-      "last_check_at": "2026-11-11T15:54:07.747667-03:00",
+      "last_check_at": "2026-11-11T16:05:29.535382-03:00",
       "last_success_at": null
     },
     {
@@ -66,7 +66,7 @@
       "status_message": "Timeout ou erro: ",
       "connector_type": "OFFICIAL_PUBLIC_API_V2_AND_SKU_JSON",
       "integration_docs": "Consulta a API/Catálogo da KaBuM! ordenado pelo menor preço (sort=price) e valida o JSON direto da página de cada SKU (pageProps.product.prices.priceWithDiscount) para capturar o menor preço real no PIX.",
-      "last_check_at": "2026-11-11T15:54:12.263127-03:00",
+      "last_check_at": "2026-11-11T16:05:33.355848-03:00",
       "last_success_at": "2026-11-10T14:04:33.460820-03:00"
     },
     {
@@ -96,7 +96,7 @@
       "status_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
       "connector_type": "PUBLIC_FEED",
       "integration_docs": "Consulta o feed público de promoções do Pelando via dados estruturados públicos (__NEXT_DATA__ / JSON-LD). Respeita rate-limiting e políticas anti-bot.",
-      "last_check_at": "2026-11-11T15:54:02.364528-03:00",
+      "last_check_at": "2026-11-11T16:05:23.279001-03:00",
       "last_success_at": null
     },
     {
@@ -106,7 +106,7 @@
       "status_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
       "connector_type": "PUBLIC_JSONLD_FEED",
       "integration_docs": "Suporta API Lomadee (LOMADEE_APP_TOKEN no .env) e feed público verificado.",
-      "last_check_at": "2026-11-11T15:54:07.752292-03:00",
+      "last_check_at": "2026-11-11T16:05:29.537380-03:00",
       "last_success_at": null
     },
     {
@@ -121,6 +121,182 @@
     }
   ],
   "logs": [
+    {
+      "id": 6238,
+      "store_name": "Pelando",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
+      "duration_ms": 990,
+      "started_at": "2026-11-11T16:05:22.288542-03:00",
+      "finished_at": "2026-11-11T16:05:23.279001-03:00"
+    },
+    {
+      "id": 6237,
+      "store_name": "Ponto",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 7742,
+      "started_at": "2026-11-11T16:05:21.795627-03:00",
+      "finished_at": "2026-11-11T16:05:29.537380-03:00"
+    },
+    {
+      "id": 6236,
+      "store_name": "Casas Bahia",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 7740,
+      "started_at": "2026-11-11T16:05:21.794629-03:00",
+      "finished_at": "2026-11-11T16:05:29.535382-03:00"
+    },
+    {
+      "id": 6235,
+      "store_name": "KaBuM!",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Timeout ou erro: ",
+      "duration_ms": 14027,
+      "started_at": "2026-11-11T16:05:19.328770-03:00",
+      "finished_at": "2026-11-11T16:05:33.355848-03:00"
+    },
+    {
+      "id": 6234,
+      "store_name": "Pelando",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
+      "duration_ms": 1636,
+      "started_at": "2026-11-11T16:01:18.277824-03:00",
+      "finished_at": "2026-11-11T16:01:19.913741-03:00"
+    },
+    {
+      "id": 6233,
+      "store_name": "Ponto",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 8193,
+      "started_at": "2026-11-11T16:01:17.707343-03:00",
+      "finished_at": "2026-11-11T16:01:25.901019-03:00"
+    },
+    {
+      "id": 6232,
+      "store_name": "Casas Bahia",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 8186,
+      "started_at": "2026-11-11T16:01:17.707343-03:00",
+      "finished_at": "2026-11-11T16:01:25.894423-03:00"
+    },
+    {
+      "id": 6231,
+      "store_name": "KaBuM!",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Timeout ou erro: ",
+      "duration_ms": 14031,
+      "started_at": "2026-11-11T16:01:13.531671-03:00",
+      "finished_at": "2026-11-11T16:01:27.562641-03:00"
+    },
+    {
+      "id": 6230,
+      "store_name": "Pelando",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
+      "duration_ms": 1379,
+      "started_at": "2026-11-11T15:56:18.007788-03:00",
+      "finished_at": "2026-11-11T15:56:19.386297-03:00"
+    },
+    {
+      "id": 6229,
+      "store_name": "Ponto",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 0,
+      "started_at": "2026-11-11T15:56:18.006789-03:00",
+      "finished_at": "2026-11-11T15:56:18.006789-03:00"
+    },
+    {
+      "id": 6228,
+      "store_name": "Casas Bahia",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 0,
+      "started_at": "2026-11-11T15:56:18.006789-03:00",
+      "finished_at": "2026-11-11T15:56:18.006789-03:00"
+    },
+    {
+      "id": 6227,
+      "store_name": "KaBuM!",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Timeout ou erro: ",
+      "duration_ms": 14030,
+      "started_at": "2026-11-11T15:56:13.924563-03:00",
+      "finished_at": "2026-11-11T15:56:27.955579-03:00"
+    },
+    {
+      "id": 6226,
+      "store_name": "Pelando",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
+      "duration_ms": 1016,
+      "started_at": "2026-11-11T15:54:49.886316-03:00",
+      "finished_at": "2026-11-11T15:54:50.903862-03:00"
+    },
+    {
+      "id": 6225,
+      "store_name": "Ponto",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 7279,
+      "started_at": "2026-11-11T15:54:49.360085-03:00",
+      "finished_at": "2026-11-11T15:54:56.639316-03:00"
+    },
+    {
+      "id": 6224,
+      "store_name": "Casas Bahia",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 7276,
+      "started_at": "2026-11-11T15:54:49.359085-03:00",
+      "finished_at": "2026-11-11T15:54:56.635321-03:00"
+    },
+    {
+      "id": 6223,
+      "store_name": "KaBuM!",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Timeout ou erro: ",
+      "duration_ms": 13993,
+      "started_at": "2026-11-11T15:54:46.906462-03:00",
+      "finished_at": "2026-11-11T15:55:00.899547-03:00"
+    },
     {
       "id": 6222,
       "store_name": "Pelando",
@@ -384,182 +560,6 @@
       "duration_ms": 13989,
       "started_at": "2026-11-11T15:36:13.647998-03:00",
       "finished_at": "2026-11-11T15:36:27.638201-03:00"
-    },
-    {
-      "id": 6198,
-      "store_name": "Pelando",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
-      "duration_ms": 1557,
-      "started_at": "2026-11-11T15:31:54.596559-03:00",
-      "finished_at": "2026-11-11T15:31:56.154452-03:00"
-    },
-    {
-      "id": 6197,
-      "store_name": "Ponto",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 7138,
-      "started_at": "2026-11-11T15:31:54.116515-03:00",
-      "finished_at": "2026-11-11T15:32:01.255386-03:00"
-    },
-    {
-      "id": 6196,
-      "store_name": "Casas Bahia",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 7136,
-      "started_at": "2026-11-11T15:31:54.116515-03:00",
-      "finished_at": "2026-11-11T15:32:01.252397-03:00"
-    },
-    {
-      "id": 6195,
-      "store_name": "KaBuM!",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Timeout ou erro: ",
-      "duration_ms": 14002,
-      "started_at": "2026-11-11T15:31:51.718219-03:00",
-      "finished_at": "2026-11-11T15:32:05.719813-03:00"
-    },
-    {
-      "id": 6194,
-      "store_name": "Pelando",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
-      "duration_ms": 1568,
-      "started_at": "2026-11-11T15:31:16.287104-03:00",
-      "finished_at": "2026-11-11T15:31:17.855349-03:00"
-    },
-    {
-      "id": 6193,
-      "store_name": "Ponto",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 7166,
-      "started_at": "2026-11-11T15:31:15.821790-03:00",
-      "finished_at": "2026-11-11T15:31:22.988706-03:00"
-    },
-    {
-      "id": 6192,
-      "store_name": "Casas Bahia",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 7160,
-      "started_at": "2026-11-11T15:31:15.821790-03:00",
-      "finished_at": "2026-11-11T15:31:22.981712-03:00"
-    },
-    {
-      "id": 6191,
-      "store_name": "KaBuM!",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Timeout ou erro: ",
-      "duration_ms": 14026,
-      "started_at": "2026-11-11T15:31:13.501448-03:00",
-      "finished_at": "2026-11-11T15:31:27.527618-03:00"
-    },
-    {
-      "id": 6190,
-      "store_name": "Pelando",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
-      "duration_ms": 952,
-      "started_at": "2026-11-11T15:26:17.999736-03:00",
-      "finished_at": "2026-11-11T15:26:18.953115-03:00"
-    },
-    {
-      "id": 6189,
-      "store_name": "Ponto",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 7430,
-      "started_at": "2026-11-11T15:26:17.538077-03:00",
-      "finished_at": "2026-11-11T15:26:24.968313-03:00"
-    },
-    {
-      "id": 6188,
-      "store_name": "Casas Bahia",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 7425,
-      "started_at": "2026-11-11T15:26:17.538077-03:00",
-      "finished_at": "2026-11-11T15:26:24.963318-03:00"
-    },
-    {
-      "id": 6187,
-      "store_name": "Fast Shop",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Timeout ou erro: ",
-      "duration_ms": 13983,
-      "started_at": "2026-11-11T15:26:16.607788-03:00",
-      "finished_at": "2026-11-11T15:26:30.590715-03:00"
-    },
-    {
-      "id": 6186,
-      "store_name": "KaBuM!",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Timeout ou erro: ",
-      "duration_ms": 15378,
-      "started_at": "2026-11-11T15:26:15.222385-03:00",
-      "finished_at": "2026-11-11T15:26:30.600706-03:00"
-    },
-    {
-      "id": 6185,
-      "store_name": "Pelando",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
-      "duration_ms": 986,
-      "started_at": "2026-11-11T15:21:16.285718-03:00",
-      "finished_at": "2026-11-11T15:21:17.272626-03:00"
-    },
-    {
-      "id": 6184,
-      "store_name": "Ponto",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 7385,
-      "started_at": "2026-11-11T15:21:15.814464-03:00",
-      "finished_at": "2026-11-11T15:21:23.199595-03:00"
-    },
-    {
-      "id": 6183,
-      "store_name": "Casas Bahia",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 7384,
-      "started_at": "2026-11-11T15:21:15.813465-03:00",
-      "finished_at": "2026-11-11T15:21:23.198558-03:00"
     }
   ]
 }
