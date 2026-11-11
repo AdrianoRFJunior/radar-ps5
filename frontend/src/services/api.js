@@ -8,8 +8,7 @@
 const isGitHubPages =
   typeof window !== 'undefined' && window.location.hostname.endsWith('github.io');
 
-const LIVE_REMOTE_API = 'https://shredder-cloud-ladder.ngrok-free.dev/api';
-const API_BASE = import.meta.env.VITE_API_BASE_URL || (isGitHubPages ? LIVE_REMOTE_API : '/api');
+const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
 
 const READ_ALERTS_STORAGE_KEY = 'radar_bf_read_alerts_v1';
 const ARCHIVED_ALERTS_STORAGE_KEY = 'radar_bf_archived_alerts_v1';
@@ -50,6 +49,11 @@ function applyLocalAlertState(alertsList) {
 }
 
 async function request(path, options = {}, staticFallbackFn = null) {
+  // Quando hospedado no GitHub Pages, utiliza diretamente os snapshots estáticos gerados sem depender de túnel
+  if (isGitHubPages && staticFallbackFn && (!options.method || options.method === 'GET')) {
+    return await staticFallbackFn();
+  }
+
   const controller = new AbortController();
   const timeoutMs = (options.method && options.method !== 'GET') ? 45000 : 5000;
   const timer = setTimeout(() => controller.abort(), timeoutMs);
@@ -58,7 +62,6 @@ async function request(path, options = {}, staticFallbackFn = null) {
     const res = await fetch(`${API_BASE}${path}`, {
       headers: {
         'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning': '1',
         ...(options.headers || {}),
       },
       signal: controller.signal,
