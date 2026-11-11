@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T12:16:49.666344-03:00",
+  "generated_at": "2026-11-11T12:27:43.370302-03:00",
   "daily_report": {
     "date_reference": "11/11/2026",
     "lowest_prices": {
@@ -1485,7 +1485,7 @@
       },
       {
         "store_name": "Promobit",
-        "status": "ERROR",
+        "status": "UNAVAILABLE",
         "reputation_score": 91.0,
         "active_offers_count": 7,
         "min_ps5_price": 3742.16,
