@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T23:58:20.701180-03:00",
+  "generated_at": "2026-11-11T00:09:34.329260-03:00",
   "disclaimer": "IMPORTANTE: As previsões utilizam métodos estatísticos interpretáveis (Médias Móveis de 7 e 30 dias, Regressão Linear Amortecida e Volatilidade Histórica). Correlações passadas não garantem promoções futuras em horários específicos.",
   "products_predictions": [
     {
@@ -26,7 +26,7 @@
           "is_reliable": true,
           "data_points_used": 1221,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 1221 coletas históricas, a média móvel de 7 dias (R$ 4295.34) comparada à média de 30 dias (R$ 4295.34) e inclinação linear de R$ +221466.39/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 8.0%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 1221 coletas históricas, a média móvel de 7 dias (R$ 4295.34) comparada à média de 30 dias (R$ 4295.34) e inclinação linear de R$ +221466.39/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 8.0%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -46,7 +46,7 @@
           "is_reliable": true,
           "data_points_used": 1221,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 1221 coletas históricas, a média móvel de 7 dias (R$ 4295.34) comparada à média de 30 dias (R$ 4295.34) e inclinação linear de R$ +221466.39/dia indicam tendência de aumento para o horizonte de próximos 3 dias (volatilidade de 8.0%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 1221 coletas históricas, a média móvel de 7 dias (R$ 4295.34) comparada à média de 30 dias (R$ 4295.34) e inclinação linear de R$ +221466.39/dia indicam tendência de aumento para o horizonte de próximos 3 dias (volatilidade de 8.0%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -66,7 +66,7 @@
           "is_reliable": true,
           "data_points_used": 1221,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 1221 coletas históricas, a média móvel de 7 dias (R$ 4295.34) comparada à média de 30 dias (R$ 4295.34) e inclinação linear de R$ +221466.39/dia indicam tendência de aumento para o horizonte de próximos 7 dias (volatilidade de 8.0%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 1221 coletas históricas, a média móvel de 7 dias (R$ 4295.34) comparada à média de 30 dias (R$ 4295.34) e inclinação linear de R$ +221466.39/dia indicam tendência de aumento para o horizonte de próximos 7 dias (volatilidade de 8.0%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         }
       ]
@@ -95,7 +95,7 @@
           "is_reliable": true,
           "data_points_used": 960,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 960 coletas históricas, a média móvel de 7 dias (R$ 4782.66) comparada à média de 30 dias (R$ 4781.37) e inclinação linear de R$ +503394.46/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 19.4%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 960 coletas históricas, a média móvel de 7 dias (R$ 4782.66) comparada à média de 30 dias (R$ 4781.37) e inclinação linear de R$ +503394.46/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 19.4%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -115,7 +115,7 @@
           "is_reliable": true,
           "data_points_used": 960,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 960 coletas históricas, a média móvel de 7 dias (R$ 4782.66) comparada à média de 30 dias (R$ 4781.37) e inclinação linear de R$ +503394.46/dia indicam tendência de aumento para o horizonte de próximos 3 dias (volatilidade de 19.4%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 960 coletas históricas, a média móvel de 7 dias (R$ 4782.66) comparada à média de 30 dias (R$ 4781.37) e inclinação linear de R$ +503394.46/dia indicam tendência de aumento para o horizonte de próximos 3 dias (volatilidade de 19.4%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -135,7 +135,7 @@
           "is_reliable": true,
           "data_points_used": 960,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 960 coletas históricas, a média móvel de 7 dias (R$ 4782.66) comparada à média de 30 dias (R$ 4781.37) e inclinação linear de R$ +503394.46/dia indicam tendência de aumento para o horizonte de próximos 7 dias (volatilidade de 19.4%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 960 coletas históricas, a média móvel de 7 dias (R$ 4782.66) comparada à média de 30 dias (R$ 4781.37) e inclinação linear de R$ +503394.46/dia indicam tendência de aumento para o horizonte de próximos 7 dias (volatilidade de 19.4%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         }
       ]
@@ -164,7 +164,7 @@
           "is_reliable": true,
           "data_points_used": 2681,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 2681 coletas históricas, a média móvel de 7 dias (R$ 5164.50) comparada à média de 30 dias (R$ 5163.94) e inclinação linear de R$ -6586017.13/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 10.3%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 2681 coletas históricas, a média móvel de 7 dias (R$ 5164.50) comparada à média de 30 dias (R$ 5163.94) e inclinação linear de R$ -6586017.13/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 10.3%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -184,7 +184,7 @@
           "is_reliable": true,
           "data_points_used": 2681,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 2681 coletas históricas, a média móvel de 7 dias (R$ 5164.50) comparada à média de 30 dias (R$ 5163.94) e inclinação linear de R$ -6586017.13/dia indicam tendência de queda para o horizonte de próximos 3 dias (volatilidade de 10.3%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 2681 coletas históricas, a média móvel de 7 dias (R$ 5164.50) comparada à média de 30 dias (R$ 5163.94) e inclinação linear de R$ -6586017.13/dia indicam tendência de queda para o horizonte de próximos 3 dias (volatilidade de 10.3%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -204,7 +204,7 @@
           "is_reliable": true,
           "data_points_used": 2681,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 2681 coletas históricas, a média móvel de 7 dias (R$ 5164.50) comparada à média de 30 dias (R$ 5163.94) e inclinação linear de R$ -6586017.13/dia indicam tendência de queda para o horizonte de próximos 7 dias (volatilidade de 10.3%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 2681 coletas históricas, a média móvel de 7 dias (R$ 5164.50) comparada à média de 30 dias (R$ 5163.94) e inclinação linear de R$ -6586017.13/dia indicam tendência de queda para o horizonte de próximos 7 dias (volatilidade de 10.3%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         }
       ]
@@ -233,7 +233,7 @@
           "is_reliable": true,
           "data_points_used": 212,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 212 coletas históricas, a média móvel de 7 dias (R$ 5726.36) comparada à média de 30 dias (R$ 5726.36) e inclinação linear de R$ -4427.23/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 2.1%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 212 coletas históricas, a média móvel de 7 dias (R$ 5726.36) comparada à média de 30 dias (R$ 5726.36) e inclinação linear de R$ -4427.23/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 2.1%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -253,7 +253,7 @@
           "is_reliable": true,
           "data_points_used": 212,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 212 coletas históricas, a média móvel de 7 dias (R$ 5726.36) comparada à média de 30 dias (R$ 5726.36) e inclinação linear de R$ -4427.23/dia indicam tendência de queda para o horizonte de próximos 3 dias (volatilidade de 2.1%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 212 coletas históricas, a média móvel de 7 dias (R$ 5726.36) comparada à média de 30 dias (R$ 5726.36) e inclinação linear de R$ -4427.23/dia indicam tendência de queda para o horizonte de próximos 3 dias (volatilidade de 2.1%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -273,7 +273,7 @@
           "is_reliable": true,
           "data_points_used": 212,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 212 coletas históricas, a média móvel de 7 dias (R$ 5726.36) comparada à média de 30 dias (R$ 5726.36) e inclinação linear de R$ -4427.23/dia indicam tendência de queda para o horizonte de próximos 7 dias (volatilidade de 2.1%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 212 coletas históricas, a média móvel de 7 dias (R$ 5726.36) comparada à média de 30 dias (R$ 5726.36) e inclinação linear de R$ -4427.23/dia indicam tendência de queda para o horizonte de próximos 7 dias (volatilidade de 2.1%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         }
       ]
@@ -302,7 +302,7 @@
           "is_reliable": true,
           "data_points_used": 2075,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 2075 coletas históricas, a média móvel de 7 dias (R$ 443.78) comparada à média de 30 dias (R$ 443.75) e inclinação linear de R$ -83878.08/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 13.5%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 2075 coletas históricas, a média móvel de 7 dias (R$ 443.78) comparada à média de 30 dias (R$ 443.75) e inclinação linear de R$ -83878.08/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 13.5%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -322,7 +322,7 @@
           "is_reliable": true,
           "data_points_used": 2075,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 2075 coletas históricas, a média móvel de 7 dias (R$ 443.78) comparada à média de 30 dias (R$ 443.75) e inclinação linear de R$ -83878.08/dia indicam tendência de queda para o horizonte de próximos 3 dias (volatilidade de 13.5%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 2075 coletas históricas, a média móvel de 7 dias (R$ 443.78) comparada à média de 30 dias (R$ 443.75) e inclinação linear de R$ -83878.08/dia indicam tendência de queda para o horizonte de próximos 3 dias (volatilidade de 13.5%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -342,7 +342,7 @@
           "is_reliable": true,
           "data_points_used": 2075,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 2075 coletas históricas, a média móvel de 7 dias (R$ 443.78) comparada à média de 30 dias (R$ 443.75) e inclinação linear de R$ -83878.08/dia indicam tendência de queda para o horizonte de próximos 7 dias (volatilidade de 13.5%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 2075 coletas históricas, a média móvel de 7 dias (R$ 443.78) comparada à média de 30 dias (R$ 443.75) e inclinação linear de R$ -83878.08/dia indicam tendência de queda para o horizonte de próximos 7 dias (volatilidade de 13.5%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         }
       ]
@@ -371,7 +371,7 @@
           "is_reliable": true,
           "data_points_used": 1356,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 1356 coletas históricas, a média móvel de 7 dias (R$ 464.23) comparada à média de 30 dias (R$ 464.18) e inclinação linear de R$ +3555.65/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 16.1%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 1356 coletas históricas, a média móvel de 7 dias (R$ 464.23) comparada à média de 30 dias (R$ 464.18) e inclinação linear de R$ +3555.65/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 16.1%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -391,7 +391,7 @@
           "is_reliable": true,
           "data_points_used": 1356,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 1356 coletas históricas, a média móvel de 7 dias (R$ 464.23) comparada à média de 30 dias (R$ 464.18) e inclinação linear de R$ +3555.65/dia indicam tendência de aumento para o horizonte de próximos 3 dias (volatilidade de 16.1%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 1356 coletas históricas, a média móvel de 7 dias (R$ 464.23) comparada à média de 30 dias (R$ 464.18) e inclinação linear de R$ +3555.65/dia indicam tendência de aumento para o horizonte de próximos 3 dias (volatilidade de 16.1%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -411,7 +411,7 @@
           "is_reliable": true,
           "data_points_used": 1356,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 1356 coletas históricas, a média móvel de 7 dias (R$ 464.23) comparada à média de 30 dias (R$ 464.18) e inclinação linear de R$ +3555.65/dia indicam tendência de aumento para o horizonte de próximos 7 dias (volatilidade de 16.1%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 1356 coletas históricas, a média móvel de 7 dias (R$ 464.23) comparada à média de 30 dias (R$ 464.18) e inclinação linear de R$ +3555.65/dia indicam tendência de aumento para o horizonte de próximos 7 dias (volatilidade de 16.1%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         }
       ]
@@ -440,7 +440,7 @@
           "is_reliable": true,
           "data_points_used": 5035,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 5035 coletas históricas, a média móvel de 7 dias (R$ 548.93) comparada à média de 30 dias (R$ 548.93) e inclinação linear de R$ +846965.31/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 35.4%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 5035 coletas históricas, a média móvel de 7 dias (R$ 548.93) comparada à média de 30 dias (R$ 548.93) e inclinação linear de R$ +846965.31/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 35.4%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -460,7 +460,7 @@
           "is_reliable": true,
           "data_points_used": 5035,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 5035 coletas históricas, a média móvel de 7 dias (R$ 548.93) comparada à média de 30 dias (R$ 548.93) e inclinação linear de R$ +846965.31/dia indicam tendência de aumento para o horizonte de próximos 3 dias (volatilidade de 35.4%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 5035 coletas históricas, a média móvel de 7 dias (R$ 548.93) comparada à média de 30 dias (R$ 548.93) e inclinação linear de R$ +846965.31/dia indicam tendência de aumento para o horizonte de próximos 3 dias (volatilidade de 35.4%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -480,7 +480,7 @@
           "is_reliable": true,
           "data_points_used": 5035,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 5035 coletas históricas, a média móvel de 7 dias (R$ 548.93) comparada à média de 30 dias (R$ 548.93) e inclinação linear de R$ +846965.31/dia indicam tendência de aumento para o horizonte de próximos 7 dias (volatilidade de 35.4%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 5035 coletas históricas, a média móvel de 7 dias (R$ 548.93) comparada à média de 30 dias (R$ 548.93) e inclinação linear de R$ +846965.31/dia indicam tendência de aumento para o horizonte de próximos 7 dias (volatilidade de 35.4%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         }
       ]
@@ -509,7 +509,7 @@
           "is_reliable": true,
           "data_points_used": 2039,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 2039 coletas históricas, a média móvel de 7 dias (R$ 551.51) comparada à média de 30 dias (R$ 551.51) e inclinação linear de R$ +26478.45/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 4.2%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 2039 coletas históricas, a média móvel de 7 dias (R$ 551.51) comparada à média de 30 dias (R$ 551.51) e inclinação linear de R$ +26478.45/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 4.2%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -529,7 +529,7 @@
           "is_reliable": true,
           "data_points_used": 2039,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 2039 coletas históricas, a média móvel de 7 dias (R$ 551.51) comparada à média de 30 dias (R$ 551.51) e inclinação linear de R$ +26478.45/dia indicam tendência de aumento para o horizonte de próximos 3 dias (volatilidade de 4.2%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 2039 coletas históricas, a média móvel de 7 dias (R$ 551.51) comparada à média de 30 dias (R$ 551.51) e inclinação linear de R$ +26478.45/dia indicam tendência de aumento para o horizonte de próximos 3 dias (volatilidade de 4.2%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         },
         {
@@ -549,7 +549,7 @@
           "is_reliable": true,
           "data_points_used": 2039,
           "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-          "explanation": "Baseado em 2039 coletas históricas, a média móvel de 7 dias (R$ 551.51) comparada à média de 30 dias (R$ 551.51) e inclinação linear de R$ +26478.45/dia indicam tendência de aumento para o horizonte de próximos 7 dias (volatilidade de 4.2%). Faltam 16 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+          "explanation": "Baseado em 2039 coletas históricas, a média móvel de 7 dias (R$ 551.51) comparada à média de 30 dias (R$ 551.51) e inclinação linear de R$ +26478.45/dia indicam tendência de aumento para o horizonte de próximos 7 dias (volatilidade de 4.2%). Faltam 15 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
           "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
         }
       ]
