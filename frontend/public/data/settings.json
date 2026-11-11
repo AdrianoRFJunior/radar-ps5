@@ -81,13 +81,13 @@
   "only_official_warranty": false,
   "updated_at": "2026-11-04T18:08:16.639716-03:00",
   "scheduler_status": {
-    "scheduler_running": false,
+    "scheduler_running": true,
     "is_paused": false,
-    "is_running_cycle_now": false,
-    "current_mode": "AUTO_EVENT",
+    "is_running_cycle_now": true,
+    "current_mode": "EVENT_ACTIVE",
     "current_interval_minutes": 5,
-    "last_run_at": null,
-    "next_run_at": null
+    "last_run_at": "2026-11-11T11:06:34.212862-03:00",
+    "next_run_at": "2026-11-11T11:16:12.982095-03:00"
   },
   "event_mode": {
     "event_mode_enabled": true,
