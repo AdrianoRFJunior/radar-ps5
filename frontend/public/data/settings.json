@@ -107,8 +107,8 @@
       "expand_coupon_search": true,
       "recommended_interval_minutes": 10,
       "status": "ACTIVE",
-      "days_until_start": -1,
-      "days_until_end": 1
+      "days_until_start": -2,
+      "days_until_end": 0
     },
     "next_event": {
       "slug": "black-friday-2026",
@@ -119,10 +119,10 @@
       "expand_coupon_search": true,
       "recommended_interval_minutes": 5,
       "status": "UPCOMING",
-      "days_until_start": 15,
-      "days_until_end": 17
+      "days_until_start": 14,
+      "days_until_end": 16
     },
-    "days_until_next_event": 15,
+    "days_until_next_event": 14,
     "active_actions": [
       "Consultas intensificadas a cada 10 min (respeitando rate-limit de cada fonte)",
       "Busca ampliada por cupons promocionais e descontos PIX",
@@ -140,8 +140,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "ACTIVE",
-        "days_until_start": -1,
-        "days_until_end": 1
+        "days_until_start": -2,
+        "days_until_end": 0
       },
       {
         "slug": "black-friday-2026",
@@ -152,8 +152,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 5,
         "status": "UPCOMING",
-        "days_until_start": 15,
-        "days_until_end": 17
+        "days_until_start": 14,
+        "days_until_end": 16
       },
       {
         "slug": "cyber-monday-2026",
@@ -164,8 +164,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "UPCOMING",
-        "days_until_start": 19,
-        "days_until_end": 20
+        "days_until_start": 18,
+        "days_until_end": 19
       },
       {
         "slug": "prime-day-2027",
@@ -176,8 +176,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "UPCOMING",
-        "days_until_start": 245,
-        "days_until_end": 247
+        "days_until_start": 244,
+        "days_until_end": 246
       }
     ],
     "transparency_notice": "As consultas respeitam rigorosamente os limites técnicos de cada loja. O sistema não afirma monitoramento em tempo real para fontes que bloqueiam acesso automatizado ou não fornecem API em tempo real, sinalizando claramente quando um dado está desatualizado."
