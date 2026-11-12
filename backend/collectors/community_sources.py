@@ -98,8 +98,9 @@ async def fetch_live_promobit_raw_offers(headers: dict[str, str]) -> list[dict]:
             except Exception:
                 continue
 
-    _PROMOBIT_CACHE["timestamp"] = time.time()
-    _PROMOBIT_CACHE["raw_items"] = collected_raw
+    if collected_raw:
+        _PROMOBIT_CACHE["timestamp"] = time.time()
+        _PROMOBIT_CACHE["raw_items"] = collected_raw
     return collected_raw
 
 
@@ -124,8 +125,7 @@ class PromobitCollector(BaseStoreCollector):
             domain = str(item.get("storeDomain") or "").lower()
             store_origin = str(item.get("storeName") or "Loja Verificada").strip()
             if "mercadolivre" in domain or "mercado livre" in store_origin.lower():
-                # Ofertas do Mercado Livre já são salvas diretamente na loja 'Mercado Livre' pelo MercadoLivreCollector
-                continue
+                store_origin = "Mercado Livre"
             oid = item.get("offerId") or item.get("id")
             title = str(item.get("offerTitle") or "").strip()
             price = float(item.get("offerPrice") or 0)

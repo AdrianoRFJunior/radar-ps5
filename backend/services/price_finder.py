@@ -401,6 +401,22 @@ async def find_and_save_best_prices(store_filter: Optional[str] = None) -> Dict[
             offer_counter += 1
             all_classified_offers.append(serialized)
 
+    # Proteção essencial: se a varredura ao vivo retornou menos de 10 ofertas (ex: oscilação de rede momentânea),
+    # NUNCA apagar o catálogo nem zerar a tela do usuário! Preserva as ofertas anteriores verificadas.
+    if len(all_classified_offers) < 10:
+        logger.warning("Varredura ao vivo obteve poucas ofertas (%d). Preservando o catálogo anterior.", len(all_classified_offers))
+        prev_dash_file = ROOT_DIR / "frontend" / "public" / "data" / "dashboard.json"
+        if prev_dash_file.exists():
+            try:
+                prev_data = json.loads(prev_dash_file.read_text(encoding="utf-8"))
+                if prev_data.get("top_offers") and len(prev_data["top_offers"]) >= 10:
+                    prev_data["indicators"]["last_updated_at"] = format_sp_iso(scan_dt)
+                    prev_data["indicators"]["data_age_minutes"] = 0
+                    prev_data["indicators"]["is_data_stale"] = False
+                    return prev_data
+            except Exception:
+                pass
+
     # 1. Separar por categoria e ordenar do menor preço para o maior
     ps5_offers = [o for o in all_classified_offers if o["category"] == "PS5"]
     dualsense_offers = [o for o in all_classified_offers if o["category"] == "DUALSENSE"]
