@@ -67,6 +67,7 @@ async def fetch_live_promobit_raw_offers(headers: dict[str, str]) -> list[dict]:
                 data = json.loads(nd.string)
                 pp = data.get("props", {}).get("pageProps", {})
                 server_offers = (pp.get("serverOffers") or {}).get("offers") or []
+                candidates = []
                 for item in server_offers:
                     if not isinstance(item, dict):
                         continue
@@ -82,11 +83,18 @@ async def fetch_live_promobit_raw_offers(headers: dict[str, str]) -> list[dict]:
                     if not any(k in t_low for k in ("playstation 5", "ps5", "dualsense")):
                         continue
                     seen_ids.add(int(oid))
-                    slug = str(item.get("offerSlug") or item.get("offer_slug") or "").strip()
-                    direct_url = await resolve_promobit_direct_url(client, oid, slug)
-                    item_copy = dict(item)
+                    candidates.append(item)
+
+                async def _resolve_item(item_obj):
+                    oid_val = item_obj.get("offerId") or item_obj.get("id")
+                    slug_val = str(item_obj.get("offerSlug") or item_obj.get("offer_slug") or "").strip()
+                    direct_url = await resolve_promobit_direct_url(client, oid_val, slug_val)
+                    item_copy = dict(item_obj)
                     item_copy["_resolved_url"] = direct_url
-                    collected_raw.append(item_copy)
+                    return item_copy
+
+                resolved_items = await asyncio.gather(*[_resolve_item(c) for c in candidates])
+                collected_raw.extend(resolved_items)
             except Exception:
                 continue
 

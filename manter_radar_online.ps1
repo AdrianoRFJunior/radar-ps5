@@ -28,8 +28,8 @@ while ($true) {
     if ($cycleCounter -ge 60) {
         $cycleCounter = 0
         Set-Location $projectDir
-        & $pythonExe scripts/export_static_data.py --scan
-        & $gitExe add frontend/public/data/*.json backend/radar_bf2026.db
+        & $pythonExe scripts/export_static_data.py
+        & $gitExe add frontend/public/data/*.json
         & $gitExe commit -m "chore(radar): sincronização automática de preços a cada 10 minutos"
         & $gitExe push origin main
     }

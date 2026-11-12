@@ -383,15 +383,15 @@ class KabumCollector(BaseStoreCollector):
         offers: list[CollectedOfferDTO] = []
         seen_codes: set[str] = set()
 
-        async with httpx.AsyncClient(timeout=self.timeout, follow_redirects=True, headers=self.get_http_headers()) as client:
-            # 1. Consultar em paralelo o JSON de cada SKU prioritário para obter o preço PIX exato ao vivo (sem cache defasado)
-            sem = asyncio.Semaphore(5)
+        async with httpx.AsyncClient(timeout=6.0, follow_redirects=True, headers=self.get_http_headers()) as client:
+            # 1. Consultar em paralelo os SKUs prioritários com alta concorrência
+            sem = asyncio.Semaphore(16)
 
             async def fetch_kabum_sku(code: str):
                 async with sem:
                     try:
                         prod_url = f"https://www.kabum.com.br/produto/{code}"
-                        resp = await client.get(prod_url)
+                        resp = await client.get(prod_url, timeout=4.5)
                         if resp.status_code != 200:
                             return None
                         soup = BeautifulSoup(resp.text, "html.parser")
@@ -436,20 +436,10 @@ class KabumCollector(BaseStoreCollector):
                     except Exception:
                         return None
 
-            sku_tasks = [fetch_kabum_sku(code) for code in self.PRIORITY_KABUM_SKUS]
-            sku_results = await asyncio.gather(*sku_tasks)
-            for res_dto in sku_results:
-                if res_dto:
-                    code = res_dto.external_id.replace("KABUM-", "")
-                    if code not in seen_codes:
-                        seen_codes.add(code)
-                        offers.append(res_dto)
-
-            # 2. Complementar com varredura da categoria ordenada por menor preço em paralelo
             async def fetch_kabum_catalog(web_url: str):
                 cat_offers = []
                 try:
-                    resp = await client.get(web_url, timeout=5.0)
+                    resp = await client.get(web_url, timeout=4.5)
                     if resp.status_code != 200:
                         return []
                     soup = BeautifulSoup(resp.text, "html.parser")
@@ -461,7 +451,7 @@ class KabumCollector(BaseStoreCollector):
                         catalog = parsed_inner.get("catalogServer", {}).get("data", [])
                         for item in catalog:
                             code = str(item.get("code") or "").strip()
-                            if not code or code in seen_codes or not item.get("available", False):
+                            if not code or not item.get("available", False):
                                 continue
                             if item.get("openBox"):
                                 continue
@@ -503,13 +493,22 @@ class KabumCollector(BaseStoreCollector):
                     pass
                 return cat_offers
 
-            cat_results = await asyncio.gather(*[fetch_kabum_catalog(u) for u in self.CATALOG_WEB_URLS])
-            for cat_list in cat_results:
-                for c_dto in cat_list:
-                    c_code = c_dto.external_id.replace("KABUM-", "")
+            sku_tasks = [fetch_kabum_sku(code) for code in self.PRIORITY_KABUM_SKUS]
+            cat_tasks = [fetch_kabum_catalog(u) for u in self.CATALOG_WEB_URLS]
+            all_raw = await asyncio.gather(*sku_tasks, *cat_tasks)
+
+            for item in all_raw:
+                if isinstance(item, list):
+                    for dto in item:
+                        c_code = dto.external_id.replace("KABUM-", "")
+                        if c_code not in seen_codes:
+                            seen_codes.add(c_code)
+                            offers.append(dto)
+                elif item is not None:
+                    c_code = item.external_id.replace("KABUM-", "")
                     if c_code not in seen_codes:
                         seen_codes.add(c_code)
-                        offers.append(c_dto)
+                        offers.append(item)
 
         if offers:
             return CollectorResult(

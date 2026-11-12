@@ -12,8 +12,11 @@ Rotas REST completas do RADAR BF 2026 para alimentar as 10 páginas da plataform
 10. /api/settings, /api/monitoring, /api/backups — Configurações, Preço-Alvo, Agendador, Logs e Backups
 """
 import json
+from pathlib import Path
 from datetime import timedelta
 from typing import Optional
+
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import func
 from sqlalchemy.orm import Session
@@ -261,6 +264,14 @@ def _get_event_mode_status(db: Session) -> dict:
 
 @router.get("/dashboard")
 def get_dashboard_data(db: Session = Depends(get_db)):
+    dash_file = ROOT_DIR / "frontend" / "public" / "data" / "dashboard.json"
+    if dash_file.exists():
+        try:
+            data = json.loads(dash_file.read_text(encoding="utf-8"))
+            if data and data.get("indicators"):
+                return data
+        except Exception:
+            pass
     ensure_initial_catalog_and_settings(db)
     setting = db.query(Setting).first()
     event_mode = _get_event_mode_status(db)
@@ -397,6 +408,24 @@ def get_price_comparator(
     only_official_warranty: bool = Query(default=False),
     db: Session = Depends(get_db),
 ):
+    comp_file = ROOT_DIR / "frontend" / "public" / "data" / "comparator.json"
+    if comp_file.exists():
+        try:
+            data = json.loads(comp_file.read_text(encoding="utf-8"))
+            offers = data.get("offers", [])
+            if category in ("PS5", "DUALSENSE"):
+                offers = [o for o in offers if o.get("category") == category]
+            if not include_alternatives:
+                offers = [o for o in offers if o.get("is_priority")]
+            if only_official_warranty:
+                offers = [o for o in offers if o.get("has_official_warranty") and o.get("is_national")]
+            return {
+                "offers": offers,
+                "stores": data.get("stores", []),
+                "active_coupons": data.get("active_coupons", []),
+            }
+        except Exception:
+            pass
     ensure_initial_catalog_and_settings(db)
     ps5_m = _category_metrics(db, "PS5")
     ds_m = _category_metrics(db, "DUALSENSE")
@@ -720,11 +749,14 @@ async def trigger_manual_monitoring(
     store_slug: Optional[str] = Query(default=None),
     db: Session = Depends(get_db),
 ):
-    result = await run_monitoring_cycle(db, store_slug_filter=store_slug)
-    dash = get_dashboard_data(db=db)
+    from backend.services.price_finder import find_and_save_best_prices
+    dash = await find_and_save_best_prices(store_filter=store_slug)
     return {
         "status": "SUCCESS",
-        "result": result,
+        "result": {
+            "status": "SUCCESS",
+            "offers_identified": dash.get("indicators", {}).get("offers_identified_count", 0),
+        },
         "dashboard": dash,
     }
 

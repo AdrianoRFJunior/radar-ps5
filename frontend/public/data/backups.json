@@ -1,6 +1,16 @@
 {
   "backups": [
     {
+      "filename": "radar_bf2026_backup_20261112_100331.db",
+      "size_kb": 9164.0,
+      "modified_at": "2026-11-12T10:03:31.783204"
+    },
+    {
+      "filename": "radar_bf2026_backup_20261112_100206.db",
+      "size_kb": 9164.0,
+      "modified_at": "2026-11-12T10:02:06.350501"
+    },
+    {
       "filename": "radar_bf2026_backup_20261112_041112.db",
       "size_kb": 9016.0,
       "modified_at": "2026-11-12T04:11:13.061141"
@@ -39,16 +49,6 @@
       "filename": "radar_bf2026_backup_20261110_201112.db",
       "size_kb": 7976.0,
       "modified_at": "2026-11-10T20:11:12.297967"
-    },
-    {
-      "filename": "radar_bf2026_backup_20261110_141112.db",
-      "size_kb": 7704.0,
-      "modified_at": "2026-11-10T14:11:12.154634"
-    },
-    {
-      "filename": "radar_bf2026_backup_20261110_140954.db",
-      "size_kb": 7704.0,
-      "modified_at": "2026-11-10T14:09:54.246547"
     }
   ]
 }

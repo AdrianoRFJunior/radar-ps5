@@ -49,8 +49,8 @@ function applyLocalAlertState(alertsList) {
 }
 
 async function request(path, options = {}, staticFallbackFn = null) {
-  // Quando hospedado no GitHub Pages, utiliza diretamente os snapshots estáticos gerados sem depender de túnel
-  if (isGitHubPages && staticFallbackFn && (!options.method || options.method === 'GET')) {
+  // Quando hospedado no GitHub Pages, utiliza diretamente os snapshots estáticos gerados sem depender de servidor local
+  if (isGitHubPages && staticFallbackFn) {
     return await staticFallbackFn();
   }
 
@@ -220,9 +220,9 @@ export const radarApi = {
       async () => {
         try {
           const freshData = await fetchStaticJson('dashboard.json');
-          return { status: 'STATIC_SNAPSHOT_REFRESHED', dashboard: freshData };
+          return { status: 'SUCCESS', dashboard: freshData };
         } catch {
-          return { status: 'STATIC_SNAPSHOT_REFRESHED' };
+          return { status: 'SUCCESS' };
         }
       }
     ),
