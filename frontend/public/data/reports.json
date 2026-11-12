@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T03:10:25.541539-03:00",
+  "generated_at": "2026-11-12T03:21:22.803461-03:00",
   "daily_report": {
     "date_reference": "12/11/2026",
     "lowest_prices": {
@@ -1263,7 +1263,7 @@
         "trend": "TENDÊNCIA DE AUMENTO",
         "estimated_price": 7975.13,
         "current_price": 4199.99,
-        "moving_avg_7d": 4292.89,
+        "moving_avg_7d": 4292.92,
         "moving_avg_30d": 4295.34,
         "slope_per_day": 221466.39,
         "volatility_pct": 8.01,
@@ -1271,7 +1271,7 @@
         "is_reliable": true,
         "data_points_used": 1221,
         "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-        "explanation": "Baseado em 1221 coletas históricas, a média móvel de 7 dias (R$ 4292.89) comparada à média de 30 dias (R$ 4295.34) e inclinação linear de R$ +221466.39/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 8.0%). Faltam 14 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+        "explanation": "Baseado em 1221 coletas históricas, a média móvel de 7 dias (R$ 4292.92) comparada à média de 30 dias (R$ 4295.34) e inclinação linear de R$ +221466.39/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 8.0%). Faltam 14 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
         "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
       },
       {
@@ -1283,7 +1283,7 @@
         "trend": "TENDÊNCIA DE AUMENTO",
         "estimated_price": 17247.7,
         "current_price": 3951.57,
-        "moving_avg_7d": 4785.16,
+        "moving_avg_7d": 4785.57,
         "moving_avg_30d": 4781.37,
         "slope_per_day": 503394.46,
         "volatility_pct": 19.35,
@@ -1291,7 +1291,7 @@
         "is_reliable": true,
         "data_points_used": 960,
         "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-        "explanation": "Baseado em 960 coletas históricas, a média móvel de 7 dias (R$ 4785.16) comparada à média de 30 dias (R$ 4781.37) e inclinação linear de R$ +503394.46/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 19.4%). Faltam 14 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+        "explanation": "Baseado em 960 coletas históricas, a média móvel de 7 dias (R$ 4785.57) comparada à média de 30 dias (R$ 4781.37) e inclinação linear de R$ +503394.46/dia indicam tendência de aumento para o horizonte de próximas 24 horas (volatilidade de 19.4%). Faltam 14 dias para a Black Friday 2026 (27/11), período historicamente associado a maior volatilidade e queimas pontuais de estoque. Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
         "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
       },
       {
@@ -1418,7 +1418,7 @@
   },
   "weekly_report": {
     "period_label": "05/11/2026 a 12/11/2026",
-    "total_weekly_checks": 12919,
+    "total_weekly_checks": 12904,
     "store_comparison": [
       {
         "store_name": "KaBuM!",
