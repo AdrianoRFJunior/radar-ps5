@@ -84,32 +84,21 @@
     "scheduler_running": true,
     "is_paused": false,
     "is_running_cycle_now": true,
-    "current_mode": "EVENT_ACTIVE",
+    "current_mode": "NORMAL",
     "current_interval_minutes": 5,
-    "last_run_at": "2026-11-12T18:11:31.015265-03:00",
-    "next_run_at": "2026-11-12T18:21:13.386204-03:00"
+    "last_run_at": "2026-11-13T11:06:37.387293-03:00",
+    "next_run_at": "2026-11-13T11:16:13.393024-03:00"
   },
   "event_mode": {
     "event_mode_enabled": true,
-    "mode_code": "EVENT_ACTIVE",
-    "mode_label": "MODO DE EVENTO ATIVO: Singles' Day (11/11)",
-    "is_intensified": true,
-    "effective_interval_minutes": 10,
+    "mode_code": "NORMAL",
+    "mode_label": "Monitoramento Periódico Normal",
+    "is_intensified": false,
+    "effective_interval_minutes": 30,
     "lead_days_configured": 7,
-    "prioritize_ps5_active": true,
-    "expand_coupon_search_active": true,
-    "active_event": {
-      "slug": "singles-day-11-11",
-      "name": "Singles' Day (11/11)",
-      "start_date": "2026-11-10",
-      "end_date": "2026-11-12",
-      "description": "Data dupla 11/11 com forte liberação de cupons relâmpago e descontos no PIX para eletrônicos e games.",
-      "expand_coupon_search": true,
-      "recommended_interval_minutes": 10,
-      "status": "ACTIVE",
-      "days_until_start": -2,
-      "days_until_end": 0
-    },
+    "prioritize_ps5_active": false,
+    "expand_coupon_search_active": false,
+    "active_event": null,
     "next_event": {
       "slug": "black-friday-2026",
       "name": "Black Friday 2026",
@@ -119,16 +108,14 @@
       "expand_coupon_search": true,
       "recommended_interval_minutes": 5,
       "status": "UPCOMING",
-      "days_until_start": 14,
-      "days_until_end": 16
+      "days_until_start": 13,
+      "days_until_end": 15
     },
-    "days_until_next_event": 14,
+    "days_until_next_event": 13,
     "active_actions": [
-      "Consultas intensificadas a cada 10 min (respeitando rate-limit de cada fonte)",
-      "Busca ampliada por cupons promocionais e descontos PIX",
-      "Detecção imediata de quedas repentinas e ofertas temporárias (Flash Deals)",
-      "Comparação cruzada entre lojas e atualização de estatísticas por horário",
-      "Priorização de varredura para PlayStation 5 Slim Digital"
+      "Comparação automática de preços finais entre lojas",
+      "Atualização contínua das estatísticas por horário",
+      "Atualização manual liberada a qualquer momento"
     ],
     "calendar": [
       {
@@ -139,9 +126,9 @@
         "description": "Data dupla 11/11 com forte liberação de cupons relâmpago e descontos no PIX para eletrônicos e games.",
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
-        "status": "ACTIVE",
-        "days_until_start": -2,
-        "days_until_end": 0
+        "status": "PAST",
+        "days_until_start": -3,
+        "days_until_end": -1
       },
       {
         "slug": "black-friday-2026",
@@ -152,8 +139,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 5,
         "status": "UPCOMING",
-        "days_until_start": 14,
-        "days_until_end": 16
+        "days_until_start": 13,
+        "days_until_end": 15
       },
       {
         "slug": "cyber-monday-2026",
@@ -164,8 +151,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "UPCOMING",
-        "days_until_start": 18,
-        "days_until_end": 19
+        "days_until_start": 17,
+        "days_until_end": 18
       },
       {
         "slug": "prime-day-2027",
@@ -176,8 +163,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "UPCOMING",
-        "days_until_start": 244,
-        "days_until_end": 246
+        "days_until_start": 243,
+        "days_until_end": 245
       }
     ],
     "transparency_notice": "As consultas respeitam rigorosamente os limites técnicos de cada loja. O sistema não afirma monitoramento em tempo real para fontes que bloqueiam acesso automatizado ou não fornecem API em tempo real, sinalizando claramente quando um dado está desatualizado."
