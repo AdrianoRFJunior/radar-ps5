@@ -86,8 +86,8 @@
     "is_running_cycle_now": true,
     "current_mode": "NORMAL",
     "current_interval_minutes": 5,
-    "last_run_at": "2026-11-13T17:41:29.736699-03:00",
-    "next_run_at": "2026-11-13T17:51:13.393024-03:00"
+    "last_run_at": "2026-11-16T06:46:38.368492-03:00",
+    "next_run_at": "2026-11-16T06:56:13.393024-03:00"
   },
   "event_mode": {
     "event_mode_enabled": true,
@@ -108,10 +108,10 @@
       "expand_coupon_search": true,
       "recommended_interval_minutes": 5,
       "status": "UPCOMING",
-      "days_until_start": 13,
-      "days_until_end": 15
+      "days_until_start": 10,
+      "days_until_end": 12
     },
-    "days_until_next_event": 13,
+    "days_until_next_event": 10,
     "active_actions": [
       "Comparação automática de preços finais entre lojas",
       "Atualização contínua das estatísticas por horário",
@@ -127,8 +127,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "PAST",
-        "days_until_start": -3,
-        "days_until_end": -1
+        "days_until_start": -6,
+        "days_until_end": -4
       },
       {
         "slug": "black-friday-2026",
@@ -139,8 +139,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 5,
         "status": "UPCOMING",
-        "days_until_start": 13,
-        "days_until_end": 15
+        "days_until_start": 10,
+        "days_until_end": 12
       },
       {
         "slug": "cyber-monday-2026",
@@ -151,8 +151,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "UPCOMING",
-        "days_until_start": 17,
-        "days_until_end": 18
+        "days_until_start": 14,
+        "days_until_end": 15
       },
       {
         "slug": "prime-day-2027",
@@ -163,8 +163,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "UPCOMING",
-        "days_until_start": 243,
-        "days_until_end": 245
+        "days_until_start": 240,
+        "days_until_end": 242
       }
     ],
     "transparency_notice": "As consultas respeitam rigorosamente os limites técnicos de cada loja. O sistema não afirma monitoramento em tempo real para fontes que bloqueiam acesso automatizado ou não fornecem API em tempo real, sinalizando claramente quando um dado está desatualizado."
