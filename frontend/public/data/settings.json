@@ -86,8 +86,8 @@
     "is_running_cycle_now": true,
     "current_mode": "NORMAL",
     "current_interval_minutes": 5,
-    "last_run_at": "2026-11-16T07:06:29.145156-03:00",
-    "next_run_at": "2026-11-16T07:16:13.393024-03:00"
+    "last_run_at": "2026-11-16T07:31:29.041619-03:00",
+    "next_run_at": "2026-11-16T07:41:13.393024-03:00"
   },
   "event_mode": {
     "event_mode_enabled": true,
