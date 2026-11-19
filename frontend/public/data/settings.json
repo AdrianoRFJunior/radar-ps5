@@ -84,20 +84,20 @@
     "scheduler_running": true,
     "is_paused": false,
     "is_running_cycle_now": true,
-    "current_mode": "NORMAL",
+    "current_mode": "EVENT_WARMUP",
     "current_interval_minutes": 5,
-    "last_run_at": "2026-11-18T17:56:29.741255-03:00",
-    "next_run_at": "2026-11-18T18:06:13.393024-03:00"
+    "last_run_at": "2026-11-19T08:31:35.652495-03:00",
+    "next_run_at": "2026-11-19T08:41:13.403185-03:00"
   },
   "event_mode": {
     "event_mode_enabled": true,
-    "mode_code": "NORMAL",
-    "mode_label": "Monitoramento Periódico Normal",
-    "is_intensified": false,
-    "effective_interval_minutes": 30,
+    "mode_code": "EVENT_WARMUP",
+    "mode_label": "MODO AQUECIMENTO (7d para Black Friday 2026)",
+    "is_intensified": true,
+    "effective_interval_minutes": 15,
     "lead_days_configured": 7,
-    "prioritize_ps5_active": false,
-    "expand_coupon_search_active": false,
+    "prioritize_ps5_active": true,
+    "expand_coupon_search_active": true,
     "active_event": null,
     "next_event": {
       "slug": "black-friday-2026",
@@ -107,15 +107,17 @@
       "description": "Evento principal do ano para compra do PlayStation 5 Slim Digital e controle DualSense adicional.",
       "expand_coupon_search": true,
       "recommended_interval_minutes": 5,
-      "status": "UPCOMING",
-      "days_until_start": 8,
-      "days_until_end": 10
+      "status": "WARMUP",
+      "days_until_start": 7,
+      "days_until_end": 9
     },
-    "days_until_next_event": 8,
+    "days_until_next_event": 7,
     "active_actions": [
-      "Comparação automática de preços finais entre lojas",
-      "Atualização contínua das estatísticas por horário",
-      "Atualização manual liberada a qualquer momento"
+      "Consultas intensificadas a cada 15 min (respeitando rate-limit de cada fonte)",
+      "Busca ampliada por cupons promocionais e descontos PIX",
+      "Detecção imediata de quedas repentinas e ofertas temporárias (Flash Deals)",
+      "Comparação cruzada entre lojas e atualização de estatísticas por horário",
+      "Priorização de varredura para PlayStation 5 Slim Digital"
     ],
     "calendar": [
       {
@@ -127,8 +129,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "PAST",
-        "days_until_start": -8,
-        "days_until_end": -6
+        "days_until_start": -9,
+        "days_until_end": -7
       },
       {
         "slug": "black-friday-2026",
@@ -138,9 +140,9 @@
         "description": "Evento principal do ano para compra do PlayStation 5 Slim Digital e controle DualSense adicional.",
         "expand_coupon_search": true,
         "recommended_interval_minutes": 5,
-        "status": "UPCOMING",
-        "days_until_start": 8,
-        "days_until_end": 10
+        "status": "WARMUP",
+        "days_until_start": 7,
+        "days_until_end": 9
       },
       {
         "slug": "cyber-monday-2026",
@@ -151,8 +153,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "UPCOMING",
-        "days_until_start": 12,
-        "days_until_end": 13
+        "days_until_start": 11,
+        "days_until_end": 12
       },
       {
         "slug": "prime-day-2027",
@@ -163,8 +165,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "UPCOMING",
-        "days_until_start": 238,
-        "days_until_end": 240
+        "days_until_start": 237,
+        "days_until_end": 239
       }
     ],
     "transparency_notice": "As consultas respeitam rigorosamente os limites técnicos de cada loja. O sistema não afirma monitoramento em tempo real para fontes que bloqueiam acesso automatizado ou não fornecem API em tempo real, sinalizando claramente quando um dado está desatualizado."
