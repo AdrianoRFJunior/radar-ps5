@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T10:41:31.042800-03:00",
+  "generated_at": "2026-11-23T10:51:37.883064-03:00",
   "daily_report": {
     "date_reference": "23/11/2026",
     "lowest_prices": {
@@ -1458,7 +1458,7 @@
       },
       {
         "store_name": "Casas Bahia",
-        "status": "BLOCKED_ANTIBOT",
+        "status": "UNAVAILABLE",
         "reputation_score": 91.0,
         "active_offers_count": 0,
         "min_ps5_price": null,
@@ -1467,7 +1467,7 @@
       },
       {
         "store_name": "Ponto",
-        "status": "BLOCKED_ANTIBOT",
+        "status": "UNAVAILABLE",
         "reputation_score": 91.0,
         "active_offers_count": 0,
         "min_ps5_price": null,
