@@ -5,8 +5,8 @@
     "is_running_cycle_now": true,
     "current_mode": "EVENT_WARMUP",
     "current_interval_minutes": 5,
-    "last_run_at": "2026-11-24T13:21:31.569761-03:00",
-    "next_run_at": "2026-11-24T13:31:13.403185-03:00"
+    "last_run_at": "2026-11-24T13:31:31.685099-03:00",
+    "next_run_at": "2026-11-24T13:41:13.403185-03:00"
   },
   "stores_status": [
     {
@@ -46,7 +46,7 @@
       "status_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
       "connector_type": "PUBLIC_JSONLD_FEED",
       "integration_docs": "Suporta API Lomadee (LOMADEE_APP_TOKEN no .env) e feed público verificado.",
-      "last_check_at": "2026-11-24T13:26:25.297148-03:00",
+      "last_check_at": "2026-11-24T13:36:23.247537-03:00",
       "last_success_at": null
     },
     {
@@ -86,7 +86,7 @@
       "status_message": "A API do Mercado Livre exigiu autenticação OAuth neste IP. Configure MERCADOLIVRE_ACCESS_TOKEN no .env para busca ampla.",
       "connector_type": "PUBLIC_API_AND_VERIFIED_DEALS",
       "integration_docs": "Conector utiliza a API Pública REST do Mercado Livre (sites/MLB/search) e o barramento de promoções verificadas de Lojas Oficiais no Mercado Livre com cupom ativo.",
-      "last_check_at": "2026-11-24T13:26:20.174374-03:00",
+      "last_check_at": "2026-11-24T13:36:22.010415-03:00",
       "last_success_at": "2026-11-10T14:04:20.132237-03:00"
     },
     {
@@ -96,7 +96,7 @@
       "status_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
       "connector_type": "PUBLIC_FEED",
       "integration_docs": "Consulta o feed público de promoções do Pelando via dados estruturados públicos (__NEXT_DATA__ / JSON-LD). Respeita rate-limiting e políticas anti-bot.",
-      "last_check_at": "2026-11-24T13:26:17.811188-03:00",
+      "last_check_at": "2026-11-24T13:36:18.799883-03:00",
       "last_success_at": null
     },
     {
@@ -106,7 +106,7 @@
       "status_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
       "connector_type": "PUBLIC_JSONLD_FEED",
       "integration_docs": "Suporta API Lomadee (LOMADEE_APP_TOKEN no .env) e feed público verificado.",
-      "last_check_at": "2026-11-24T13:26:25.297148-03:00",
+      "last_check_at": "2026-11-24T13:36:23.248536-03:00",
       "last_success_at": null
     },
     {
@@ -116,11 +116,121 @@
       "status_message": "Nenhuma oferta aprovada de PS5/DualSense retornada no feed público do Promobit neste instante.",
       "connector_type": "PUBLIC_FEED",
       "integration_docs": "Consulta ofertas públicas moderadas pela comunidade Promobit via JSON-LD / NextData público. Respeita estritamente limites de requisição e não contorna proteções.",
-      "last_check_at": "2026-11-24T13:26:19.605420-03:00",
+      "last_check_at": "2026-11-24T13:36:18.934352-03:00",
       "last_success_at": "2026-11-10T14:05:02.705677-03:00"
     }
   ],
   "logs": [
+    {
+      "id": 12024,
+      "store_name": "Pelando",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
+      "duration_ms": 2195,
+      "started_at": "2026-11-24T13:36:16.603863-03:00",
+      "finished_at": "2026-11-24T13:36:18.799883-03:00"
+    },
+    {
+      "id": 12023,
+      "store_name": "Promobit",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Nenhuma oferta aprovada de PS5/DualSense retornada no feed público do Promobit neste instante.",
+      "duration_ms": 2782,
+      "started_at": "2026-11-24T13:36:16.152440-03:00",
+      "finished_at": "2026-11-24T13:36:18.934352-03:00"
+    },
+    {
+      "id": 12022,
+      "store_name": "Ponto",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 7095,
+      "started_at": "2026-11-24T13:36:16.152440-03:00",
+      "finished_at": "2026-11-24T13:36:23.248536-03:00"
+    },
+    {
+      "id": 12021,
+      "store_name": "Casas Bahia",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 7096,
+      "started_at": "2026-11-24T13:36:16.151443-03:00",
+      "finished_at": "2026-11-24T13:36:23.247537-03:00"
+    },
+    {
+      "id": 12020,
+      "store_name": "Mercado Livre",
+      "status": "NEEDS_CREDENTIALS",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "A API do Mercado Livre exigiu autenticação OAuth neste IP. Configure MERCADOLIVRE_ACCESS_TOKEN no .env para busca ampla.",
+      "duration_ms": 8584,
+      "started_at": "2026-11-24T13:36:13.425399-03:00",
+      "finished_at": "2026-11-24T13:36:22.010415-03:00"
+    },
+    {
+      "id": 12019,
+      "store_name": "Pelando",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
+      "duration_ms": 1093,
+      "started_at": "2026-11-24T13:31:16.668210-03:00",
+      "finished_at": "2026-11-24T13:31:17.762293-03:00"
+    },
+    {
+      "id": 12018,
+      "store_name": "Promobit",
+      "status": "UNAVAILABLE",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Nenhuma oferta aprovada de PS5/DualSense retornada no feed público do Promobit neste instante.",
+      "duration_ms": 2951,
+      "started_at": "2026-11-24T13:31:16.176192-03:00",
+      "finished_at": "2026-11-24T13:31:19.128334-03:00"
+    },
+    {
+      "id": 12017,
+      "store_name": "Ponto",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 8750,
+      "started_at": "2026-11-24T13:31:16.176192-03:00",
+      "finished_at": "2026-11-24T13:31:24.927450-03:00"
+    },
+    {
+      "id": 12016,
+      "store_name": "Casas Bahia",
+      "status": "BLOCKED_ANTIBOT",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
+      "duration_ms": 8750,
+      "started_at": "2026-11-24T13:31:16.176192-03:00",
+      "finished_at": "2026-11-24T13:31:24.927450-03:00"
+    },
+    {
+      "id": 12015,
+      "store_name": "Mercado Livre",
+      "status": "NEEDS_CREDENTIALS",
+      "offers_found": 0,
+      "offers_updated": 0,
+      "error_message": "A API do Mercado Livre exigiu autenticação OAuth neste IP. Configure MERCADOLIVRE_ACCESS_TOKEN no .env para busca ampla.",
+      "duration_ms": 8896,
+      "started_at": "2026-11-24T13:31:13.447751-03:00",
+      "finished_at": "2026-11-24T13:31:22.343593-03:00"
+    },
     {
       "id": 12014,
       "store_name": "Pelando",
@@ -450,116 +560,6 @@
       "duration_ms": 9839,
       "started_at": "2026-11-24T13:01:13.436801-03:00",
       "finished_at": "2026-11-24T13:01:23.276562-03:00"
-    },
-    {
-      "id": 11984,
-      "store_name": "Pelando",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
-      "duration_ms": 1148,
-      "started_at": "2026-11-24T12:56:16.990597-03:00",
-      "finished_at": "2026-11-24T12:56:18.138947-03:00"
-    },
-    {
-      "id": 11983,
-      "store_name": "Promobit",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Nenhuma oferta aprovada de PS5/DualSense retornada no feed público do Promobit neste instante.",
-      "duration_ms": 3898,
-      "started_at": "2026-11-24T12:56:16.483341-03:00",
-      "finished_at": "2026-11-24T12:56:20.381601-03:00"
-    },
-    {
-      "id": 11982,
-      "store_name": "Ponto",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 9918,
-      "started_at": "2026-11-24T12:56:16.483341-03:00",
-      "finished_at": "2026-11-24T12:56:26.401658-03:00"
-    },
-    {
-      "id": 11981,
-      "store_name": "Casas Bahia",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 9918,
-      "started_at": "2026-11-24T12:56:16.483341-03:00",
-      "finished_at": "2026-11-24T12:56:26.401658-03:00"
-    },
-    {
-      "id": 11980,
-      "store_name": "Mercado Livre",
-      "status": "NEEDS_CREDENTIALS",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "A API do Mercado Livre exigiu autenticação OAuth neste IP. Configure MERCADOLIVRE_ACCESS_TOKEN no .env para busca ampla.",
-      "duration_ms": 7464,
-      "started_at": "2026-11-24T12:56:13.436144-03:00",
-      "finished_at": "2026-11-24T12:56:20.901660-03:00"
-    },
-    {
-      "id": 11979,
-      "store_name": "Pelando",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "O Pelando utiliza proteção GraphQL/Cloudflare nas buscas diretas. Nenhuma promoção pública em JSON-LD retornada sem autenticação.",
-      "duration_ms": 1369,
-      "started_at": "2026-11-24T12:51:16.670039-03:00",
-      "finished_at": "2026-11-24T12:51:18.039594-03:00"
-    },
-    {
-      "id": 11978,
-      "store_name": "Promobit",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Nenhuma oferta aprovada de PS5/DualSense retornada no feed público do Promobit neste instante.",
-      "duration_ms": 3155,
-      "started_at": "2026-11-24T12:51:16.207824-03:00",
-      "finished_at": "2026-11-24T12:51:19.363202-03:00"
-    },
-    {
-      "id": 11977,
-      "store_name": "Ponto",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 8735,
-      "started_at": "2026-11-24T12:51:16.207824-03:00",
-      "finished_at": "2026-11-24T12:51:24.943238-03:00"
-    },
-    {
-      "id": 11976,
-      "store_name": "Casas Bahia",
-      "status": "BLOCKED_ANTIBOT",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Protegido por WAF Akamai. Configure LOMADEE_APP_TOKEN para consulta direta.",
-      "duration_ms": 8735,
-      "started_at": "2026-11-24T12:51:16.207824-03:00",
-      "finished_at": "2026-11-24T12:51:24.943238-03:00"
-    },
-    {
-      "id": 11975,
-      "store_name": "Mercado Livre",
-      "status": "NEEDS_CREDENTIALS",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "A API do Mercado Livre exigiu autenticação OAuth neste IP. Configure MERCADOLIVRE_ACCESS_TOKEN no .env para busca ampla.",
-      "duration_ms": 6440,
-      "started_at": "2026-11-24T12:51:13.441029-03:00",
-      "finished_at": "2026-11-24T12:51:19.882214-03:00"
     }
   ]
 }
