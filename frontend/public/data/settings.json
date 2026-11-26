@@ -84,22 +84,21 @@
     "scheduler_running": true,
     "is_paused": false,
     "is_running_cycle_now": true,
-    "current_mode": "EVENT_WARMUP",
+    "current_mode": "EVENT_ACTIVE",
     "current_interval_minutes": 5,
-    "last_run_at": "2026-11-25T23:06:30.833130-03:00",
-    "next_run_at": "2026-11-25T23:16:13.403185-03:00"
+    "last_run_at": "2026-11-26T09:01:35.764338-03:00",
+    "next_run_at": "2026-11-26T09:11:13.422658-03:00"
   },
   "event_mode": {
     "event_mode_enabled": true,
-    "mode_code": "EVENT_WARMUP",
-    "mode_label": "MODO AQUECIMENTO (1d para Black Friday 2026)",
+    "mode_code": "EVENT_ACTIVE",
+    "mode_label": "MODO DE EVENTO ATIVO: Black Friday 2026",
     "is_intensified": true,
-    "effective_interval_minutes": 15,
+    "effective_interval_minutes": 10,
     "lead_days_configured": 7,
     "prioritize_ps5_active": true,
     "expand_coupon_search_active": true,
-    "active_event": null,
-    "next_event": {
+    "active_event": {
       "slug": "black-friday-2026",
       "name": "Black Friday 2026",
       "start_date": "2026-11-26",
@@ -107,13 +106,25 @@
       "description": "Evento principal do ano para compra do PlayStation 5 Slim Digital e controle DualSense adicional.",
       "expand_coupon_search": true,
       "recommended_interval_minutes": 5,
-      "status": "WARMUP",
-      "days_until_start": 1,
-      "days_until_end": 3
+      "status": "ACTIVE",
+      "days_until_start": 0,
+      "days_until_end": 2
     },
-    "days_until_next_event": 1,
+    "next_event": {
+      "slug": "cyber-monday-2026",
+      "name": "Cyber Monday 2026",
+      "start_date": "2026-11-30",
+      "end_date": "2026-12-01",
+      "description": "Queima de estoque residual pós-Black Friday focada em hardware, consoles digitais e acessórios.",
+      "expand_coupon_search": true,
+      "recommended_interval_minutes": 10,
+      "status": "WARMUP",
+      "days_until_start": 4,
+      "days_until_end": 5
+    },
+    "days_until_next_event": 4,
     "active_actions": [
-      "Consultas intensificadas a cada 15 min (respeitando rate-limit de cada fonte)",
+      "Consultas intensificadas a cada 10 min (respeitando rate-limit de cada fonte)",
       "Busca ampliada por cupons promocionais e descontos PIX",
       "Detecção imediata de quedas repentinas e ofertas temporárias (Flash Deals)",
       "Comparação cruzada entre lojas e atualização de estatísticas por horário",
@@ -129,8 +140,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "PAST",
-        "days_until_start": -15,
-        "days_until_end": -13
+        "days_until_start": -16,
+        "days_until_end": -14
       },
       {
         "slug": "black-friday-2026",
@@ -140,9 +151,9 @@
         "description": "Evento principal do ano para compra do PlayStation 5 Slim Digital e controle DualSense adicional.",
         "expand_coupon_search": true,
         "recommended_interval_minutes": 5,
-        "status": "WARMUP",
-        "days_until_start": 1,
-        "days_until_end": 3
+        "status": "ACTIVE",
+        "days_until_start": 0,
+        "days_until_end": 2
       },
       {
         "slug": "cyber-monday-2026",
@@ -153,8 +164,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "WARMUP",
-        "days_until_start": 5,
-        "days_until_end": 6
+        "days_until_start": 4,
+        "days_until_end": 5
       },
       {
         "slug": "prime-day-2027",
@@ -165,8 +176,8 @@
         "expand_coupon_search": true,
         "recommended_interval_minutes": 10,
         "status": "UPCOMING",
-        "days_until_start": 231,
-        "days_until_end": 233
+        "days_until_start": 230,
+        "days_until_end": 232
       }
     ],
     "transparency_notice": "As consultas respeitam rigorosamente os limites técnicos de cada loja. O sistema não afirma monitoramento em tempo real para fontes que bloqueiam acesso automatizado ou não fornecem API em tempo real, sinalizando claramente quando um dado está desatualizado."
