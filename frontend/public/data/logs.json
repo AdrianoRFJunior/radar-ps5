@@ -6,7 +6,7 @@
     "interval_minutes": 2,
     "current_interval_minutes": 2,
     "next_run_in_minutes": 2,
-    "last_run_at": "2026-11-27T15:59:32.962411-03:00"
+    "last_run_at": "2026-11-27T16:27:46.686342-03:00"
   },
   "stores_status": [
     {
@@ -14,39 +14,39 @@
       "slug": "promobit",
       "name": "Radar Promobit (Cupons & Relâmpago)",
       "status": "ONLINE",
-      "status_message": "Radar Promobit Black Friday ativo (1 promoções relâmpago e cupons ao vivo).",
+      "status_message": "Radar Promobit Black Friday ativo (13 promoções relâmpago e cupons ao vivo).",
       "connector_type": "PUBLIC_FEED",
       "integration_docs": "Monitora em tempo real promoções relâmpago (RECENTS), destaques Black Friday (TOP_OFFER) e cupons ativos (KaBuM!, Mercado Livre, Amazon, Shopee Oficial, Magalu, AliExpress Brasil) com resolução direta do link.",
       "reputation_score": 94.0,
-      "offers_found": 1,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": "2026-11-27T15:59:32.962411-03:00"
+      "offers_found": 13,
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 2,
       "slug": "mercado-livre",
       "name": "Mercado Livre",
-      "status": "UNAVAILABLE",
-      "status_message": "Configure MERCADOLIVRE_ACCESS_TOKEN no .env para busca extra além das Lojas Oficiais monitoradas.",
+      "status": "ONLINE",
+      "status_message": "Mercado Livre consultado ao vivo (2 ofertas verificadas e cupons ativos).",
       "connector_type": "PUBLIC_API_AND_VERIFIED_DEALS",
       "integration_docs": "Integra Lojas Oficiais do Mercado Livre via promoções verificadas em tempo real (com cupons Meli+/Black Friday), comparadores Zoom/Buscapé e API Oficial MLB.",
       "reputation_score": 95.0,
-      "offers_found": 0,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": null
+      "offers_found": 2,
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 3,
       "slug": "amazon-br",
       "name": "Amazon Brasil",
       "status": "ONLINE",
-      "status_message": "Amazon Brasil consultada (30 ofertas ativas com ASIN direto verificado).",
+      "status_message": "Amazon Brasil consultada (58 ofertas ativas com ASIN direto verificado).",
       "connector_type": "OFFICIAL_PAAPI_OR_VERIFIED_FEED",
       "integration_docs": "Consulta catálogo público de Black Friday da Amazon Brasil e barramento de ASINs verificados (/dp/<ASIN>).",
       "reputation_score": 98.0,
-      "offers_found": 30,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": "2026-11-27T15:59:32.962411-03:00"
+      "offers_found": 58,
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 4,
@@ -58,8 +58,8 @@
       "integration_docs": "Consulta a API/Catálogo da KaBuM! ordenado pelo menor preço (sort=price), inspeciona o JSON ao vivo dos SKUs prioritários no PIX e cruza cupons ativos de Black Friday.",
       "reputation_score": 96.0,
       "offers_found": 106,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": "2026-11-27T15:59:32.962411-03:00"
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 5,
@@ -71,21 +71,21 @@
       "integration_docs": "Consulta páginas públicas da Magazine Luiza + barramentos Zoom/Buscapé com link direto (/p/).",
       "reputation_score": 95.0,
       "offers_found": 9,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": "2026-11-27T15:59:32.962411-03:00"
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 6,
       "slug": "shopee",
       "name": "Shopee (Lojas Oficiais)",
-      "status": "UNAVAILABLE",
-      "status_message": "Nenhuma promoção verificada da Shopee Oficial ativa neste instante.",
+      "status": "ONLINE",
+      "status_message": "Shopee Lojas Oficiais consultada (2 ofertas ativas).",
       "connector_type": "VERIFIED_MALL_AND_FLASH_DEALS",
       "integration_docs": "Monitora ofertas verificadas de Lojas Oficiais (Shopee Mall) via barramentos públicos e Promobit.",
       "reputation_score": 92.0,
-      "offers_found": 0,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": null
+      "offers_found": 2,
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 7,
@@ -97,8 +97,8 @@
       "integration_docs": "Conector Fast Shop verifica JSON-LD ao vivo na página do produto e barramento público (/p).",
       "reputation_score": 96.0,
       "offers_found": 2,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": "2026-11-27T15:59:32.962411-03:00"
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 8,
@@ -110,21 +110,21 @@
       "integration_docs": "Verifica produtos reais no Carrefour com filtro estrito de título e link direto (/produto/).",
       "reputation_score": 92.0,
       "offers_found": 28,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": "2026-11-27T15:59:32.962411-03:00"
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 9,
       "slug": "havan",
       "name": "Havan",
       "status": "ONLINE",
-      "status_message": "Havan consultada ao vivo (11 ofertas oficiais ativas).",
+      "status_message": "Havan consultada ao vivo (12 ofertas oficiais ativas).",
       "connector_type": "MAGENTO_PUBLIC_SSR",
       "integration_docs": "Consulta direta ao catálogo público Magento SSR da Havan (produtos 100% novos nacionais).",
       "reputation_score": 93.0,
-      "offers_found": 11,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": "2026-11-27T15:59:32.962411-03:00"
+      "offers_found": 12,
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 10,
@@ -136,8 +136,8 @@
       "integration_docs": "Consulta direta ao catálogo público da Kalunga (revendedora oficial Sony Brasil).",
       "reputation_score": 94.0,
       "offers_found": 7,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": "2026-11-27T15:59:32.962411-03:00"
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 11,
@@ -149,8 +149,8 @@
       "integration_docs": "Consulta a API REST pública VTEX (/api/catalog_system/pub/products/search/) em paralelo nas redes Bemol, Lojas Benoit, Angeloni, iByte, Fujioka, Webcontinental e Lojas Solar com validação de estoque real.",
       "reputation_score": 93.0,
       "offers_found": 27,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": "2026-11-27T15:59:32.962411-03:00"
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 12,
@@ -162,7 +162,7 @@
       "integration_docs": "Consulta barramento duplo Zoom + Buscapé + Promobit para ofertas oficiais Casas Bahia.",
       "reputation_score": 91.0,
       "offers_found": 0,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
       "last_success_at": null
     },
     {
@@ -175,7 +175,7 @@
       "integration_docs": "Consulta barramento duplo Zoom + Buscapé + Promobit para ofertas oficiais Ponto.",
       "reputation_score": 91.0,
       "offers_found": 0,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
       "last_success_at": null
     },
     {
@@ -183,13 +183,13 @@
       "slug": "americanas",
       "name": "Americanas",
       "status": "ONLINE",
-      "status_message": "Americanas consultada (4 ofertas reais verificadas).",
+      "status_message": "Americanas consultada (5 ofertas reais verificadas).",
       "connector_type": "VERIFIED_COMPARISON_FEED",
       "integration_docs": "Consulta ofertas verificadas da Americanas via Zoom + Buscapé + Promobit.",
       "reputation_score": 90.0,
-      "offers_found": 4,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": "2026-11-27T15:59:32.962411-03:00"
+      "offers_found": 5,
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     },
     {
       "id": 15,
@@ -201,8 +201,8 @@
       "integration_docs": "Monitora Extra, Submarino, Girafa, Webfones e Nagem via barramentos duplos Zoom + Buscapé.",
       "reputation_score": 91.0,
       "offers_found": 0,
-      "last_check_at": "2026-11-27T15:59:32.962411-03:00",
-      "last_success_at": "2026-11-27T15:59:32.962411-03:00"
+      "last_check_at": "2026-11-27T16:27:46.686342-03:00",
+      "last_success_at": "2026-11-27T16:27:46.686342-03:00"
     }
   ],
   "logs": [
@@ -210,34 +210,34 @@
       "id": 1,
       "store_name": "Radar Promobit (Cupons & Relâmpago)",
       "status": "ONLINE",
-      "offers_found": 1,
-      "offers_updated": 1,
+      "offers_found": 13,
+      "offers_updated": 13,
       "error_message": null,
       "duration_ms": 0,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.804447-03:00"
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.783164-03:00"
     },
     {
       "id": 2,
       "store_name": "Mercado Livre",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Configure MERCADOLIVRE_ACCESS_TOKEN no .env para busca extra além das Lojas Oficiais monitoradas.",
+      "status": "ONLINE",
+      "offers_found": 2,
+      "offers_updated": 2,
+      "error_message": null,
       "duration_ms": 0,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.804447-03:00"
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.783164-03:00"
     },
     {
       "id": 3,
       "store_name": "Amazon Brasil",
       "status": "ONLINE",
-      "offers_found": 30,
-      "offers_updated": 30,
+      "offers_found": 58,
+      "offers_updated": 58,
       "error_message": null,
-      "duration_ms": 7219,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.804447-03:00"
+      "duration_ms": 7446,
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.784163-03:00"
     },
     {
       "id": 4,
@@ -246,9 +246,9 @@
       "offers_found": 106,
       "offers_updated": 106,
       "error_message": null,
-      "duration_ms": 6879,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.805447-03:00"
+      "duration_ms": 7521,
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.785161-03:00"
     },
     {
       "id": 5,
@@ -257,20 +257,20 @@
       "offers_found": 9,
       "offers_updated": 9,
       "error_message": null,
-      "duration_ms": 3366,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.808443-03:00"
+      "duration_ms": 3538,
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.788158-03:00"
     },
     {
       "id": 6,
       "store_name": "Shopee (Lojas Oficiais)",
-      "status": "UNAVAILABLE",
-      "offers_found": 0,
-      "offers_updated": 0,
-      "error_message": "Nenhuma promoção verificada da Shopee Oficial ativa neste instante.",
+      "status": "ONLINE",
+      "offers_found": 2,
+      "offers_updated": 2,
+      "error_message": null,
       "duration_ms": 0,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.808443-03:00"
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.788158-03:00"
     },
     {
       "id": 7,
@@ -279,9 +279,9 @@
       "offers_found": 2,
       "offers_updated": 2,
       "error_message": null,
-      "duration_ms": 4528,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.808443-03:00"
+      "duration_ms": 3745,
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.788158-03:00"
     },
     {
       "id": 8,
@@ -290,20 +290,20 @@
       "offers_found": 28,
       "offers_updated": 28,
       "error_message": null,
-      "duration_ms": 5115,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.808443-03:00"
+      "duration_ms": 5877,
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.788158-03:00"
     },
     {
       "id": 9,
       "store_name": "Havan",
       "status": "ONLINE",
-      "offers_found": 11,
-      "offers_updated": 11,
+      "offers_found": 12,
+      "offers_updated": 12,
       "error_message": null,
-      "duration_ms": 3385,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.809445-03:00"
+      "duration_ms": 3514,
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.789157-03:00"
     },
     {
       "id": 10,
@@ -312,9 +312,9 @@
       "offers_found": 7,
       "offers_updated": 7,
       "error_message": null,
-      "duration_ms": 2912,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.809445-03:00"
+      "duration_ms": 2293,
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.790157-03:00"
     },
     {
       "id": 11,
@@ -323,9 +323,9 @@
       "offers_found": 27,
       "offers_updated": 27,
       "error_message": null,
-      "duration_ms": 3868,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.809445-03:00"
+      "duration_ms": 4639,
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.790157-03:00"
     },
     {
       "id": 12,
@@ -335,8 +335,8 @@
       "offers_updated": 0,
       "error_message": "Protegido por WAF Akamai na busca direta; monitorando via comparadores oficiais.",
       "duration_ms": 0,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.810444-03:00"
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.790157-03:00"
     },
     {
       "id": 13,
@@ -346,19 +346,19 @@
       "offers_updated": 0,
       "error_message": "Protegido por WAF Akamai na busca direta; monitorando via comparadores oficiais.",
       "duration_ms": 0,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.810444-03:00"
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.790157-03:00"
     },
     {
       "id": 14,
       "store_name": "Americanas",
       "status": "ONLINE",
-      "offers_found": 4,
-      "offers_updated": 4,
+      "offers_found": 5,
+      "offers_updated": 5,
       "error_message": null,
       "duration_ms": 0,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.810444-03:00"
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.791155-03:00"
     },
     {
       "id": 15,
@@ -368,8 +368,8 @@
       "offers_updated": 0,
       "error_message": null,
       "duration_ms": 0,
-      "started_at": "2026-11-27T15:59:32.962411-03:00",
-      "finished_at": "2026-11-27T15:59:51.810444-03:00"
+      "started_at": "2026-11-27T16:27:46.686342-03:00",
+      "finished_at": "2026-11-27T16:28:03.791155-03:00"
     }
   ]
 }
