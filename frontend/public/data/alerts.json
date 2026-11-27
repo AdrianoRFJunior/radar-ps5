@@ -1,6 +1,6 @@
 {
-  "unread_count": 10,
-  "total_active": 10,
+  "unread_count": 9,
+  "total_active": 9,
   "alerts": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "coupon_code": "NINJAPLAY",
       "price": 3999.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T13:03:30.991323-03:00",
+      "created_at": "2026-11-27T13:07:04.070623-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -28,7 +28,7 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T13:03:30.991323-03:00",
+      "created_at": "2026-11-27T13:07:04.070623-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -43,7 +43,7 @@
       "coupon_code": null,
       "price": 313.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T13:03:30.991323-03:00",
+      "created_at": "2026-11-27T13:07:04.070623-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -58,7 +58,7 @@
       "coupon_code": "NINJAPLAY",
       "price": 3999.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T13:03:30.991323-03:00",
+      "created_at": "2026-11-27T13:07:04.070623-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -73,27 +73,12 @@
       "coupon_code": "RELAMP2",
       "price": 3999.0,
       "store_name": "AliExpress Brasil (Parceiro Magalu)",
-      "created_at": "2026-11-27T13:03:30.991323-03:00",
+      "created_at": "2026-11-27T13:07:04.070623-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
       "id": 6,
-      "type": "COUPON_AVAILABLE",
-      "severity": "HIGH",
-      "title": "🎟️ Cupom Black Friday RELAMP2 na AliExpress Brasil (Parceiro Magalu) — R$ 3999.00",
-      "message": "Console PlayStation 5 Digital saindo por R$ 3999.00 usando o cupom RELAMP2.",
-      "url": "https://www.promobit.com.br/oferta/console-playstation-5-digital-3266893",
-      "offer_url": "https://www.promobit.com.br/oferta/console-playstation-5-digital-3266893",
-      "coupon_code": "RELAMP2",
-      "price": 3999.0,
-      "store_name": "AliExpress Brasil (Parceiro Magalu)",
-      "created_at": "2026-11-27T13:03:30.991323-03:00",
-      "is_read": false,
-      "is_archived": false
-    },
-    {
-      "id": 7,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday NINJAPLAY na KaBuM! — R$ 4499.00",
@@ -103,12 +88,12 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T13:03:30.991323-03:00",
+      "created_at": "2026-11-27T13:07:04.070623-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 8,
+      "id": 7,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday T31N0V na Shopee (Loja Oficial) — R$ 327.00",
@@ -118,12 +103,12 @@
       "coupon_code": "T31N0V",
       "price": 327.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T13:03:30.991323-03:00",
+      "created_at": "2026-11-27T13:07:04.070623-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 9,
+      "id": 8,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday GRANDUAL na KaBuM! — R$ 457.00",
@@ -133,12 +118,12 @@
       "coupon_code": "GRANDUAL",
       "price": 457.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T13:03:30.991323-03:00",
+      "created_at": "2026-11-27T13:07:04.070623-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 10,
+      "id": 9,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday CONTROLEBF na KaBuM! — R$ 464.00",
@@ -148,7 +133,7 @@
       "coupon_code": "CONTROLEBF",
       "price": 464.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T13:03:30.991323-03:00",
+      "created_at": "2026-11-27T13:07:04.070623-03:00",
       "is_read": false,
       "is_archived": false
     }
