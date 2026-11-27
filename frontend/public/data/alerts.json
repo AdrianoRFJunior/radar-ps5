@@ -1,6 +1,6 @@
 {
-  "unread_count": 8,
-  "total_active": 8,
+  "unread_count": 9,
+  "total_active": 9,
   "alerts": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "coupon_code": null,
       "price": 3915.52,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:49:43.965957-03:00",
+      "created_at": "2026-11-27T17:53:09.609034-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -28,7 +28,7 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:49:43.965957-03:00",
+      "created_at": "2026-11-27T17:53:09.609034-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -36,14 +36,14 @@
       "id": 3,
       "type": "NEW_LOWEST_PRICE",
       "severity": "HIGH",
-      "title": "🎮 Menor DualSense Oficial: R$ 327.00 na Shopee (Loja Oficial)",
-      "message": "Controle Sem Fio Sony DualSense Hyperpop, PS5, Rhythm Blue, Azul 1000048538 na Shopee (Loja Oficial) por R$ 327.00.",
-      "url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-hyperpop-ps5-rhythm-blue-azul-1000048538-3268157",
-      "offer_url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-hyperpop-ps5-rhythm-blue-azul-1000048538-3268157",
-      "coupon_code": null,
-      "price": 327.0,
-      "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:49:43.965957-03:00",
+      "title": "🎮 Menor DualSense Oficial: R$ 259.00 na Magazine Luiza",
+      "message": "Controle PS5 e para PC sem Fio DualSense Sony Azul Claro na Magazine Luiza por R$ 259.00.",
+      "url": "https://www.promobit.com.br/oferta/controle-ps5-e-para-pc-sem-fio-dualsense-sony-azul-claro-3269810",
+      "offer_url": "https://www.promobit.com.br/oferta/controle-ps5-e-para-pc-sem-fio-dualsense-sony-azul-claro-3269810",
+      "coupon_code": "CUPOM100BLACK",
+      "price": 259.0,
+      "store_name": "Magazine Luiza",
+      "created_at": "2026-11-27T17:53:09.609034-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -58,7 +58,7 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:49:43.965957-03:00",
+      "created_at": "2026-11-27T17:53:09.609034-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -73,12 +73,27 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:49:43.965957-03:00",
+      "created_at": "2026-11-27T17:53:09.609034-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
       "id": 6,
+      "type": "COUPON_AVAILABLE",
+      "severity": "HIGH",
+      "title": "🎟️ Cupom Black Friday CUPOM100BLACK na Magazine Luiza — R$ 259.00",
+      "message": "Controle PS5 e para PC sem Fio DualSense Sony Azul Claro saindo por R$ 259.00 usando o cupom CUPOM100BLACK.",
+      "url": "https://www.promobit.com.br/oferta/controle-ps5-e-para-pc-sem-fio-dualsense-sony-azul-claro-3269810",
+      "offer_url": "https://www.promobit.com.br/oferta/controle-ps5-e-para-pc-sem-fio-dualsense-sony-azul-claro-3269810",
+      "coupon_code": "CUPOM100BLACK",
+      "price": 259.0,
+      "store_name": "Magazine Luiza",
+      "created_at": "2026-11-27T17:53:09.609034-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 7,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday WEUYRUE na Mercado Livre — R$ 334.00",
@@ -88,12 +103,12 @@
       "coupon_code": "WEUYRUE",
       "price": 334.0,
       "store_name": "Mercado Livre",
-      "created_at": "2026-11-27T17:49:43.965957-03:00",
+      "created_at": "2026-11-27T17:53:09.609034-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 7,
+      "id": 8,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday GRANDUAL na KaBuM! — R$ 457.00",
@@ -103,12 +118,12 @@
       "coupon_code": "GRANDUAL",
       "price": 457.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:49:43.965957-03:00",
+      "created_at": "2026-11-27T17:53:09.609034-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 8,
+      "id": 9,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday CONTROLEBF na KaBuM! — R$ 464.00",
@@ -118,7 +133,7 @@
       "coupon_code": "CONTROLEBF",
       "price": 464.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:49:43.965957-03:00",
+      "created_at": "2026-11-27T17:53:09.609034-03:00",
       "is_read": false,
       "is_archived": false
     }
