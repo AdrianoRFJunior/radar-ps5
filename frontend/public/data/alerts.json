@@ -13,7 +13,7 @@
       "coupon_code": "NINJAPLAY",
       "price": 3999.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T13:24:23.635333-03:00",
+      "created_at": "2026-11-27T13:27:49.857640-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -28,7 +28,7 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T13:24:23.635333-03:00",
+      "created_at": "2026-11-27T13:27:49.857640-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -43,7 +43,7 @@
       "coupon_code": "C4RR1NH070",
       "price": 275.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T13:24:23.635333-03:00",
+      "created_at": "2026-11-27T13:27:49.857640-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -58,7 +58,7 @@
       "coupon_code": "NINJAPLAY",
       "price": 3999.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T13:24:23.635333-03:00",
+      "created_at": "2026-11-27T13:27:49.857640-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -73,7 +73,7 @@
       "coupon_code": "RELAMP2",
       "price": 3999.0,
       "store_name": "AliExpress Brasil (Parceiro Magalu)",
-      "created_at": "2026-11-27T13:24:23.635333-03:00",
+      "created_at": "2026-11-27T13:27:49.857640-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -88,7 +88,7 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T13:24:23.635333-03:00",
+      "created_at": "2026-11-27T13:27:49.857640-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -103,7 +103,7 @@
       "coupon_code": "C4RR1NH070",
       "price": 275.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T13:24:23.635333-03:00",
+      "created_at": "2026-11-27T13:27:49.857640-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -118,27 +118,12 @@
       "coupon_code": "C4RR1NH070",
       "price": 275.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T13:24:23.635333-03:00",
+      "created_at": "2026-11-27T13:27:49.857640-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
       "id": 9,
-      "type": "COUPON_AVAILABLE",
-      "severity": "HIGH",
-      "title": "🎟️ Cupom Black Friday C4RR1NH070 na Shopee (Loja Oficial) — R$ 308.00",
-      "message": "Controle Sem Fio Sony DualSense Hyperpop, Ps5, Rhythm Blue, Azul saindo por R$ 308.00 usando o cupom C4RR1NH070.",
-      "url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-hyperpop-ps5-rhythm-blue-azul-3267427",
-      "offer_url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-hyperpop-ps5-rhythm-blue-azul-3267427",
-      "coupon_code": "C4RR1NH070",
-      "price": 308.0,
-      "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T13:24:23.635333-03:00",
-      "is_read": false,
-      "is_archived": false
-    },
-    {
-      "id": 10,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday C4RR1NH070 na Shopee (Loja Oficial) — R$ 308.00",
@@ -148,7 +133,22 @@
       "coupon_code": "C4RR1NH070",
       "price": 308.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T13:24:23.635333-03:00",
+      "created_at": "2026-11-27T13:27:49.857640-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 10,
+      "type": "COUPON_AVAILABLE",
+      "severity": "HIGH",
+      "title": "🎟️ Cupom Black Friday C4RR1NH070 na Shopee (Loja Oficial) — R$ 308.00",
+      "message": "Controle Sem Fio Sony DualSense Hyperpop, Ps5, Rhythm Blue, Azul saindo por R$ 308.00 usando o cupom C4RR1NH070.",
+      "url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-hyperpop-ps5-rhythm-blue-azul-3267427",
+      "offer_url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-hyperpop-ps5-rhythm-blue-azul-3267427",
+      "coupon_code": "C4RR1NH070",
+      "price": 308.0,
+      "store_name": "Shopee (Loja Oficial)",
+      "created_at": "2026-11-27T13:27:49.857640-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -163,7 +163,7 @@
       "coupon_code": "CONTROLEBF",
       "price": 464.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T13:24:23.635333-03:00",
+      "created_at": "2026-11-27T13:27:49.857640-03:00",
       "is_read": false,
       "is_archived": false
     }
