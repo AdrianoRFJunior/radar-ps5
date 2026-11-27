@@ -1,6 +1,6 @@
 {
-  "unread_count": 11,
-  "total_active": 11,
+  "unread_count": 13,
+  "total_active": 13,
   "alerts": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "coupon_code": null,
       "price": 4099.0,
       "store_name": "Carrefour",
-      "created_at": "2026-11-27T14:20:40.187594-03:00",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -28,7 +28,7 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T14:20:40.187594-03:00",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -43,7 +43,7 @@
       "coupon_code": "C4RR1NH070",
       "price": 275.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T14:20:40.187594-03:00",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -58,7 +58,7 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T14:20:40.187594-03:00",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -73,7 +73,7 @@
       "coupon_code": "C4RR1NH070",
       "price": 275.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T14:20:40.187594-03:00",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -88,7 +88,7 @@
       "coupon_code": "C4RR1NH070",
       "price": 275.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T14:20:40.187594-03:00",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -103,7 +103,7 @@
       "coupon_code": "C4RR1NH070",
       "price": 307.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T14:20:40.187594-03:00",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -118,7 +118,7 @@
       "coupon_code": "C4RR1NH070",
       "price": 308.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T14:20:40.187594-03:00",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -133,12 +133,42 @@
       "coupon_code": "C4RR1NH070",
       "price": 308.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T14:20:40.187594-03:00",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
       "id": 10,
+      "type": "COUPON_AVAILABLE",
+      "severity": "HIGH",
+      "title": "🎟️ Cupom Black Friday T31N0V na Shopee (Loja Oficial) — R$ 327.00",
+      "message": "Controle Sem Fio Sony DualSense Hyperpop Ps5 Remix Green Verde 1000048534 saindo por R$ 327.00 usando o cupom T31N0V.",
+      "url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-hyperpop-ps5-remix-green-verde-1000048534-3264019",
+      "offer_url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-hyperpop-ps5-remix-green-verde-1000048534-3264019",
+      "coupon_code": "T31N0V",
+      "price": 327.0,
+      "store_name": "Shopee (Loja Oficial)",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 11,
+      "type": "COUPON_AVAILABLE",
+      "severity": "HIGH",
+      "title": "🎟️ Cupom Black Friday DUALMARA na KaBuM! — R$ 359.40",
+      "message": "Controle DualSense PS5 Branco Edição Marathon saindo por R$ 359.40 usando o cupom DUALMARA.",
+      "url": "https://www.promobit.com.br/oferta/controle-dualsense-ps5-branco-edicao-marathon-3263037",
+      "offer_url": "https://www.promobit.com.br/oferta/controle-dualsense-ps5-branco-edicao-marathon-3263037",
+      "coupon_code": "DUALMARA",
+      "price": 359.4,
+      "store_name": "KaBuM!",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 12,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday GRANDUAL na KaBuM! — R$ 457.00",
@@ -148,12 +178,12 @@
       "coupon_code": "GRANDUAL",
       "price": 457.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T14:20:40.187594-03:00",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 11,
+      "id": 13,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday CONTROLEBF na KaBuM! — R$ 464.00",
@@ -163,7 +193,7 @@
       "coupon_code": "CONTROLEBF",
       "price": 464.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T14:20:40.187594-03:00",
+      "created_at": "2026-11-27T14:24:09.084887-03:00",
       "is_read": false,
       "is_archived": false
     }
