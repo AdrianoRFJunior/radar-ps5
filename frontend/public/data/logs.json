@@ -6,7 +6,7 @@
     "interval_minutes": 2,
     "current_interval_minutes": 2,
     "next_run_in_minutes": 2,
-    "last_run_at": "2026-11-27T16:35:01.863398-03:00"
+    "last_run_at": "2026-11-27T16:38:33.148955-03:00"
   },
   "stores_status": [
     {
@@ -19,47 +19,47 @@
       "integration_docs": "Monitora em tempo real promoções relâmpago (RECENTS), destaques Black Friday (TOP_OFFER) e cupons ativos (KaBuM!, Mercado Livre, Amazon, Shopee Oficial, Magalu, AliExpress Brasil) com resolução direta do link.",
       "reputation_score": 94.0,
       "offers_found": 13,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 2,
       "slug": "mercado-livre",
       "name": "Mercado Livre",
       "status": "ONLINE",
-      "status_message": "Mercado Livre consultado ao vivo (2 ofertas verificadas e cupons ativos).",
+      "status_message": "Mercado Livre consultado ao vivo (3 ofertas verificadas e cupons ativos).",
       "connector_type": "PUBLIC_API_AND_VERIFIED_DEALS",
       "integration_docs": "Integra Lojas Oficiais do Mercado Livre via promoções verificadas em tempo real (com cupons Meli+/Black Friday), comparadores Zoom/Buscapé e API Oficial MLB.",
       "reputation_score": 95.0,
-      "offers_found": 2,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "offers_found": 3,
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 3,
       "slug": "amazon-br",
       "name": "Amazon Brasil",
       "status": "ONLINE",
-      "status_message": "Amazon Brasil consultada (43 ofertas ativas com ASIN direto verificado).",
+      "status_message": "Amazon Brasil consultada (46 ofertas ativas com ASIN direto verificado).",
       "connector_type": "OFFICIAL_PAAPI_OR_VERIFIED_FEED",
       "integration_docs": "Consulta catálogo público de Black Friday da Amazon Brasil e barramento de ASINs verificados (/dp/<ASIN>).",
       "reputation_score": 98.0,
-      "offers_found": 43,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "offers_found": 46,
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 4,
       "slug": "kabum",
       "name": "KaBuM!",
       "status": "ONLINE",
-      "status_message": "KaBuM! consultada ao vivo (106 ofertas reais verificadas pelo menor preço PIX).",
+      "status_message": "KaBuM! consultada ao vivo (103 ofertas reais verificadas pelo menor preço PIX).",
       "connector_type": "OFFICIAL_PUBLIC_API_V2_AND_SKU_JSON",
       "integration_docs": "Consulta a API/Catálogo da KaBuM! ordenado pelo menor preço (sort=price), inspeciona o JSON ao vivo dos SKUs prioritários no PIX e cruza cupons ativos de Black Friday.",
       "reputation_score": 96.0,
-      "offers_found": 106,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "offers_found": 103,
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 5,
@@ -71,21 +71,21 @@
       "integration_docs": "Consulta páginas públicas da Magazine Luiza + barramentos Zoom/Buscapé com link direto (/p/).",
       "reputation_score": 95.0,
       "offers_found": 10,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 6,
       "slug": "shopee",
       "name": "Shopee (Lojas Oficiais)",
       "status": "ONLINE",
-      "status_message": "Shopee Lojas Oficiais consultada (2 ofertas ativas).",
+      "status_message": "Shopee Lojas Oficiais consultada (1 ofertas ativas).",
       "connector_type": "VERIFIED_MALL_AND_FLASH_DEALS",
       "integration_docs": "Monitora ofertas verificadas de Lojas Oficiais (Shopee Mall) via barramentos públicos e Promobit.",
       "reputation_score": 92.0,
-      "offers_found": 2,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "offers_found": 1,
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 7,
@@ -97,8 +97,8 @@
       "integration_docs": "Conector Fast Shop verifica JSON-LD ao vivo na página do produto e barramento público (/p).",
       "reputation_score": 96.0,
       "offers_found": 2,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 8,
@@ -110,8 +110,8 @@
       "integration_docs": "Verifica produtos reais no Carrefour com filtro estrito de título e link direto (/produto/).",
       "reputation_score": 92.0,
       "offers_found": 28,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 9,
@@ -123,8 +123,8 @@
       "integration_docs": "Consulta direta ao catálogo público Magento SSR da Havan (produtos 100% novos nacionais).",
       "reputation_score": 93.0,
       "offers_found": 12,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 10,
@@ -136,8 +136,8 @@
       "integration_docs": "Consulta direta ao catálogo público da Kalunga (revendedora oficial Sony Brasil).",
       "reputation_score": 94.0,
       "offers_found": 7,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 11,
@@ -149,8 +149,8 @@
       "integration_docs": "Consulta a API REST pública VTEX (/api/catalog_system/pub/products/search/) em paralelo nas redes Bemol, Lojas Benoit, Angeloni, iByte, Fujioka, Webcontinental e Lojas Solar com validação de estoque real.",
       "reputation_score": 93.0,
       "offers_found": 27,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 12,
@@ -162,7 +162,7 @@
       "integration_docs": "Consulta barramento duplo Zoom + Buscapé + Promobit para ofertas oficiais Casas Bahia.",
       "reputation_score": 91.0,
       "offers_found": 0,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
       "last_success_at": null
     },
     {
@@ -175,7 +175,7 @@
       "integration_docs": "Consulta barramento duplo Zoom + Buscapé + Promobit para ofertas oficiais Ponto.",
       "reputation_score": 91.0,
       "offers_found": 0,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
       "last_success_at": null
     },
     {
@@ -188,8 +188,8 @@
       "integration_docs": "Consulta ofertas verificadas da Americanas via Zoom + Buscapé + Promobit.",
       "reputation_score": 90.0,
       "offers_found": 5,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     },
     {
       "id": 15,
@@ -201,8 +201,8 @@
       "integration_docs": "Monitora Extra, Submarino, Girafa, Webfones e Nagem via barramentos duplos Zoom + Buscapé.",
       "reputation_score": 91.0,
       "offers_found": 0,
-      "last_check_at": "2026-11-27T16:35:01.863398-03:00",
-      "last_success_at": "2026-11-27T16:35:01.863398-03:00"
+      "last_check_at": "2026-11-27T16:38:33.148955-03:00",
+      "last_success_at": "2026-11-27T16:38:33.148955-03:00"
     }
   ],
   "logs": [
@@ -214,41 +214,41 @@
       "offers_updated": 13,
       "error_message": null,
       "duration_ms": 0,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.216047-03:00"
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.553147-03:00"
     },
     {
       "id": 2,
       "store_name": "Mercado Livre",
       "status": "ONLINE",
-      "offers_found": 2,
-      "offers_updated": 2,
+      "offers_found": 3,
+      "offers_updated": 3,
       "error_message": null,
       "duration_ms": 0,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.216047-03:00"
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.554147-03:00"
     },
     {
       "id": 3,
       "store_name": "Amazon Brasil",
       "status": "ONLINE",
-      "offers_found": 43,
-      "offers_updated": 43,
+      "offers_found": 46,
+      "offers_updated": 46,
       "error_message": null,
-      "duration_ms": 8210,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.217047-03:00"
+      "duration_ms": 8128,
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.554147-03:00"
     },
     {
       "id": 4,
       "store_name": "KaBuM!",
       "status": "ONLINE",
-      "offers_found": 106,
-      "offers_updated": 106,
+      "offers_found": 103,
+      "offers_updated": 103,
       "error_message": null,
-      "duration_ms": 7969,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.218046-03:00"
+      "duration_ms": 8487,
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.555145-03:00"
     },
     {
       "id": 5,
@@ -257,20 +257,20 @@
       "offers_found": 10,
       "offers_updated": 10,
       "error_message": null,
-      "duration_ms": 4496,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.220043-03:00"
+      "duration_ms": 3888,
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.557144-03:00"
     },
     {
       "id": 6,
       "store_name": "Shopee (Lojas Oficiais)",
       "status": "ONLINE",
-      "offers_found": 2,
-      "offers_updated": 2,
+      "offers_found": 1,
+      "offers_updated": 1,
       "error_message": null,
       "duration_ms": 0,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.220043-03:00"
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.558143-03:00"
     },
     {
       "id": 7,
@@ -279,9 +279,9 @@
       "offers_found": 2,
       "offers_updated": 2,
       "error_message": null,
-      "duration_ms": 5283,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.220043-03:00"
+      "duration_ms": 3974,
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.558143-03:00"
     },
     {
       "id": 8,
@@ -290,9 +290,9 @@
       "offers_found": 28,
       "offers_updated": 28,
       "error_message": null,
-      "duration_ms": 5912,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.221042-03:00"
+      "duration_ms": 6774,
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.558143-03:00"
     },
     {
       "id": 9,
@@ -301,9 +301,9 @@
       "offers_found": 12,
       "offers_updated": 12,
       "error_message": null,
-      "duration_ms": 4295,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.221042-03:00"
+      "duration_ms": 3986,
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.559142-03:00"
     },
     {
       "id": 10,
@@ -312,9 +312,9 @@
       "offers_found": 7,
       "offers_updated": 7,
       "error_message": null,
-      "duration_ms": 2478,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.222042-03:00"
+      "duration_ms": 4884,
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.560141-03:00"
     },
     {
       "id": 11,
@@ -323,9 +323,9 @@
       "offers_found": 27,
       "offers_updated": 27,
       "error_message": null,
-      "duration_ms": 4644,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.222042-03:00"
+      "duration_ms": 5286,
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.560141-03:00"
     },
     {
       "id": 12,
@@ -335,8 +335,8 @@
       "offers_updated": 0,
       "error_message": "Protegido por WAF Akamai na busca direta; monitorando via comparadores oficiais.",
       "duration_ms": 0,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.222042-03:00"
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.561140-03:00"
     },
     {
       "id": 13,
@@ -346,8 +346,8 @@
       "offers_updated": 0,
       "error_message": "Protegido por WAF Akamai na busca direta; monitorando via comparadores oficiais.",
       "duration_ms": 0,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.222042-03:00"
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.561140-03:00"
     },
     {
       "id": 14,
@@ -357,8 +357,8 @@
       "offers_updated": 5,
       "error_message": null,
       "duration_ms": 0,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.222042-03:00"
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.561140-03:00"
     },
     {
       "id": 15,
@@ -368,8 +368,8 @@
       "offers_updated": 0,
       "error_message": null,
       "duration_ms": 0,
-      "started_at": "2026-11-27T16:35:01.863398-03:00",
-      "finished_at": "2026-11-27T16:35:19.223040-03:00"
+      "started_at": "2026-11-27T16:38:33.148955-03:00",
+      "finished_at": "2026-11-27T16:38:50.561140-03:00"
     }
   ]
 }
