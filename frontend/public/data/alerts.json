@@ -1,24 +1,84 @@
 {
-  "unread_count": 2,
-  "total_active": 2,
+  "unread_count": 8,
+  "total_active": 8,
   "alerts": [
     {
       "id": 1,
       "type": "NEW_LOWEST_PRICE",
-      "title": "Menor Preço PS5 Encontrado: R$ 4099.00",
-      "message": "Console Sony Playstation 5 Digital Slim 1tb – Branco + Jogos Returnal E Ratchet &amp; Clank + Controle Sem Fio Dualsense Bra disponível na Carrefour por R$ 4099.00.",
-      "url": "https://www.carrefour.com.br/produto/console-sony-playstation-5-digital-slim-1tb-branco-jogos-returnal-e-ratchet-amp-clank-controle-sem-fio-dualsense-bra-334776478",
-      "created_at": "2026-11-27T12:11:45.644553-03:00",
+      "title": "Menor Preço PS5 Encontrado: R$ 3999.00",
+      "message": "Console PlayStation 5 Digital disponível na Radar Promobit (Cupons & Relâmpago) por R$ 3999.00.",
+      "url": "https://www.aliexpress.com/item/1005010260639712.html",
+      "created_at": "2026-11-27T12:22:22.486920-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
       "id": 2,
       "type": "NEW_LOWEST_PRICE",
-      "title": "Menor Preço DualSense: R$ 359.10",
-      "message": "Controle Dualsense Playstation 5, Starlight Blue - Ps5 na KaBuM! por R$ 359.10.",
-      "url": "https://www.kabum.com.br/produto/1008212",
-      "created_at": "2026-11-27T12:11:45.644553-03:00",
+      "title": "Menor Preço DualSense: R$ 313.00",
+      "message": "Controle Sem Fio Sony DualSense PlayStation 5 Bluetooth Midnight Black Cfi-Zct2w na Radar Promobit (Cupons & Relâmpago) por R$ 313.00.",
+      "url": "https://s.shopee.com.br/AKcTKyOF9K",
+      "created_at": "2026-11-27T12:22:22.486920-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 3,
+      "type": "COUPON_AVAILABLE",
+      "title": "Cupom Ativo: RELAMP2 na Radar Promobit (Cupons & Relâmpago)",
+      "message": "Utilize o cupom RELAMP2 na oferta Console PlayStation 5 Digital para garantir desconto.",
+      "url": "https://www.aliexpress.com/item/1005010260639712.html",
+      "created_at": "2026-11-27T12:22:22.486920-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 4,
+      "type": "COUPON_AVAILABLE",
+      "title": "Cupom Ativo: NINJAPLAY na Radar Promobit (Cupons & Relâmpago)",
+      "message": "Utilize o cupom NINJAPLAY na oferta Console Sony PlayStation 5 SSD 825GB Controle Sem Fio DualSense + 2 Jogos Digitais Edição Digital para garantir desconto.",
+      "url": "https://www.kabum.com.br/produto/989702",
+      "created_at": "2026-11-27T12:22:22.486920-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 5,
+      "type": "COUPON_AVAILABLE",
+      "title": "Cupom Ativo: NINJAPLAY na Radar Promobit (Cupons & Relâmpago)",
+      "message": "Utilize o cupom NINJAPLAY na oferta Console Sony PlayStation 5 Com Leitor de Discos SSD 1TB Controle Sem Fio DualSense + 2 Jogos para garantir desconto.",
+      "url": "https://www.kabum.com.br/produto/934759",
+      "created_at": "2026-11-27T12:22:22.486920-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 6,
+      "type": "COUPON_AVAILABLE",
+      "title": "Cupom Ativo: RELAMP2 na Radar Promobit (Cupons & Relâmpago)",
+      "message": "Utilize o cupom RELAMP2 na oferta PlayStation 5 Edição Digital 825GB 1 Controle Branco Sony para garantir desconto.",
+      "url": "https://pt.aliexpress.com/item/1005010260639712.html",
+      "created_at": "2026-11-27T12:22:22.486920-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 7,
+      "type": "COUPON_AVAILABLE",
+      "title": "Cupom Ativo: CONTROLEBF na Radar Promobit (Cupons & Relâmpago)",
+      "message": "Utilize o cupom CONTROLEBF na oferta Controle Sem Fio Sony DualSense Gran Turismo PS5 PC para garantir desconto.",
+      "url": "https://www.kabum.com.br/produto/1080805",
+      "created_at": "2026-11-27T12:22:22.486920-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 8,
+      "type": "COUPON_AVAILABLE",
+      "title": "Cupom Ativo: T31N0V na Radar Promobit (Cupons & Relâmpago)",
+      "message": "Utilize o cupom T31N0V na oferta Controle Sem Fio Sony DualSense Hyperpop Ps5 Remix Green Verde 1000048534 para garantir desconto.",
+      "url": "https://s.shopee.com.br/7fbhkotU7K",
+      "created_at": "2026-11-27T12:22:22.486920-03:00",
       "is_read": false,
       "is_archived": false
     }
