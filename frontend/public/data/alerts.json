@@ -1,6 +1,6 @@
 {
-  "unread_count": 8,
-  "total_active": 8,
+  "unread_count": 7,
+  "total_active": 7,
   "alerts": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "coupon_code": null,
       "price": 4099.0,
       "store_name": "Carrefour",
-      "created_at": "2026-11-27T15:24:35.339003-03:00",
+      "created_at": "2026-11-27T15:28:07.804973-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -28,7 +28,7 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T15:24:35.339003-03:00",
+      "created_at": "2026-11-27T15:28:07.804973-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -36,14 +36,14 @@
       "id": 3,
       "type": "NEW_LOWEST_PRICE",
       "severity": "HIGH",
-      "title": "🎮 Menor DualSense Oficial: R$ 275.00 na Shopee (Loja Oficial)",
-      "message": "Controle Sem Fio Sony DualSense PlayStation 5 Bluetooth Branco - 3005767 na Shopee (Loja Oficial) por R$ 275.00.",
-      "url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-playstation-5-bluetooth-branco-3005767-3268352",
-      "offer_url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-playstation-5-bluetooth-branco-3005767-3268352",
-      "coupon_code": "C4RR1NH070",
-      "price": 275.0,
+      "title": "🎮 Menor DualSense Oficial: R$ 313.00 na Shopee (Loja Oficial)",
+      "message": "Controle Sem Fio Sony DualSense PlayStation 5 Bluetooth Midnight Black Cfi-Zct2w na Shopee (Loja Oficial) por R$ 313.00.",
+      "url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-playstation-5-bluetooth-midnight-black-cfi-zct2w-3264140",
+      "offer_url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-playstation-5-bluetooth-midnight-black-cfi-zct2w-3264140",
+      "coupon_code": null,
+      "price": 313.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T15:24:35.339003-03:00",
+      "created_at": "2026-11-27T15:28:07.804973-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -58,7 +58,7 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T15:24:35.339003-03:00",
+      "created_at": "2026-11-27T15:28:07.804973-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -73,27 +73,12 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T15:24:35.339003-03:00",
+      "created_at": "2026-11-27T15:28:07.804973-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
       "id": 6,
-      "type": "COUPON_AVAILABLE",
-      "severity": "HIGH",
-      "title": "🎟️ Cupom Black Friday C4RR1NH070 na Shopee (Loja Oficial) — R$ 275.00",
-      "message": "Controle Sem Fio Sony DualSense PlayStation 5 Bluetooth Branco - 3005767 saindo por R$ 275.00 usando o cupom C4RR1NH070.",
-      "url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-playstation-5-bluetooth-branco-3005767-3268352",
-      "offer_url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-playstation-5-bluetooth-branco-3005767-3268352",
-      "coupon_code": "C4RR1NH070",
-      "price": 275.0,
-      "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T15:24:35.339003-03:00",
-      "is_read": false,
-      "is_archived": false
-    },
-    {
-      "id": 7,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday GRANDUAL na KaBuM! — R$ 457.00",
@@ -103,12 +88,12 @@
       "coupon_code": "GRANDUAL",
       "price": 457.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T15:24:35.339003-03:00",
+      "created_at": "2026-11-27T15:28:07.804973-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 8,
+      "id": 7,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday CONTROLEBF na KaBuM! — R$ 464.00",
@@ -118,7 +103,7 @@
       "coupon_code": "CONTROLEBF",
       "price": 464.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T15:24:35.339003-03:00",
+      "created_at": "2026-11-27T15:28:07.804973-03:00",
       "is_read": false,
       "is_archived": false
     }
