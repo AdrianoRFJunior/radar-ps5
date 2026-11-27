@@ -1,6 +1,6 @@
 {
-  "unread_count": 10,
-  "total_active": 10,
+  "unread_count": 9,
+  "total_active": 9,
   "alerts": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "coupon_code": null,
       "price": 3915.52,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:03:11.176353-03:00",
+      "created_at": "2026-11-27T17:06:42.411798-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -28,7 +28,7 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:03:11.176353-03:00",
+      "created_at": "2026-11-27T17:06:42.411798-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -43,27 +43,12 @@
       "coupon_code": "C4RR1NH070",
       "price": 270.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:03:11.176353-03:00",
+      "created_at": "2026-11-27T17:06:42.411798-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
       "id": 4,
-      "type": "COUPON_AVAILABLE",
-      "severity": "HIGH",
-      "title": "🎟️ Cupom Black Friday CHAMANOPLAY na KaBuM! — R$ 3999.00",
-      "message": "Console Sony PlayStation 5 Edição Digital SSD 825GB Controle Sem Fio DualSense + 2 Jogos Digitais saindo por R$ 3999.00 usando o cupom CHAMANOPLAY.",
-      "url": "https://www.promobit.com.br/oferta/console-sony-playstation-5-edicao-digital-ssd-825gb-controle-sem-fio-dualsense-2-jogos-digitais-3269074",
-      "offer_url": "https://www.promobit.com.br/oferta/console-sony-playstation-5-edicao-digital-ssd-825gb-controle-sem-fio-dualsense-2-jogos-digitais-3269074",
-      "coupon_code": "CHAMANOPLAY",
-      "price": 3999.0,
-      "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:03:11.176353-03:00",
-      "is_read": false,
-      "is_archived": false
-    },
-    {
-      "id": 5,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday DISCONELES na KaBuM! — R$ 4499.00",
@@ -73,12 +58,12 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:03:11.176353-03:00",
+      "created_at": "2026-11-27T17:06:42.411798-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 6,
+      "id": 5,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday NINJAPLAY na KaBuM! — R$ 4499.00",
@@ -88,12 +73,12 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:03:11.176353-03:00",
+      "created_at": "2026-11-27T17:06:42.411798-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 7,
+      "id": 6,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday C4RR1NH070 na Shopee (Loja Oficial) — R$ 270.00",
@@ -103,12 +88,12 @@
       "coupon_code": "C4RR1NH070",
       "price": 270.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:03:11.176353-03:00",
+      "created_at": "2026-11-27T17:06:42.411798-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 8,
+      "id": 7,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday C4RR1NH070 na Shopee (Loja Oficial) — R$ 270.66",
@@ -118,12 +103,12 @@
       "coupon_code": "C4RR1NH070",
       "price": 270.66,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:03:11.176353-03:00",
+      "created_at": "2026-11-27T17:06:42.411798-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 9,
+      "id": 8,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday C4RR1NH070 na Shopee (Loja Oficial) — R$ 299.00",
@@ -133,12 +118,12 @@
       "coupon_code": "C4RR1NH070",
       "price": 299.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:03:11.176353-03:00",
+      "created_at": "2026-11-27T17:06:42.411798-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 10,
+      "id": 9,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday WEUYRUE na Mercado Livre — R$ 334.00",
@@ -148,7 +133,7 @@
       "coupon_code": "WEUYRUE",
       "price": 334.0,
       "store_name": "Mercado Livre",
-      "created_at": "2026-11-27T17:03:11.176353-03:00",
+      "created_at": "2026-11-27T17:06:42.411798-03:00",
       "is_read": false,
       "is_archived": false
     }
