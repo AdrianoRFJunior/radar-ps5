@@ -1,6 +1,6 @@
 {
-  "unread_count": 9,
-  "total_active": 9,
+  "unread_count": 8,
+  "total_active": 8,
   "alerts": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "coupon_code": null,
       "price": 4099.0,
       "store_name": "Carrefour",
-      "created_at": "2026-11-27T14:38:11.334644-03:00",
+      "created_at": "2026-11-27T14:41:57.651972-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -28,7 +28,7 @@
       "coupon_code": null,
       "price": 3955.91,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T14:38:11.334644-03:00",
+      "created_at": "2026-11-27T14:41:57.651972-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -43,7 +43,7 @@
       "coupon_code": null,
       "price": 313.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T14:38:11.334644-03:00",
+      "created_at": "2026-11-27T14:41:57.651972-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -58,7 +58,7 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T14:38:11.334644-03:00",
+      "created_at": "2026-11-27T14:41:57.651972-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -73,7 +73,7 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T14:38:11.334644-03:00",
+      "created_at": "2026-11-27T14:41:57.651972-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -88,27 +88,12 @@
       "coupon_code": "T31N0V",
       "price": 327.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T14:38:11.334644-03:00",
+      "created_at": "2026-11-27T14:41:57.651972-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
       "id": 7,
-      "type": "COUPON_AVAILABLE",
-      "severity": "HIGH",
-      "title": "🎟️ Cupom Black Friday DUALMARA na KaBuM! — R$ 359.40",
-      "message": "Controle DualSense PS5 Branco Edição Marathon saindo por R$ 359.40 usando o cupom DUALMARA.",
-      "url": "https://www.promobit.com.br/oferta/controle-dualsense-ps5-branco-edicao-marathon-3263037",
-      "offer_url": "https://www.promobit.com.br/oferta/controle-dualsense-ps5-branco-edicao-marathon-3263037",
-      "coupon_code": "DUALMARA",
-      "price": 359.4,
-      "store_name": "KaBuM!",
-      "created_at": "2026-11-27T14:38:11.334644-03:00",
-      "is_read": false,
-      "is_archived": false
-    },
-    {
-      "id": 8,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday GRANDUAL na KaBuM! — R$ 457.00",
@@ -118,12 +103,12 @@
       "coupon_code": "GRANDUAL",
       "price": 457.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T14:38:11.334644-03:00",
+      "created_at": "2026-11-27T14:41:57.651972-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 9,
+      "id": 8,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday CONTROLEBF na KaBuM! — R$ 464.00",
@@ -133,7 +118,7 @@
       "coupon_code": "CONTROLEBF",
       "price": 464.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T14:38:11.334644-03:00",
+      "created_at": "2026-11-27T14:41:57.651972-03:00",
       "is_read": false,
       "is_archived": false
     }
