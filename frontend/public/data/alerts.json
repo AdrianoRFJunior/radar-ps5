@@ -1,6 +1,6 @@
 {
-  "unread_count": 9,
-  "total_active": 9,
+  "unread_count": 11,
+  "total_active": 11,
   "alerts": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "coupon_code": null,
       "price": 3915.52,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:06:42.411798-03:00",
+      "created_at": "2026-11-27T17:10:17.710050-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -28,7 +28,7 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:06:42.411798-03:00",
+      "created_at": "2026-11-27T17:10:17.710050-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -43,7 +43,7 @@
       "coupon_code": "C4RR1NH070",
       "price": 270.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:06:42.411798-03:00",
+      "created_at": "2026-11-27T17:10:17.710050-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -58,7 +58,7 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:06:42.411798-03:00",
+      "created_at": "2026-11-27T17:10:17.710050-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -73,7 +73,7 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:06:42.411798-03:00",
+      "created_at": "2026-11-27T17:10:17.710050-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -88,7 +88,7 @@
       "coupon_code": "C4RR1NH070",
       "price": 270.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:06:42.411798-03:00",
+      "created_at": "2026-11-27T17:10:17.710050-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -103,7 +103,7 @@
       "coupon_code": "C4RR1NH070",
       "price": 270.66,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:06:42.411798-03:00",
+      "created_at": "2026-11-27T17:10:17.710050-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -118,7 +118,7 @@
       "coupon_code": "C4RR1NH070",
       "price": 299.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:06:42.411798-03:00",
+      "created_at": "2026-11-27T17:10:17.710050-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -133,7 +133,37 @@
       "coupon_code": "WEUYRUE",
       "price": 334.0,
       "store_name": "Mercado Livre",
-      "created_at": "2026-11-27T17:06:42.411798-03:00",
+      "created_at": "2026-11-27T17:10:17.710050-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 10,
+      "type": "COUPON_AVAILABLE",
+      "severity": "HIGH",
+      "title": "🎟️ Cupom Black Friday GRANDUAL na KaBuM! — R$ 457.00",
+      "message": "Controle Sem Fio Sony DualSense, Edição Limitada Gran Turismo, PS5, PC, Bluetooth, USB-C 1000056957 saindo por R$ 457.00 usando o cupom GRANDUAL.",
+      "url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-edicao-limitada-gran-turismo-ps5-pc-bluetooth-usb-c-1000056957-3264406",
+      "offer_url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-edicao-limitada-gran-turismo-ps5-pc-bluetooth-usb-c-1000056957-3264406",
+      "coupon_code": "GRANDUAL",
+      "price": 457.0,
+      "store_name": "KaBuM!",
+      "created_at": "2026-11-27T17:10:17.710050-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 11,
+      "type": "COUPON_AVAILABLE",
+      "severity": "HIGH",
+      "title": "🎟️ Cupom Black Friday CONTROLEBF na KaBuM! — R$ 464.00",
+      "message": "Controle Sem Fio Sony DualSense Gran Turismo PS5 PC saindo por R$ 464.00 usando o cupom CONTROLEBF.",
+      "url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-gran-turismo-ps5-pc-3264415",
+      "offer_url": "https://www.promobit.com.br/oferta/controle-sem-fio-sony-dualsense-gran-turismo-ps5-pc-3264415",
+      "coupon_code": "CONTROLEBF",
+      "price": 464.0,
+      "store_name": "KaBuM!",
+      "created_at": "2026-11-27T17:10:17.710050-03:00",
       "is_read": false,
       "is_archived": false
     }
