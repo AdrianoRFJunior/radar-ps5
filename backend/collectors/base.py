@@ -31,6 +31,10 @@ class CollectedOfferDTO:
     in_stock: bool = True
     image_url: Optional[str] = None
     data_origin: str = "PUBLIC_API"
+    store_slug_override: Optional[str] = None
+    store_name_override: Optional[str] = None
+    store_reputation_override: Optional[float] = None
+    is_flash_deal: bool = False
 
 
 @dataclass

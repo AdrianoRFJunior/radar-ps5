@@ -93,6 +93,19 @@ ACCESSORY_OR_USED_EXCLUSION_KEYWORDS = [
     "wd_black",
     "hd externo",
     "base carregadora",
+    "mochila",
+    "lancheira",
+    "bolsa ",
+    "luminária",
+    "luminaria",
+    "caneca",
+    "chaveiro",
+    "mousepad",
+    "almofada",
+    "caderno",
+    "camiseta",
+    "garrafa",
+    "volante ",
 ]
 
 PARALLEL_CONTROLLER_KEYWORDS = [

@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   ExternalLink,
   ShieldCheck,
   AlertTriangle,
-  Truck,
   TrendingDown,
   TrendingUp,
   Store,
@@ -14,24 +13,36 @@ import {
   RefreshCw,
   Disc,
   Award,
-  LineChart,
+  Flame,
+  Bell,
+  Search,
+  Ticket,
 } from 'lucide-react';
 import { formatBRL, formatDateTimeSP, getScoreBadgeStyle } from '../services/api';
 import PriceBreakdown from '../components/PriceBreakdown';
 import CouponBadge from '../components/CouponBadge';
 
-function EventModeBanner({ eventMode, indicators, onTriggerScan, scanning }) {
+function EventModeBanner({
+  eventMode,
+  indicators,
+  onTriggerScan,
+  scanning,
+  notifPermission,
+  onEnableNotifications,
+}) {
   if (!eventMode) return null;
 
   const isIntensified = eventMode.is_intensified;
   const activeEv = eventMode.active_event;
   const nextEv = eventMode.next_event;
+  const storesCount = indicators?.active_store_names?.length || indicators?.stores_online_count || 0;
+  const totalOffers = indicators?.offers_identified_count || 0;
 
   return (
     <div
       className={`rounded-2xl p-3.5 sm:p-5 border transition shadow-lg ${
         activeEv
-          ? 'bg-gradient-to-r from-emerald-950/60 via-[#0d211f] to-[#0b1116] border-emerald-500/50'
+          ? 'bg-gradient-to-r from-emerald-950/75 via-[#0d211f] to-[#0b1116] border-emerald-500/60 shadow-emerald-950/30'
           : isIntensified
           ? 'bg-gradient-to-r from-[#0d1d20] via-[#0e2024] to-[#0b1116] border-emerald-500/35'
           : 'bg-[#0b1116] border-[#182631]'
@@ -55,12 +66,12 @@ function EventModeBanner({ eventMode, indicators, onTriggerScan, scanning }) {
             </span>
 
             <span className="inline-flex items-center gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-[#080d11] border border-[#182631] text-[11px] sm:text-xs font-mono text-emerald-300 whitespace-nowrap">
-              <span>Ciclo: a cada {eventMode.effective_interval_minutes} min</span>
+              <span>Varredura: a cada {eventMode.effective_interval_minutes} min</span>
             </span>
 
             <span className="inline-flex items-center gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/25 text-[11px] sm:text-xs font-mono text-emerald-300 font-semibold whitespace-nowrap">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-              <span>PS5 Novo • Lojas Confiáveis</span>
+              <span>{storesCount} Lojas • {totalOffers} Promoções Ativas</span>
             </span>
 
             {indicators?.is_data_stale ? (
@@ -72,27 +83,25 @@ function EventModeBanner({ eventMode, indicators, onTriggerScan, scanning }) {
               <span className="inline-flex items-center gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg bg-[#080d11] border border-[#182631] text-slate-300 text-[11px] sm:text-xs font-mono whitespace-nowrap">
                 <Clock className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                 <span>
-                  Há {indicators?.data_age_minutes ?? 0} min ({formatDateTimeSP(indicators?.last_updated_at)})
+                  Ao Vivo ({formatDateTimeSP(indicators?.last_updated_at)})
                 </span>
               </span>
             )}
           </div>
 
-          {/* Linha de Próximo Evento / Evento Ativo */}
+          {/* Linha de Evento Ativo */}
           <div className="text-xs sm:text-sm text-slate-300 flex items-start sm:items-center gap-2 leading-relaxed">
             <Calendar className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
             {activeEv ? (
               <span>
-                <strong className="text-white">Evento Ativo:</strong>{' '}
-                <span className="text-emerald-300 font-bold">{activeEv.name}</span> ({activeEv.start_date} a{' '}
-                {activeEv.end_date}) — {activeEv.description}
+                <strong className="text-white">{activeEv.name}:</strong>{' '}
+                <span className="text-emerald-300 font-semibold">{activeEv.description}</span>
               </span>
             ) : nextEv ? (
               <span>
                 <strong className="text-white">Próximo Evento:</strong>{' '}
                 <span className="text-emerald-300 font-bold">{nextEv.name}</span> em{' '}
-                <span className="font-mono font-bold text-white">{nextEv.days_until_start} dia(s)</span> ({nextEv.start_date}).{' '}
-                Referência histórica: <strong className="text-amber-300 font-mono">{formatBRL(indicators?.ps5_historical_low || 3349)}</strong>.
+                <span className="font-mono font-bold text-white">{nextEv.days_until_start} dia(s)</span>.
               </span>
             ) : (
               <span>
@@ -102,15 +111,25 @@ function EventModeBanner({ eventMode, indicators, onTriggerScan, scanning }) {
           </div>
         </div>
 
-        {/* Botão de Ação */}
-        <div className="shrink-0">
+        {/* Botões de Ação */}
+        <div className="shrink-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+          {notifPermission === 'default' && onEnableNotifications && (
+            <button
+              onClick={onEnableNotifications}
+              className="px-3.5 py-2.5 sm:py-3 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/50 text-amber-200 font-extrabold text-xs flex items-center justify-center gap-1.5 transition whitespace-nowrap"
+              title="Receba aviso sonoro e notificação instantânea assim que surgir um novo menor preço ou cupom"
+            >
+              <Bell className="w-4 h-4 text-amber-400 shrink-0" />
+              <span>Avisar 1º nas Quedas</span>
+            </button>
+          )}
           <button
             onClick={onTriggerScan}
             disabled={scanning}
-            className="w-full lg:w-auto px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 disabled:opacity-50 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-2 transition shadow-md whitespace-nowrap"
+            className="w-full sm:w-auto px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 disabled:opacity-50 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-2 transition shadow-md whitespace-nowrap"
           >
             <RefreshCw className={`w-4 h-4 shrink-0 ${scanning ? 'animate-spin' : ''}`} />
-            <span>{scanning ? 'Varrendo Lojas...' : 'Atualizar Preços Agora'}</span>
+            <span>{scanning ? 'Varrendo +20 Lojas...' : 'Atualizar Preços Agora'}</span>
           </button>
         </div>
       </div>
@@ -123,7 +142,6 @@ function LowestPriceHeroCard({
   categoryBadge,
   accentColor = 'emerald',
   offer,
-  onOpenHistory,
   onOpenPredictions,
 }) {
   if (!offer) {
@@ -136,12 +154,10 @@ function LowestPriceHeroCard({
 
   const varPct = offer.variation_vs_avg_30d_pct || 0;
   const isBelowAvg = varPct <= 0;
-  const diffHist = offer.diff_vs_historical_low;
   const isCyan = accentColor === 'cyan';
 
   return (
     <div className="bg-[#0b1116] border border-[#182631] hover:border-emerald-500/40 rounded-2xl p-4 sm:p-5 flex flex-col justify-between transition shadow-xl shadow-black/30 relative overflow-hidden">
-      {/* Barra de Destaque no Topo */}
       <div
         className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${
           isCyan
@@ -151,7 +167,6 @@ function LowestPriceHeroCard({
       />
 
       <div className="space-y-3.5 sm:space-y-4">
-        {/* Linha 1: Categoria e Score */}
         <div className="flex items-center justify-between gap-2 pt-0.5">
           <div className="flex items-center gap-1.5 min-w-0">
             <span
@@ -174,7 +189,6 @@ function LowestPriceHeroCard({
           </span>
         </div>
 
-        {/* Linha 2: Miniatura e Título do Produto */}
         <div className="flex gap-3 sm:gap-3.5 items-start">
           <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white p-1 sm:p-1.5 flex items-center justify-center shrink-0 border border-slate-700/80 shadow-inner">
             <img
@@ -209,7 +223,7 @@ function LowestPriceHeroCard({
                       : 'bg-emerald-500/15 border-emerald-500/35 text-emerald-300'
                   }`}
                 >
-                  <Disc className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
+                  <Disc className="w-3 h-3 shrink-0" />
                   <span>{offer.has_disc_drive ? 'COM LEITOR' : 'DIGITAL'}</span>
                 </span>
               )}
@@ -217,7 +231,6 @@ function LowestPriceHeroCard({
           </div>
         </div>
 
-        {/* Linha 3: Bloco Principal de Preço com Cupom e Parcelamento */}
         <PriceBreakdown
           finalPrice={offer.final_price}
           originalPrice={offer.original_declared_price}
@@ -229,27 +242,25 @@ function LowestPriceHeroCard({
           layout="hero"
         />
 
-        {/* Linha 4: Comparação Dupla (Recorde Histórico vs Média 30 Dias) */}
-        <div className="grid grid-cols-2 gap-2 sm:gap-2.5">
-          <div className="p-2.5 sm:p-3 rounded-xl bg-[#080d11] border border-[#182631] flex flex-col justify-between">
-            <span className="text-[10px] text-amber-300/90 font-mono uppercase font-bold flex items-center gap-1 whitespace-nowrap">
-              <Award className="w-3 h-3 shrink-0" />
-              <span>Recorde Histórico</span>
+        <div className="grid grid-cols-2 gap-2 text-xs">
+          <div className="bg-[#080d11] border border-[#182631] rounded-xl p-2.5 flex flex-col justify-between">
+            <span className="text-[10px] text-slate-400 font-mono uppercase font-bold whitespace-nowrap">
+              Recorde Histórico
             </span>
-            <p className="text-sm sm:text-base font-extrabold font-mono text-amber-300 mt-1 whitespace-nowrap">
+            <p className="text-sm sm:text-base font-bold font-mono text-amber-300 mt-1 whitespace-nowrap">
               {formatBRL(offer.min_historical_price)}
             </p>
             <span className="text-[10px] text-slate-400 mt-0.5 font-mono truncate">
-              {diffHist && diffHist > 0
-                ? `+${formatBRL(diffHist)} vs recorde`
-                : 'No recorde histórico!'}
+              {offer.diff_vs_historical_low > 0
+                ? `+${formatBRL(offer.diff_vs_historical_low)} acima`
+                : 'No recorde!'}
             </span>
           </div>
 
-          <div className="p-2.5 sm:p-3 rounded-xl bg-[#080d11] border border-[#182631] flex flex-col justify-between">
+          <div className="bg-[#080d11] border border-[#182631] rounded-xl p-2.5 flex flex-col justify-between">
             <div className="flex items-center justify-between gap-1">
               <span className="text-[10px] text-slate-400 font-mono uppercase font-bold whitespace-nowrap">
-                Média 30 Dias
+                Média Normal
               </span>
               <span
                 className={`text-[10px] font-mono font-bold inline-flex items-center gap-0.5 whitespace-nowrap ${
@@ -268,12 +279,11 @@ function LowestPriceHeroCard({
               {formatBRL(offer.avg_30d_price)}
             </p>
             <span className="text-[10px] text-slate-400 mt-0.5 font-mono truncate">
-              {isBelowAvg ? 'Abaixo da média' : 'Acima da média'}
+              {isBelowAvg ? 'Desconto Real' : 'Acima da média'}
             </span>
           </div>
         </div>
 
-        {/* Linha 5: Diagnóstico de Confiabilidade */}
         <div
           className={`p-2.5 sm:p-3 rounded-xl border text-xs space-y-1 ${
             offer.is_fake_discount
@@ -292,7 +302,6 @@ function LowestPriceHeroCard({
         </div>
       </div>
 
-      {/* Rodapé de Ações */}
       <div className="flex items-center gap-1.5 sm:gap-2 pt-3 mt-3 sm:mt-4 border-t border-[#182631]">
         <a
           href={offer.url}
@@ -315,27 +324,136 @@ function LowestPriceHeroCard({
   );
 }
 
-export default function DashboardPage({ data, setActiveTab, onTriggerScan, scanning }) {
-  const [filterMode, setFilterMode] = useState('ALL');
-  if (!data) return null;
-  const { indicators, event_mode, featured_products, top_offers } = data;
+function FlashAndCouponSection({ flashDeals }) {
+  if (!flashDeals || flashDeals.length === 0) return null;
 
-  const filteredOffers = (top_offers || []).filter((o) => {
-    if (filterMode === 'PS5_ALL') return o.category === 'PS5';
-    if (filterMode === 'PS5_DIGITAL') return o.category === 'PS5' && !o.has_disc_drive;
-    if (filterMode === 'PS5_DISC') return o.category === 'PS5' && o.has_disc_drive;
-    if (filterMode === 'DUALSENSE') return o.category === 'DUALSENSE';
+  return (
+    <section className="bg-gradient-to-br from-amber-950/25 via-[#0b1116] to-[#0b1116] border border-amber-500/40 rounded-2xl p-4 sm:p-5 space-y-3.5 shadow-lg">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div className="flex items-center gap-2">
+          <Flame className="w-5 h-5 text-amber-400 shrink-0 animate-pulse" />
+          <h2 className="text-xs sm:text-base font-extrabold text-white uppercase tracking-wide">
+            Ofertas Relâmpago & Cupons Black Friday Ativos Agora ({flashDeals.length})
+          </h2>
+        </div>
+        <span className="text-[11px] font-mono text-amber-300">
+          Clique no cupom para copiar em 1 clique antes que esgote!
+        </span>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-3.5">
+        {flashDeals.slice(0, 8).map((deal) => (
+          <div
+            key={`flash-${deal.id}`}
+            className="bg-[#080d11]/95 border border-amber-500/30 hover:border-emerald-400/60 rounded-xl p-3.5 flex flex-col justify-between gap-2.5 transition"
+          >
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between gap-1.5">
+                <span className="px-2 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/35 text-emerald-300 text-[10px] font-mono font-bold truncate">
+                  {deal.store_name}
+                </span>
+                {deal.category === 'PS5' ? (
+                  <span className="text-[10px] font-mono font-bold text-cyan-300 whitespace-nowrap">
+                    {deal.has_disc_drive ? '💿 C/ LEITOR' : '⚡ DIGITAL'}
+                  </span>
+                ) : (
+                  <span className="text-[10px] font-mono font-bold text-purple-300 whitespace-nowrap">
+                    🎮 DUALSENSE
+                  </span>
+                )}
+              </div>
+
+              <div className="text-xs font-bold text-white leading-snug line-clamp-2 min-h-[2.1rem]" title={deal.title}>
+                {deal.title}
+              </div>
+
+              <div className="pt-1 flex items-baseline gap-2 flex-wrap">
+                <span className="text-lg font-extrabold font-mono text-emerald-400">
+                  {formatBRL(deal.final_price)}
+                </span>
+                {deal.original_declared_price && deal.original_declared_price > deal.final_price && (
+                  <span className="text-[11px] font-mono text-slate-500 line-through">
+                    {formatBRL(deal.original_declared_price)}
+                  </span>
+                )}
+              </div>
+
+              {deal.coupon_code && (
+                <div className="pt-0.5">
+                  <CouponBadge code={deal.coupon_code} discount={deal.coupon_discount} compact />
+                </div>
+              )}
+            </div>
+
+            <a
+              href={deal.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-2 px-3 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-1.5 transition"
+            >
+              <span>Pegar Promoção</span>
+              <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default function DashboardPage({
+  data,
+  setActiveTab,
+  onTriggerScan,
+  scanning,
+  notifPermission,
+  onEnableNotifications,
+}) {
+  const [filterMode, setFilterMode] = useState('ALL');
+  const [selectedStore, setSelectedStore] = useState('ALL');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const topOffers = data?.top_offers || [];
+
+  const storesWithCounts = useMemo(() => {
+    const counts = new Map();
+    topOffers.forEach((o) => {
+      const st = o.store_name || 'Loja';
+      counts.set(st, (counts.get(st) || 0) + 1);
+    });
+    return Array.from(counts.entries()).sort((a, b) => a[0].localeCompare(b[0]));
+  }, [topOffers]);
+
+  if (!data) return null;
+  const { indicators, event_mode, featured_products, flash_deals } = data;
+
+  const filteredOffers = topOffers.filter((o) => {
+    if (filterMode === 'PS5_ALL' && o.category !== 'PS5') return false;
+    if (filterMode === 'PS5_DIGITAL' && !(o.category === 'PS5' && !o.has_disc_drive)) return false;
+    if (filterMode === 'PS5_DISC' && !(o.category === 'PS5' && o.has_disc_drive)) return false;
+    if (filterMode === 'DUALSENSE' && o.category !== 'DUALSENSE') return false;
+    if (filterMode === 'WITH_COUPON' && !o.coupon_code) return false;
+
+    if (selectedStore !== 'ALL' && o.store_name !== selectedStore) return false;
+
+    if (searchQuery.trim()) {
+      const q = searchQuery.trim().toLowerCase();
+      const hay = `${o.title} ${o.store_name} ${o.seller_name} ${o.coupon_code || ''} ${o.edition_type || ''}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
     return true;
   });
 
   return (
     <div className="space-y-6 sm:space-y-7">
-      {/* Banner do Modo de Evento */}
+      {/* Banner do Modo de Evento Black Friday */}
       <EventModeBanner
         eventMode={event_mode}
         indicators={indicators}
         onTriggerScan={onTriggerScan}
         scanning={scanning}
+        notifPermission={notifPermission}
+        onEnableNotifications={onEnableNotifications}
       />
 
       {/* Os 3 Cards Campeões de Menor Preço Real */}
@@ -343,10 +461,10 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
           <h2 className="text-xs sm:text-base font-extrabold text-white uppercase tracking-wide flex items-center gap-2">
             <Award className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0" />
-            <span>Menores Preços Reais Encontrados Agora</span>
+            <span>Campeões Absolutos de Menor Preço Agora</span>
           </h2>
-          <span className="text-[11px] sm:text-xs font-mono text-slate-400">
-            Varejistas: KaBuM! • Magalu • Amazon • Fast Shop
+          <span className="text-[11px] sm:text-xs font-mono text-emerald-300">
+            Mercado Livre • Amazon • KaBuM! • Magalu • Shopee • Fast Shop • Carrefour • Havan • Kalunga • Bemol e +
           </span>
         </div>
 
@@ -356,7 +474,6 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
             categoryBadge="PS5 SLIM DIGITAL"
             accentColor="emerald"
             offer={featured_products.ps5_lowest_digital || featured_products.ps5}
-            onOpenHistory={() => setActiveTab('history')}
             onOpenPredictions={() => setActiveTab('predictions')}
           />
           <LowestPriceHeroCard
@@ -364,7 +481,6 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
             categoryBadge="PS5 COM LEITOR DE DISCO"
             accentColor="cyan"
             offer={featured_products.ps5_lowest_disc}
-            onOpenHistory={() => setActiveTab('history')}
             onOpenPredictions={() => setActiveTab('predictions')}
           />
           <LowestPriceHeroCard
@@ -372,56 +488,102 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
             categoryBadge="CONTROLE DUALSENSE"
             accentColor="emerald"
             offer={featured_products.dualsense}
-            onOpenHistory={() => setActiveTab('history')}
             onOpenPredictions={() => setActiveTab('predictions')}
           />
         </div>
       </section>
 
-      {/* Ranking Geral pelo Menor Preço */}
+      {/* Faixa de Ofertas Relâmpago & Cupons Black Friday */}
+      <FlashAndCouponSection flashDeals={flash_deals} />
+
+      {/* Ranking Geral Completo de TODAS as Promoções */}
       <section className="bg-[#0b1116] border border-[#182631] rounded-2xl overflow-hidden shadow-lg">
-        <div className="p-3.5 sm:p-5 border-b border-[#182631] flex flex-col xl:flex-row xl:items-center justify-between gap-3 sm:gap-4">
-          <div className="space-y-1">
-            <h3 className="font-bold text-white text-xs sm:text-base flex items-center gap-2">
-              <Scale className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Ranking Geral pelo Menor Preço — Auditoria de Confiabilidade</span>
-            </h3>
-            <p className="text-[11px] sm:text-xs text-slate-400">
-              Ofertas ordenadas do menor para o maior preço à vista (PIX), com verificação de procedência e histórico.
-            </p>
+        <div className="p-3.5 sm:p-5 border-b border-[#182631] space-y-3.5">
+          <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-3 sm:gap-4">
+            <div className="space-y-1">
+              <h3 className="font-bold text-white text-xs sm:text-base flex items-center gap-2">
+                <Scale className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>
+                  Todas as Promoções em Tempo Real ({filteredOffers.length} de {topOffers.length} ofertas)
+                </span>
+              </h3>
+              <p className="text-[11px] sm:text-xs text-slate-400">
+                Lista completa sem cortes ordenada do menor para o maior preço à vista (PIX/Cupom) em todas as lojas monitoradas.
+              </p>
+            </div>
+
+            {/* Botões Rápidos de Categoria */}
+            <div className="flex flex-wrap items-center gap-1.5 text-xs shrink-0">
+              {[
+                { id: 'ALL', label: `Todos (${topOffers.length})` },
+                { id: 'PS5_ALL', label: 'Todos PS5' },
+                { id: 'PS5_DIGITAL', label: 'PS5 Digital' },
+                { id: 'PS5_DISC', label: 'PS5 c/ Leitor' },
+                { id: 'DUALSENSE', label: 'DualSense' },
+                { id: 'WITH_COUPON', label: '🎟️ Com Cupom' },
+              ].map((btn) => (
+                <button
+                  key={btn.id}
+                  onClick={() => setFilterMode(btn.id)}
+                  className={`px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg font-mono text-[11px] sm:text-xs transition border whitespace-nowrap ${
+                    filterMode === btn.id
+                      ? 'bg-emerald-500 text-slate-950 font-extrabold border-emerald-400'
+                      : 'bg-[#080d11] text-slate-300 border-[#182631] hover:border-emerald-500/40'
+                  }`}
+                >
+                  {btn.label}
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Botões Rápidos de Filtro */}
-          <div className="flex flex-wrap items-center gap-1.5 text-xs shrink-0">
-            {[
-              { id: 'ALL', label: 'Todos' },
-              { id: 'PS5_ALL', label: 'Todos PS5' },
-              { id: 'PS5_DIGITAL', label: 'PS5 Digital' },
-              { id: 'PS5_DISC', label: 'PS5 c/ Leitor' },
-              { id: 'DUALSENSE', label: 'DualSense' },
-            ].map((btn) => (
+          {/* Barra de Busca Instantânea + Filtro por Loja */}
+          <div className="flex flex-col md:flex-row gap-2.5 items-stretch md:items-center justify-between pt-1">
+            <div className="relative flex-1 max-w-md">
+              <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Buscar loja, versão (1TB, Astro Bot, GT7), cor ou cupom..."
+                className="w-full pl-8 pr-3 py-1.5 sm:py-2 rounded-xl bg-[#080d11] border border-[#182631] focus:border-emerald-500/60 focus:outline-none text-xs text-white placeholder:text-slate-500"
+              />
+            </div>
+
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0">
               <button
-                key={btn.id}
-                onClick={() => setFilterMode(btn.id)}
-                className={`px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg font-mono text-[11px] sm:text-xs transition border whitespace-nowrap ${
-                  filterMode === btn.id
-                    ? 'bg-emerald-500 text-slate-950 font-extrabold border-emerald-400'
-                    : 'bg-[#080d11] text-slate-300 border-[#182631] hover:border-emerald-500/40'
+                onClick={() => setSelectedStore('ALL')}
+                className={`px-2.5 py-1 rounded-lg text-[11px] font-mono border whitespace-nowrap transition ${
+                  selectedStore === 'ALL'
+                    ? 'bg-cyan-500/20 text-cyan-200 border-cyan-400/60 font-bold'
+                    : 'bg-[#080d11] text-slate-400 border-[#182631] hover:text-slate-200'
                 }`}
               >
-                {btn.label}
+                Todas as Lojas ({storesWithCounts.length})
               </button>
-            ))}
+              {storesWithCounts.map(([stName, cnt]) => (
+                <button
+                  key={stName}
+                  onClick={() => setSelectedStore(selectedStore === stName ? 'ALL' : stName)}
+                  className={`px-2.5 py-1 rounded-lg text-[11px] font-mono border whitespace-nowrap transition ${
+                    selectedStore === stName
+                      ? 'bg-cyan-500/25 text-cyan-200 border-cyan-400 font-bold'
+                      : 'bg-[#080d11] text-slate-300 border-[#182631] hover:border-cyan-500/40'
+                  }`}
+                >
+                  {stName} ({cnt})
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Visão Mobile Otimizada para Celular: Cards Verticais Elegantes (md:hidden) */}
+        {/* Visão Mobile: Cards Verticais */}
         <div className="md:hidden divide-y divide-[#182631]">
           {filteredOffers.map((o) => {
             const diffHist = o.diff_vs_historical_low;
             return (
               <div key={o.id} className="p-3.5 space-y-2.5 bg-[#0b1116] hover:bg-[#101921]/60 transition">
-                {/* Linha 1: Loja + Versão + Score */}
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-1.5 min-w-0">
                     <span className="font-extrabold text-white text-xs truncate">{o.store_name}</span>
@@ -436,12 +598,10 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
                   </span>
                 </div>
 
-                {/* Linha 2: Título do Produto */}
                 <div className="font-semibold text-slate-100 text-xs leading-snug line-clamp-2">
                   {o.title}
                 </div>
 
-                {/* Linha 3: Tags de Versão e Procedência */}
                 <div className="flex flex-wrap items-center gap-1 text-[10px] font-mono">
                   {o.category === 'PS5' ? (
                     <span
@@ -459,10 +619,11 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
                       DUALSENSE • {o.color}
                     </span>
                   )}
-                  <span className="text-slate-400">• {o.is_national ? 'Nacional Anatel' : 'Importado'}</span>
+                  <span className="text-slate-400">
+                    • {o.is_national ? 'Nacional Anatel' : 'Importado'}
+                  </span>
                 </div>
 
-                {/* Linha 4: Bloco de Preços no Celular com Cupom e Parcelamento */}
                 <PriceBreakdown
                   finalPrice={o.final_price}
                   originalPrice={o.original_declared_price}
@@ -474,23 +635,9 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
                   layout="compact"
                 />
 
-                {/* Linha 5: Observação de Confiabilidade & Botão Abrir */}
                 <div className="flex items-center justify-between gap-2 pt-0.5">
-                  <div className="min-w-0 flex-1">
-                    <p
-                      className={`text-[11px] font-semibold truncate ${
-                        o.is_fake_discount
-                          ? 'text-rose-400'
-                          : o.is_marketplace || !o.is_national
-                          ? 'text-amber-300'
-                          : 'text-emerald-400'
-                      }`}
-                    >
-                      {o.reliability_observation}
-                    </p>
-                    <span className="text-[10px] text-slate-400">
-                      Confiabilidade: {o.reliability_score}%
-                    </span>
+                  <div className="text-[11px] font-mono text-amber-300">
+                    {diffHist && diffHist > 0 ? `+${formatBRL(diffHist)} do recorde` : 'No piso histórico!'}
                   </div>
                   <a
                     href={o.url}
@@ -507,15 +654,15 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
           })}
         </div>
 
-        {/* Visão Desktop: Tabela Completa (hidden md:block) - 100% INTACTA PARA PC */}
+        {/* Visão Desktop: Tabela Completa */}
         <div className="hidden md:block overflow-x-auto">
           <table className="w-full text-left border-collapse text-xs sm:text-sm">
             <thead>
               <tr className="bg-[#080d11] text-slate-400 font-mono text-[11px] uppercase border-b border-[#182631] whitespace-nowrap">
-                <th className="py-3.5 px-4">Produto Novo & Versão</th>
-                <th className="py-3.5 px-4">Loja</th>
-                <th className="py-3.5 px-4">Menor Preço & Condições</th>
-                <th className="py-3.5 px-4">vs Recorde Histórico</th>
+                <th className="py-3.5 px-4">Produto Novo & Edição</th>
+                <th className="py-3.5 px-4">Loja & Vendedor</th>
+                <th className="py-3.5 px-4">Preço & Condições</th>
+                <th className="py-3.5 px-4">vs Recorde</th>
                 <th className="py-3.5 px-4">Auditoria de Confiabilidade</th>
                 <th className="py-3.5 px-4 text-right">Ação</th>
               </tr>
@@ -526,7 +673,14 @@ export default function DashboardPage({ data, setActiveTab, onTriggerScan, scann
                 return (
                   <tr key={o.id} className="hover:bg-[#101921]/80 transition">
                     <td className="py-3.5 px-4 align-middle max-w-md">
-                      <div className="font-semibold text-white leading-snug">{o.title}</div>
+                      <div className="font-semibold text-white leading-snug flex items-center gap-1.5 flex-wrap">
+                        {o.is_flash_deal && (
+                          <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-amber-500/20 border border-amber-400/50 text-amber-300 text-[10px] font-mono font-bold">
+                            <Ticket className="w-3 h-3" /> DESTAQUE BF
+                          </span>
+                        )}
+                        <span>{o.title}</span>
+                      </div>
                       <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-mono mt-1.5">
                         {o.category === 'PS5' ? (
                           <span

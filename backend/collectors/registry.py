@@ -1,6 +1,9 @@
 """
-Registro central de todos os módulos de coleta (Seção 3).
-Focado em lojas varejistas confiáveis e vendedores verificados de produtos NOVOS (incluindo Mercado Livre, Amazon, KaBuM!, Magalu, Fast Shop, Carrefour, Casas Bahia, Ponto e Promobit).
+Registro central de todos os módulos de coleta (Modo Intensivo Black Friday 2026).
+Cobre mais de 20 varejistas confiáveis e radares de ofertas relâmpago para produtos 100% NOVOS:
+Mercado Livre, Amazon Brasil, KaBuM!, Magazine Luiza, Shopee Oficial, Fast Shop, Carrefour,
+Havan, Kalunga, Rede Varejistas VTEX (Bemol, Benoit, Angeloni, iByte, Fujioka, Webcontinental, Solar),
+Casas Bahia, Ponto, Americanas, Extra, Submarino, Girafa, Webfones e Radar Promobit.
 """
 from typing import Dict, List
 from backend.collectors.base import BaseStoreCollector
@@ -14,24 +17,33 @@ from backend.collectors.retail_stores import (
     PontoCollector,
     CarrefourCollector,
     AmericanasCollector,
+    ShopeeOficialCollector,
+    HavanCollector,
+    KalungaCollector,
+    VtexRetailNetworkCollector,
+    ExtraSubmarinoGirafaCollector,
 )
-from backend.collectors.community_sources import PromobitCollector, PelandoCollector
+from backend.collectors.community_sources import PromobitCollector
 
 
 def get_all_collectors() -> List[BaseStoreCollector]:
-    """Retorna instâncias dos módulos de coleta de lojas confiáveis para produtos novos."""
+    """Retorna todas as instâncias de coleta de lojas confiáveis para varredura paralela Black Friday."""
     return [
+        PromobitCollector(),
         MercadoLivreCollector(),
+        AmazonBrasilCollector(),
         KabumCollector(),
         MagazineLuizaCollector(),
-        AmazonBrasilCollector(),
+        ShopeeOficialCollector(),
         FastShopCollector(),
         CarrefourCollector(),
-        AmericanasCollector(),
+        HavanCollector(),
+        KalungaCollector(),
+        VtexRetailNetworkCollector(),
         CasasBahiaCollector(),
         PontoCollector(),
-        PromobitCollector(),
-        PelandoCollector(),
+        AmericanasCollector(),
+        ExtraSubmarinoGirafaCollector(),
     ]
 
 

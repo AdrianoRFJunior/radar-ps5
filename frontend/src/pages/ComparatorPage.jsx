@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   ExternalLink,
   HelpCircle,
-  Truck,
   Disc,
   Award,
   Scale,
+  Search,
 } from 'lucide-react';
 import { radarApi, formatBRL, formatDateTimeSP, getScoreBadgeStyle } from '../services/api';
 import PriceBreakdown from '../components/PriceBreakdown';
 
 export default function ComparatorPage() {
   const [categoryFilter, setCategoryFilter] = useState('ALL');
-  const [includeAlternatives, setIncludeAlternatives] = useState(false);
+  const [storeFilter, setStoreFilter] = useState('ALL');
+  const [searchText, setSearchText] = useState('');
   const [onlyOfficialWarranty, setOnlyOfficialWarranty] = useState(false);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -27,69 +28,100 @@ export default function ComparatorPage() {
   useEffect(() => {
     setLoading(true);
     radarApi
-      .getComparator(backendCategory, includeAlternatives, onlyOfficialWarranty)
+      .getComparator(backendCategory, true, onlyOfficialWarranty)
       .then(setData)
       .finally(() => setLoading(false));
-  }, [backendCategory, includeAlternatives, onlyOfficialWarranty]);
+  }, [backendCategory, onlyOfficialWarranty]);
+
+  const availableStores = useMemo(() => {
+    const setNames = new Set((data?.offers || []).map((o) => o.store_name).filter(Boolean));
+    return Array.from(setNames).sort();
+  }, [data]);
 
   const displayedOffers = (data?.offers || []).filter((o) => {
-    if (categoryFilter === 'PS5_DIGITAL') return o.category === 'PS5' && !o.has_disc_drive;
-    if (categoryFilter === 'PS5_DISC') return o.category === 'PS5' && o.has_disc_drive;
+    if (categoryFilter === 'PS5_DIGITAL' && !(o.category === 'PS5' && !o.has_disc_drive)) return false;
+    if (categoryFilter === 'PS5_DISC' && !(o.category === 'PS5' && o.has_disc_drive)) return false;
+    if (categoryFilter === 'COUPON_ONLY' && !o.coupon_code) return false;
+    if (storeFilter !== 'ALL' && o.store_name !== storeFilter) return false;
+    if (searchText.trim()) {
+      const q = searchText.trim().toLowerCase();
+      const hay = `${o.title} ${o.store_name} ${o.seller_name} ${o.coupon_code || ''}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
     return true;
   });
 
   return (
     <div className="space-y-6 sm:space-y-7">
       {/* Cabeçalho e Filtros */}
-      <div className="bg-[#0b1116] border border-[#182631] rounded-2xl p-4 sm:p-5 flex flex-col xl:flex-row xl:items-center justify-between gap-3 sm:gap-4">
-        <div className="space-y-1">
-          <h2 className="text-base sm:text-xl font-extrabold text-white flex items-center gap-2">
-            <Scale className="w-5 h-5 text-emerald-400 shrink-0" />
-            <span>Comparador de Lojas Confiáveis — Busca pelo Menor Preço Real</span>
-          </h2>
-          <p className="text-[11px] sm:text-sm text-slate-400">
-            Compara lado a lado os menores preços de PlayStation 5 Novo (Digital e Com Leitor) e DualSense em varejistas verificados.
-          </p>
+      <div className="bg-[#0b1116] border border-[#182631] rounded-2xl p-4 sm:p-5 space-y-4">
+        <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-3 sm:gap-4">
+          <div className="space-y-1">
+            <h2 className="text-base sm:text-xl font-extrabold text-white flex items-center gap-2">
+              <Scale className="w-5 h-5 text-emerald-400 shrink-0" />
+              <span>
+                Comparador Geral Black Friday — {displayedOffers.length} Ofertas Verificadas
+              </span>
+            </h2>
+            <p className="text-[11px] sm:text-sm text-slate-400">
+              Compara lado a lado todas as promoções de PlayStation 5 Novo (Digital, Com Leitor e Bundles) e DualSense em +20 varejistas confiáveis.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 text-xs shrink-0">
+            <select
+              value={categoryFilter}
+              onChange={(e) => setCategoryFilter(e.target.value)}
+              className="w-full sm:w-auto bg-[#080d11] border border-[#182631] rounded-xl px-3 sm:px-3.5 py-2 sm:py-2.5 text-white font-medium focus:outline-none focus:border-emerald-500/50"
+            >
+              <option value="ALL">Todos (PS5 Digital + Disco + DualSense)</option>
+              <option value="PS5">Todos os PlayStation 5 Novos</option>
+              <option value="PS5_DIGITAL">Apenas PS5 Slim Digital (Sem Leitor)</option>
+              <option value="PS5_DISC">Apenas PS5 Slim Com Leitor de Disco</option>
+              <option value="DUALSENSE">Apenas Controle DualSense Oficial</option>
+              <option value="COUPON_ONLY">🎟️ Apenas Ofertas com Cupom Ativo</option>
+            </select>
+
+            <select
+              value={storeFilter}
+              onChange={(e) => setStoreFilter(e.target.value)}
+              className="w-full sm:w-auto bg-[#080d11] border border-[#182631] rounded-xl px-3 sm:px-3.5 py-2 sm:py-2.5 text-white font-medium focus:outline-none focus:border-emerald-500/50"
+            >
+              <option value="ALL">Todas as Lojas ({availableStores.length})</option>
+              {availableStores.map((st) => (
+                <option key={st} value={st}>
+                  {st}
+                </option>
+              ))}
+            </select>
+
+            <label className="flex items-center gap-2 bg-[#080d11] border border-[#182631] rounded-xl px-3 sm:px-3.5 py-2 sm:py-2.5 cursor-pointer whitespace-nowrap text-slate-200 text-[11px] sm:text-xs">
+              <input
+                type="checkbox"
+                checked={onlyOfficialWarranty}
+                onChange={(e) => setOnlyOfficialWarranty(e.target.checked)}
+                className="accent-emerald-500"
+              />
+              <span>Somente Nacional Anatel</span>
+            </label>
+          </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 text-xs shrink-0">
-          <select
-            value={categoryFilter}
-            onChange={(e) => setCategoryFilter(e.target.value)}
-            className="w-full sm:w-auto bg-[#080d11] border border-[#182631] rounded-xl px-3 sm:px-3.5 py-2 sm:py-2.5 text-white font-medium focus:outline-none focus:border-emerald-500/50"
-          >
-            <option value="ALL">Todos (PS5 Digital + Disco + DualSense)</option>
-            <option value="PS5">Todos os PlayStation 5 Novos</option>
-            <option value="PS5_DIGITAL">Apenas PS5 Slim Digital (Sem Leitor)</option>
-            <option value="PS5_DISC">Apenas PS5 Slim Com Leitor de Disco</option>
-            <option value="DUALSENSE">Apenas Controle DualSense Oficial</option>
-          </select>
-
-          <label className="flex items-center gap-2 bg-[#080d11] border border-[#182631] rounded-xl px-3 sm:px-3.5 py-2 sm:py-2.5 cursor-pointer whitespace-nowrap text-slate-200 text-[11px] sm:text-xs">
-            <input
-              type="checkbox"
-              checked={onlyOfficialWarranty}
-              onChange={(e) => setOnlyOfficialWarranty(e.target.checked)}
-              className="accent-emerald-500"
-            />
-            <span>Somente Nacional Anatel</span>
-          </label>
-
-          <label className="flex items-center gap-2 bg-[#080d11] border border-[#182631] rounded-xl px-3 sm:px-3.5 py-2 sm:py-2.5 cursor-pointer whitespace-nowrap text-slate-200 text-[11px] sm:text-xs">
-            <input
-              type="checkbox"
-              checked={includeAlternatives}
-              onChange={(e) => setIncludeAlternatives(e.target.checked)}
-              className="accent-emerald-500"
-            />
-            <span>Incluir PS5 Pro / Edge</span>
-          </label>
+        <div className="relative max-w-md">
+          <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+          <input
+            type="text"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            placeholder="Filtrar por nome do bundle, loja, vendedor ou código do cupom..."
+            className="w-full pl-8 pr-3 py-2 rounded-xl bg-[#080d11] border border-[#182631] focus:border-emerald-500/60 focus:outline-none text-xs text-white placeholder:text-slate-500"
+          />
         </div>
       </div>
 
       {/* Tabela Comparativa Ordenada pelo Menor Preço */}
       <section className="bg-[#0b1116] border border-[#182631] rounded-2xl overflow-hidden shadow-lg">
-        {/* Visão Mobile Otimizada para Celular: Cards Verticais Elegantes (md:hidden) */}
+        {/* Visão Mobile */}
         <div className="md:hidden divide-y divide-[#182631]">
           {loading ? (
             <div className="p-8 text-center text-slate-400 text-xs">
@@ -98,7 +130,6 @@ export default function ComparatorPage() {
           ) : (
             displayedOffers.map((o) => (
               <div key={o.id} className="p-3.5 space-y-2.5 bg-[#0b1116] hover:bg-[#101921]/60 transition">
-                {/* Linha 1: Loja e Score */}
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-1.5 min-w-0">
                     <span className="font-extrabold text-white text-xs truncate">{o.store_name}</span>
@@ -113,12 +144,10 @@ export default function ComparatorPage() {
                   </span>
                 </div>
 
-                {/* Linha 2: Título */}
                 <div className="font-semibold text-slate-100 text-xs leading-snug line-clamp-2">
                   {o.title}
                 </div>
 
-                {/* Linha 3: Badges */}
                 <div className="flex flex-wrap items-center gap-1 text-[10px] font-mono">
                   {o.category === 'PS5' ? (
                     <span
@@ -139,7 +168,6 @@ export default function ComparatorPage() {
                   <span className="text-slate-400">• {o.is_national ? 'Nacional Anatel' : 'Importado'}</span>
                 </div>
 
-                {/* Linha 4: Bloco de Preços com Cupom e Parcelamento */}
                 <PriceBreakdown
                   finalPrice={o.final_price}
                   originalPrice={o.original_declared_price}
@@ -151,7 +179,6 @@ export default function ComparatorPage() {
                   layout="compact"
                 />
 
-                {/* Linha 5: Observação e Botão */}
                 <div className="flex items-center justify-between gap-2 pt-0.5">
                   <div className="min-w-0 flex-1">
                     <p
@@ -165,11 +192,6 @@ export default function ComparatorPage() {
                     >
                       {o.reliability_observation}
                     </p>
-                    {o.price_card && (
-                      <span className="text-[10px] text-slate-400 font-mono">
-                        Cartão: {formatBRL(o.price_card)}
-                      </span>
-                    )}
                   </div>
                   <a
                     href={o.url}
@@ -186,7 +208,7 @@ export default function ComparatorPage() {
           )}
         </div>
 
-        {/* Visão Desktop: Tabela Completa (hidden md:block) - 100% INTACTA PARA PC */}
+        {/* Visão Desktop */}
         <div className="hidden md:block overflow-x-auto">
           <table className="w-full text-left border-collapse text-xs sm:text-sm">
             <thead>
@@ -203,7 +225,7 @@ export default function ComparatorPage() {
             <tbody className="divide-y divide-[#182631]">
               {loading ? (
                 <tr>
-                  <td colSpan={8} className="py-10 text-center text-slate-400">
+                  <td colSpan={7} className="py-10 text-center text-slate-400">
                     Carregando comparativo de lojas confiáveis...
                   </td>
                 </tr>
@@ -312,12 +334,12 @@ export default function ComparatorPage() {
       <section className="space-y-3.5">
         <h3 className="text-sm font-bold text-white flex items-center gap-2">
           <HelpCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-          <span>Status dos Módulos de Coleta das Lojas Varejistas Confiáveis</span>
+          <span>Status em Tempo Real dos Módulos de Coleta (+20 Lojas Varejistas & Radares)</span>
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5 sm:gap-4">
           {(data?.stores || []).map((st) => (
             <div
-              key={st.id}
+              key={st.id || st.slug}
               className="bg-[#0b1116] border border-[#182631] rounded-2xl p-4 flex flex-col justify-between gap-2.5 text-xs"
             >
               <div className="flex items-center justify-between gap-2">

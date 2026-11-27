@@ -595,6 +595,22 @@ def get_internal_alerts(
     only_unread: bool = Query(default=False),
     db: Session = Depends(get_db),
 ):
+    alerts_file = ROOT_DIR / "frontend" / "public" / "data" / "alerts.json"
+    if alerts_file.exists():
+        try:
+            data = json.loads(alerts_file.read_text(encoding="utf-8"))
+            items = data.get("alerts", [])
+            if not include_archived:
+                items = [a for a in items if not a.get("is_archived")]
+            if only_unread:
+                items = [a for a in items if not a.get("is_read")]
+            return {
+                "unread_count": sum(1 for a in data.get("alerts", []) if not a.get("is_read") and not a.get("is_archived")),
+                "total_active": sum(1 for a in data.get("alerts", []) if not a.get("is_archived")),
+                "alerts": items,
+            }
+        except Exception:
+            pass
     ensure_initial_catalog_and_settings(db)
     query = db.query(Alert)
     if not include_archived:
@@ -763,6 +779,17 @@ async def trigger_manual_monitoring(
 
 @router.get("/monitoring/logs")
 def get_monitoring_logs(limit: int = Query(default=40, le=200), db: Session = Depends(get_db)):
+    logs_file = ROOT_DIR / "frontend" / "public" / "data" / "logs.json"
+    if logs_file.exists():
+        try:
+            data = json.loads(logs_file.read_text(encoding="utf-8"))
+            return {
+                "scheduler": radar_scheduler.get_status(),
+                "stores_status": data.get("stores_status", []),
+                "logs": data.get("logs", [])[:limit],
+            }
+        except Exception:
+            pass
     logs = db.query(MonitoringLog).order_by(MonitoringLog.started_at.desc()).limit(limit).all()
     stores = db.query(Store).order_by(Store.name.asc()).all()
     return {
