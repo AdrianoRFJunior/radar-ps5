@@ -1,6 +1,6 @@
 {
-  "unread_count": 9,
-  "total_active": 9,
+  "unread_count": 10,
+  "total_active": 10,
   "alerts": [
     {
       "id": 1,
@@ -13,7 +13,7 @@
       "coupon_code": "CHAMANOPLAY",
       "price": 3999.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T16:49:06.112839-03:00",
+      "created_at": "2026-11-27T16:52:36.376557-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -28,7 +28,7 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T16:49:06.112839-03:00",
+      "created_at": "2026-11-27T16:52:36.376557-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -36,14 +36,14 @@
       "id": 3,
       "type": "NEW_LOWEST_PRICE",
       "severity": "HIGH",
-      "title": "🎮 Menor DualSense Oficial: R$ 299.00 na Shopee (Loja Oficial)",
-      "message": "Controle sem Fio DualSense PS5 Sony na Shopee (Loja Oficial) por R$ 299.00.",
-      "url": "https://www.promobit.com.br/oferta/controle-sem-fio-dualsense-ps5-sony-3269274",
-      "offer_url": "https://www.promobit.com.br/oferta/controle-sem-fio-dualsense-ps5-sony-3269274",
+      "title": "🎮 Menor DualSense Oficial: R$ 270.66 na Shopee (Loja Oficial)",
+      "message": "Controle PS5 Sony Dualsense sem fio JoyStick - Midnight Black na Shopee (Loja Oficial) por R$ 270.66.",
+      "url": "https://www.promobit.com.br/oferta/controle-ps5-sony-dualsense-sem-fio-joystick-midnight-black-3269302",
+      "offer_url": "https://www.promobit.com.br/oferta/controle-ps5-sony-dualsense-sem-fio-joystick-midnight-black-3269302",
       "coupon_code": "C4RR1NH070",
-      "price": 299.0,
+      "price": 270.66,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T16:49:06.112839-03:00",
+      "created_at": "2026-11-27T16:52:36.376557-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -58,7 +58,7 @@
       "coupon_code": "CHAMANOPLAY",
       "price": 3999.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T16:49:06.112839-03:00",
+      "created_at": "2026-11-27T16:52:36.376557-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -73,7 +73,7 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T16:49:06.112839-03:00",
+      "created_at": "2026-11-27T16:52:36.376557-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -88,12 +88,27 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T16:49:06.112839-03:00",
+      "created_at": "2026-11-27T16:52:36.376557-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
       "id": 7,
+      "type": "COUPON_AVAILABLE",
+      "severity": "HIGH",
+      "title": "🎟️ Cupom Black Friday C4RR1NH070 na Shopee (Loja Oficial) — R$ 270.66",
+      "message": "Controle PS5 Sony Dualsense sem fio JoyStick - Midnight Black saindo por R$ 270.66 usando o cupom C4RR1NH070.",
+      "url": "https://www.promobit.com.br/oferta/controle-ps5-sony-dualsense-sem-fio-joystick-midnight-black-3269302",
+      "offer_url": "https://www.promobit.com.br/oferta/controle-ps5-sony-dualsense-sem-fio-joystick-midnight-black-3269302",
+      "coupon_code": "C4RR1NH070",
+      "price": 270.66,
+      "store_name": "Shopee (Loja Oficial)",
+      "created_at": "2026-11-27T16:52:36.376557-03:00",
+      "is_read": false,
+      "is_archived": false
+    },
+    {
+      "id": 8,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday C4RR1NH070 na Shopee (Loja Oficial) — R$ 299.00",
@@ -103,12 +118,12 @@
       "coupon_code": "C4RR1NH070",
       "price": 299.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T16:49:06.112839-03:00",
+      "created_at": "2026-11-27T16:52:36.376557-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 8,
+      "id": 9,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday WEUYRUE na Mercado Livre — R$ 334.00",
@@ -118,12 +133,12 @@
       "coupon_code": "WEUYRUE",
       "price": 334.0,
       "store_name": "Mercado Livre",
-      "created_at": "2026-11-27T16:49:06.112839-03:00",
+      "created_at": "2026-11-27T16:52:36.376557-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 9,
+      "id": 10,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday CONTROLEBF na KaBuM! — R$ 464.00",
@@ -133,7 +148,7 @@
       "coupon_code": "CONTROLEBF",
       "price": 464.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T16:49:06.112839-03:00",
+      "created_at": "2026-11-27T16:52:36.376557-03:00",
       "is_read": false,
       "is_archived": false
     }
