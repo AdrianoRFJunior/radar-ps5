@@ -1,19 +1,19 @@
 {
-  "unread_count": 9,
-  "total_active": 9,
+  "unread_count": 8,
+  "total_active": 8,
   "alerts": [
     {
       "id": 1,
       "type": "BLACK_FRIDAY_CHAMPION",
       "severity": "CRITICAL",
-      "title": "🔥 Menor PS5 Digital Agora: R$ 3403.00 na Mercado Livre",
-      "message": "Playstation 5 Edição Digital 825gb 1 Controle Branco Sony por R$ 3403.00 com cupom PMFT0001JACATC.",
-      "url": "https://www.promobit.com.br/oferta/playstation-5-edicao-digital-825gb-1-controle-branco-sony-3269518",
-      "offer_url": "https://www.promobit.com.br/oferta/playstation-5-edicao-digital-825gb-1-controle-branco-sony-3269518",
-      "coupon_code": "PMFT0001JACATC",
-      "price": 3403.0,
-      "store_name": "Mercado Livre",
-      "created_at": "2026-11-27T17:32:18.364406-03:00",
+      "title": "🔥 Menor PS5 Digital Agora: R$ 3915.52 na Shopee (Loja Oficial)",
+      "message": "PlayStation 5 Digital por R$ 3915.52.",
+      "url": "https://www.promobit.com.br/oferta/playstation-5-digital-3269650",
+      "offer_url": "https://www.promobit.com.br/oferta/playstation-5-digital-3269650",
+      "coupon_code": null,
+      "price": 3915.52,
+      "store_name": "Shopee (Loja Oficial)",
+      "created_at": "2026-11-27T17:35:49.421727-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -28,7 +28,7 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:32:18.364406-03:00",
+      "created_at": "2026-11-27T17:35:49.421727-03:00",
       "is_read": false,
       "is_archived": false
     },
@@ -43,27 +43,12 @@
       "coupon_code": null,
       "price": 327.0,
       "store_name": "Shopee (Loja Oficial)",
-      "created_at": "2026-11-27T17:32:18.364406-03:00",
+      "created_at": "2026-11-27T17:35:49.421727-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
       "id": 4,
-      "type": "COUPON_AVAILABLE",
-      "severity": "HIGH",
-      "title": "🎟️ Cupom Black Friday PMFT0001JACATC na Mercado Livre — R$ 3403.00",
-      "message": "Playstation 5 Edição Digital 825gb 1 Controle Branco Sony saindo por R$ 3403.00 usando o cupom PMFT0001JACATC.",
-      "url": "https://www.promobit.com.br/oferta/playstation-5-edicao-digital-825gb-1-controle-branco-sony-3269518",
-      "offer_url": "https://www.promobit.com.br/oferta/playstation-5-edicao-digital-825gb-1-controle-branco-sony-3269518",
-      "coupon_code": "PMFT0001JACATC",
-      "price": 3403.0,
-      "store_name": "Mercado Livre",
-      "created_at": "2026-11-27T17:32:18.364406-03:00",
-      "is_read": false,
-      "is_archived": false
-    },
-    {
-      "id": 5,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday DISCONELES na KaBuM! — R$ 4499.00",
@@ -73,12 +58,12 @@
       "coupon_code": "DISCONELES",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:32:18.364406-03:00",
+      "created_at": "2026-11-27T17:35:49.421727-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 6,
+      "id": 5,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday NINJAPLAY na KaBuM! — R$ 4499.00",
@@ -88,12 +73,12 @@
       "coupon_code": "NINJAPLAY",
       "price": 4499.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:32:18.364406-03:00",
+      "created_at": "2026-11-27T17:35:49.421727-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 7,
+      "id": 6,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday WEUYRUE na Mercado Livre — R$ 334.00",
@@ -103,12 +88,12 @@
       "coupon_code": "WEUYRUE",
       "price": 334.0,
       "store_name": "Mercado Livre",
-      "created_at": "2026-11-27T17:32:18.364406-03:00",
+      "created_at": "2026-11-27T17:35:49.421727-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 8,
+      "id": 7,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday GRANDUAL na KaBuM! — R$ 457.00",
@@ -118,12 +103,12 @@
       "coupon_code": "GRANDUAL",
       "price": 457.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:32:18.364406-03:00",
+      "created_at": "2026-11-27T17:35:49.421727-03:00",
       "is_read": false,
       "is_archived": false
     },
     {
-      "id": 9,
+      "id": 8,
       "type": "COUPON_AVAILABLE",
       "severity": "HIGH",
       "title": "🎟️ Cupom Black Friday CONTROLEBF na KaBuM! — R$ 464.00",
@@ -133,7 +118,7 @@
       "coupon_code": "CONTROLEBF",
       "price": 464.0,
       "store_name": "KaBuM!",
-      "created_at": "2026-11-27T17:32:18.364406-03:00",
+      "created_at": "2026-11-27T17:35:49.421727-03:00",
       "is_read": false,
       "is_archived": false
     }
