@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T10:51:30.010165-03:00",
+  "generated_at": "2026-11-27T11:01:28.102715-03:00",
   "daily_report": {
     "date_reference": "27/11/2026",
     "lowest_prices": {
@@ -1344,14 +1344,14 @@
         "estimated_price": 288.15,
         "current_price": 583.9,
         "moving_avg_7d": 507.0,
-        "moving_avg_30d": 443.76,
+        "moving_avg_30d": 443.78,
         "slope_per_day": -83878.08,
         "volatility_pct": 13.5,
         "confidence_pct": 48.0,
         "is_reliable": true,
         "data_points_used": 2075,
         "methodology": "Média Móvel (7d/30d) + Regressão Linear Amortecida (OLS)",
-        "explanation": "Baseado em 2075 coletas históricas, a média móvel de 7 dias (R$ 507.00) comparada à média de 30 dias (R$ 443.76) e inclinação linear de R$ -83878.08/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 13.5%). Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
+        "explanation": "Baseado em 2075 coletas históricas, a média móvel de 7 dias (R$ 507.00) comparada à média de 30 dias (R$ 443.78) e inclinação linear de R$ -83878.08/dia indicam tendência de queda para o horizonte de próximas 24 horas (volatilidade de 13.5%). Nota: modelos estatísticos refletem padrões passados e não constituem certeza de oferta futura.",
         "disclaimer": "Não é possível afirmar com certeza que uma promoção ocorrerá em horário específico. Correlações históricas não representam garantia futura."
       },
       {
